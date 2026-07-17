@@ -13,8 +13,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working in this
 
 ## Directory Structure
 
-- **agents/** - 17 specialized agent markdown files (frontend, backend, testing, deployment, etc.)
-- **skills/** - restored skills bundle (composio-fullstack-pipeline, consolidate-memory, etc.)
+- **agents/** - 31 active agent markdown files (30 top-level + `custom/`). The former
+  claude-flow/ruflo bundle and role-duplicates were moved to `_archive/agents/` (94 files)
+  in the 2026-07 audit — the `ruflo-core` plugin provides those live. Restore from `_archive/` if needed.
+- **skills/** - 41 active skills. 33 redundant claude-flow/agentdb/swarm/github/memory skills
+  were moved to `_archive/skills/` in the same audit. Restore from `_archive/` if needed.
+- **_archive/** - reversible parking lot for deduped agents/skills (versioned in git backup).
 - **projects/**, **todos/**, **shell-snapshots/** - session data (regenerated locally, not restored)
 - **settings.local.json** - permission allowlist (Windows paths)
 - **mcp-scaffold.json** - prior MCP server inventory with env-var placeholders (no secrets)
