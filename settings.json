@@ -1,0 +1,277 @@
+{
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+    "CLAUDE_FLOW_V3_ENABLED": "true",
+    "CLAUDE_FLOW_HOOKS_ENABLED": "true",
+    "ECC_DISABLED_HOOKS": "pre:edit-write:gateguard-fact-force,pre:bash:gateguard-fact-force,pre:config-protection",
+    "GATEGUARD_BASH_ROUTINE_DISABLED": "1"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(npx @claude-flow*)",
+      "Bash(npx claude-flow*)",
+      "Bash(node .claude/*)",
+      "mcp__claude-flow__*",
+      "Bash(*codeagent-wrapper*)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pwsh -NoProfile -File C:/Users/JeremyWilliams/.claude/hooks/pre-commit-secret-scan.ps1"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash|Agent",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node C:/Users/JeremyWilliams/.claude/hooks/ccg/subagent-context.js",
+            "timeout": 15000
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node C:/Users/JeremyWilliams/.claude/hooks/ccg/workflow-state.js",
+            "timeout": 10000
+          },
+          {
+            "type": "command",
+            "command": "node C:/Users/JeremyWilliams/.claude/hooks/ccg/skill-router.js",
+            "timeout": 5000
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "startup|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node C:/Users/JeremyWilliams/.claude/hooks/ccg/session-start.js",
+            "timeout": 15000
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "pwsh -NoProfile -File C:/Users/JeremyWilliams/.claude/statusline.ps1"
+  },
+  "enabledPlugins": {
+    "composio@composio": true,
+    "superpowers@claude-plugins-official": true,
+    "codex@openai-codex": true,
+    "skill-creator@claude-plugins-official": false,
+    "code-simplifier@claude-plugins-official": false,
+    "frontend-design@claude-plugins-official": false,
+    "code-review@claude-plugins-official": false,
+    "gemini@abiswas97-gemini": true,
+    "grok@grok-build-plugin": true,
+    "vercel@claude-plugins-official": true,
+    "ruflo-adr@ruflo": true,
+    "ruflo-federation@ruflo": true,
+    "ruflo-agent@ruflo": true,
+    "ruflo-agentdb@ruflo": true,
+    "ruflo-aidefence@ruflo": true,
+    "ruflo-arena@ruflo": true,
+    "ruflo-autopilot@ruflo": true,
+    "ruflo-browser@ruflo": true,
+    "ruflo-core@ruflo": true,
+    "ruflo-cost-tracker@ruflo": true,
+    "ruflo-daa@ruflo": true,
+    "ruflo-ddd@ruflo": true,
+    "ruflo-docs@ruflo": true,
+    "ruflo-goals@ruflo": true,
+    "ruflo-intelligence@ruflo": true,
+    "ruflo-iot-cognitum@ruflo": true,
+    "ruflo-jujutsu@ruflo": true,
+    "ruflo-knowledge-graph@ruflo": true,
+    "ruflo-loop-workers@ruflo": true,
+    "ruflo-market-data@ruflo": true,
+    "ruflo-metaharness@ruflo": true,
+    "ruflo-migrations@ruflo": true,
+    "ruflo-neural-trader@ruflo": true,
+    "ruflo-observability@ruflo": true,
+    "ruflo-plugin-creator@ruflo": true,
+    "ruflo-rag-memory@ruflo": true,
+    "ruflo-ruvector@ruflo": true,
+    "ruflo-ruvllm@ruflo": true,
+    "ruflo-rvf@ruflo": true,
+    "ruflo-security-audit@ruflo": true,
+    "ruflo-sparc@ruflo": true,
+    "ruflo-swarm@ruflo": true,
+    "ruflo-testgen@ruflo": true,
+    "ruflo-workflows@ruflo": true,
+    "agents-blockchain-web3@buildwithclaude": true,
+    "agent-drugs@2389-research": true,
+    "binary-re@2389-research": true,
+    "building-multiagent-systems@2389-research": true,
+    "ceo-personal-os@2389-research": true,
+    "css-development@2389-research": true,
+    "deliberation@2389-research": true,
+    "agents-ai-agents@buildwithclaude": true,
+    "agents-business-finance@buildwithclaude": true,
+    "agents-crypto-trading@buildwithclaude": true,
+    "agents-data-ai@buildwithclaude": true,
+    "agents-design-experience@buildwithclaude": true,
+    "agents-development-architecture@buildwithclaude": true,
+    "agents-documentation@buildwithclaude": true,
+    "agents-infrastructure-operations@buildwithclaude": true,
+    "agents-language-specialists@buildwithclaude": true,
+    "agents-media-content@buildwithclaude": true,
+    "agents-quality-security@buildwithclaude": true,
+    "agents-research@buildwithclaude": true,
+    "agents-sales-marketing@buildwithclaude": true,
+    "agents-specialized-domains@buildwithclaude": true,
+    "all-agents@buildwithclaude": true,
+    "all-commands@buildwithclaude": true,
+    "all-hooks@buildwithclaude": true,
+    "all-skills@buildwithclaude": true,
+    "cashflow@buildwithclaude": true,
+    "claude-md-kit@buildwithclaude": true,
+    "claude-ops@buildwithclaude": true,
+    "claude-pager@buildwithclaude": true,
+    "codex-hud@buildwithclaude": true,
+    "commands-api-development@buildwithclaude": true,
+    "commands-automation-workflow@buildwithclaude": true,
+    "commands-ci-deployment@buildwithclaude": true,
+    "commands-code-analysis-testing@buildwithclaude": true,
+    "commands-context-loading-priming@buildwithclaude": true,
+    "commands-database-operations@buildwithclaude": true,
+    "commands-documentation-changelogs@buildwithclaude": true,
+    "commands-framework-svelte@buildwithclaude": true,
+    "commands-game-development@buildwithclaude": true,
+    "commands-integration-sync@buildwithclaude": true,
+    "commands-miscellaneous@buildwithclaude": true,
+    "commands-monitoring-observability@buildwithclaude": true,
+    "commands-performance-optimization@buildwithclaude": true,
+    "commands-project-setup@buildwithclaude": true,
+    "commands-project-task-management@buildwithclaude": true,
+    "commands-security-audit@buildwithclaude": true,
+    "commands-simulation-modeling@buildwithclaude": true,
+    "commands-team-collaboration@buildwithclaude": true,
+    "commands-typescript-migration@buildwithclaude": true,
+    "commands-utilities-debugging@buildwithclaude": true,
+    "commands-version-control-git@buildwithclaude": true,
+    "commands-workflow-orchestration@buildwithclaude": true,
+    "documentation-audit@2389-research": true,
+    "fresh-eyes-review@2389-research": true,
+    "git-repo-prep@2389-research": true,
+    "jam@2389-research": true,
+    "journal@2389-research": true,
+    "landing-page-design@2389-research": true,
+    "prbuddy@2389-research": true,
+    "remote-system-maintenance@2389-research": true,
+    "review-squad@2389-research": true,
+    "scenario-testing@2389-research": true,
+    "simmer@2389-research": true,
+    "socialmedia@2389-research": true,
+    "summarize-meetings@2389-research": true,
+    "terminal-title@2389-research": true,
+    "test-kitchen@2389-research": true,
+    "thrifty@2389-research": true,
+    "xtool@2389-research": true,
+    "ecc@ecc": true,
+    "fabler-relay@buildwithclaude": true,
+    "fabler-x402-tools@buildwithclaude": true,
+    "frontend-design-pro@buildwithclaude": true,
+    "hooks-automation@buildwithclaude": true,
+    "magic-cc-codex-worker@buildwithclaude": true,
+    "project-boundary@buildwithclaude": false,
+    "hooks-development@buildwithclaude": true,
+    "hooks-formatting@buildwithclaude": true,
+    "hooks-git@buildwithclaude": true,
+    "hooks-notifications@buildwithclaude": true,
+    "hooks-performance@buildwithclaude": true,
+    "hooks-security@buildwithclaude": true,
+    "hooks-testing@buildwithclaude": true,
+    "interview@buildwithclaude": true,
+    "kegg-mcp-server@buildwithclaude": true,
+    "mcp-servers-docker@buildwithclaude": true,
+    "nextjs-expert@buildwithclaude": true,
+    "origin@buildwithclaude": true,
+    "shipwright@buildwithclaude": true,
+    "slopmop@buildwithclaude": true,
+    "tlsradar@buildwithclaude": true,
+    "travel-agent-skill@buildwithclaude": true
+  },
+  "extraKnownMarketplaces": {
+    "composio": {
+      "source": {
+        "source": "github",
+        "repo": "ComposioHQ/composio-plugin-cc"
+      }
+    },
+    "openai-codex": {
+      "source": {
+        "source": "github",
+        "repo": "openai/codex-plugin-cc"
+      }
+    },
+    "abiswas97-gemini": {
+      "source": {
+        "source": "github",
+        "repo": "abiswas97/gemini-plugin-cc"
+      }
+    },
+    "grok-build-plugin": {
+      "source": {
+        "source": "github",
+        "repo": "VasiHemanth/grok-build-plugin"
+      }
+    },
+    "ruflo": {
+      "source": {
+        "source": "github",
+        "repo": "ruvnet/ruflo"
+      }
+    },
+    "buildwithclaude": {
+      "source": {
+        "source": "github",
+        "repo": "davepoon/buildwithclaude"
+      }
+    },
+    "ecc": {
+      "source": {
+        "source": "github",
+        "repo": "affaan-m/everything-claude-code"
+      }
+    },
+    "glincker-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "glincker/claude-code-marketplace"
+      }
+    },
+    "2389-research": {
+      "source": {
+        "source": "github",
+        "repo": "2389-research/claude-plugins"
+      }
+    },
+    "claude-night-market": {
+      "source": {
+        "source": "github",
+        "repo": "athola/claude-night-market"
+      }
+    }
+  },
+  "autoUpdatesChannel": "latest",
+  "tui": "fullscreen",
+  "skipWorkflowUsageWarning": true,
+  "theme": "dark"
+}

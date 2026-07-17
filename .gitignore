@@ -1,0 +1,42 @@
+# ══════════════════════════════════════════════════════════════════════
+# WHITELIST MODEL — ignore everything by default, re-include only the
+# hand-curated config worth versioning. This is deliberate: the ~/.claude
+# tree contains many volatile runtime dirs (jobs/, metrics/, sessions/,
+# session-env/, bin/, cache/, daemon/, plugins/data/, .ccg/) and real
+# secrets (jobs/**/tmp/.env.prod, supa*.txt, .credentials.json,
+# .claude.json). A deny-list would leak them; a whitelist cannot.
+# ══════════════════════════════════════════════════════════════════════
+
+# 1) Ignore everything at the root
+/*
+
+# 2) Re-include curated top-level config files
+!/.gitignore
+!/CLAUDE.md
+!/CLAUDE.md.pre-bootstrap.bak
+!/settings.json
+!/settings.local.json
+!/statusline.ps1
+!/mcp-scaffold.json
+!/README.md
+
+# 3) Re-include curated directories (their contents follow, minus sub-rules)
+!/rules/
+!/hooks/
+!/agents/
+!/skills/
+!/plans/
+!/_archive/
+
+# 3a) …but never volatile/secret content inside those dirs
+hooks/*.log
+**/.env
+**/.env.*
+*.credentials.json
+
+# 4) Memory files only, out of the otherwise-ignored projects/ tree
+!/projects/
+/projects/*
+!/projects/*/
+/projects/*/*
+!/projects/*/memory/

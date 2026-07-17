@@ -1,0 +1,45 @@
+{
+  "_comment": "Prior MCP inventory from HP CLAUDE_CONFIG_GUIDE.md - env vars are PLACEHOLDERS, no secrets. Add with: claude mcp add-json <name> '<json>' --scope user. Prefer Composio OAuth for cross-app tools.",
+  "mcpServers": {
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"]
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"],
+      "env": { "DEFAULT_MINIMUM_TOKENS": "6000" }
+    },
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": { "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}" }
+    },
+    "brave-search": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-brave-search"],
+      "env": { "BRAVE_API_KEY": "${BRAVE_API_KEY}" }
+    },
+    "google-maps": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-google-maps"],
+      "env": { "GOOGLE_MAPS_API_KEY": "${GOOGLE_MAPS_API_KEY}" }
+    },
+    "puppeteer": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
+    },
+    "hf-mcp-server": {
+      "command": "npx",
+      "args": ["mcp-remote", "https://huggingface.co/mcp", "--header", "Authorization: Bearer ${HF_TOKEN}"]
+    },
+    "supermemory": {
+      "command": "npx",
+      "args": ["supergateway", "--sse", "${SUPERMEMORY_SSE_URL}"]
+    }
+  }
+}

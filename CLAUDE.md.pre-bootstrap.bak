@@ -1,0 +1,19 @@
+﻿# CLAUDE.md
+
+Guidance for Claude Code on this Windows workstation.
+
+## MCP / integrations
+- Prefer the Composio plugin for cross-app tools after `/plugin install composio-mcp@composio`.
+- Check MCP status before relying on MCP-dependent features.
+- Do NOT set ANTHROPIC_API_KEY when using Max subscription `/login` OAuth (API key overrides subscription).
+
+## Agents
+Specialized agents live in `~/.claude/agents/` (frontend, backend, review, QA, deployment, etc.).
+Use the Task tool / agent-organizer for multi-domain work.
+
+## Skills
+User skills live in `~/.claude/skills/` including composio-fullstack-pipeline, consolidate-memory, and document tooling skills.
+
+## Shell notes (Windows)
+- Prefer PowerShell 7 (`pwsh`) or Git Bash when shell tools need Unix-like behavior.
+- Git is installed at `C:\Program Files\Git\`.

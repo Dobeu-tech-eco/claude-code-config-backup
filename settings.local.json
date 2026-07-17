@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(C:/Users/JeremyWilliams/**)",
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(mkdir:*)",
+      "Bash(mv:*)",
+      "Bash(timeout:*)",
+      "Bash(python3:*)",
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "Bash(git config:*)",
+      "Bash(git init:*)",
+      "Bash(git clone:*)",
+      "Bash(git remote add:*)",
+      "Bash(git add:*)",
+      "Bash(git rm:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(gh repo create:*)",
+      "Bash(gh auth:*)",
+      "WebFetch(domain:support.google.com)",
+      "Bash(claude mcp *)",
+      "Read(//g/My Drive/ai-content/**)",
+      "Read(//g/My Drive/ai-content//**)",
+      "Bash(agentbox --version)",
+      "Bash(agentbox install *)",
+      "Bash(docker version *)",
+      "Bash(agentbox prepare *)",
+      "Bash(agentbox claude *)",
+      "Bash(agentbox dashboard *)",
+      "Bash(agentbox prune *)",
+      "Bash(set-terminal-title \"Ruflo\" \"V3 Core Implementation\")",
+      "Bash(pwsh -NoProfile -ExecutionPolicy Bypass -File \"C:/Users/JeremyWilliams/.claude/plugins/cache/2389-research/terminal-title/1.2.0/skills/scripts/set_title.ps1\" \"Ruflo\" \"V3 Core Implementation\")",
+      "Bash(npx --yes ccg-workflow)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

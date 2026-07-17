@@ -1,0 +1,17 @@
+{
+  "project": {
+    "name": "__PROJECT_NAME__",
+    "description": "<one-paragraph problem statement — the planner will fill this in>",
+    "stack": {
+      "framework": null,
+      "database": null,
+      "deployment": null,
+      "auth": null,
+      "payments": null,
+      "observability": []
+    },
+    "created_at": "__TIMESTAMP__",
+    "updated_at": "__TIMESTAMP__"
+  },
+  "features": []
+}
