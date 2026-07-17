@@ -34,7 +34,17 @@
       "Bash(agentbox prune *)",
       "Bash(set-terminal-title \"Ruflo\" \"V3 Core Implementation\")",
       "Bash(pwsh -NoProfile -ExecutionPolicy Bypass -File \"C:/Users/JeremyWilliams/.claude/plugins/cache/2389-research/terminal-title/1.2.0/skills/scripts/set_title.ps1\" \"Ruflo\" \"V3 Core Implementation\")",
-      "Bash(npx --yes ccg-workflow)"
+      "Bash(npx --yes ccg-workflow)",
+      "Bash(git -C \"C:/Users/JeremyWilliams/.claude\" push -u origin main)",
+      "Bash(git -C C:/Users/JeremyWilliams/.claude branch --show-current)",
+      "Bash(git -C C:/Users/JeremyWilliams/.claude branch -a)",
+      "Bash(git -C C:/Users/JeremyWilliams/.claude rev-parse --abbrev-ref HEAD)",
+      "Bash(git -C C:/Users/JeremyWilliams/.claude rev-parse master)",
+      "Bash(git -C C:/Users/JeremyWilliams/.claude rev-parse origin/master)",
+      "Bash(git -C C:/Users/JeremyWilliams/.claude rev-list --left-right --count master...origin/master)",
+      "Bash(git -C C:/Users/JeremyWilliams/.claude branch --set-upstream-to=origin/master master)",
+      "Bash(gh repo *)",
+      "Bash(npx ruflo *)"
     ],
     "deny": [],
     "ask": []
