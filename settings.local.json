@@ -44,7 +44,8 @@
       "Bash(git -C C:/Users/JeremyWilliams/.claude rev-list --left-right --count master...origin/master)",
       "Bash(git -C C:/Users/JeremyWilliams/.claude branch --set-upstream-to=origin/master master)",
       "Bash(gh repo *)",
-      "Bash(npx ruflo *)"
+      "Bash(npx ruflo *)",
+      "Bash(gh --version)"
     ],
     "deny": [],
     "ask": []
