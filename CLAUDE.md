@@ -2,6 +2,8 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working in this user's global configuration (~/.claude) on Windows 11.
 
+> **Scope:** This file governs **global defaults** — environment, the `agents/` catalog, tool routing, and auth. The repo-level `C:\Users\JeremyWilliams\CLAUDE.md` governs the **active Ruflo swarm/project** and tightens (never loosens) these defaults. When both apply, the more specific project file wins.
+
 ## Environment
 
 - Machine: Windows 11 (rebuilt 2026-07). User: JeremyWilliams (`C:\Users\JeremyWilliams`).
@@ -22,6 +24,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working in this
 - **projects/**, **todos/**, **shell-snapshots/** - session data (regenerated locally, not restored)
 - **settings.local.json** - permission allowlist (Windows paths)
 - **mcp-scaffold.json** - prior MCP server inventory with env-var placeholders (no secrets)
+
+## Memory (system of record)
+
+- **Canonical store = native file-memory** at `projects\C--Users-JeremyWilliams\memory\` (`MEMORY.md` index + one file per fact). It is the memory auto-loaded each session and the single source of truth.
+- Other backends are secondary: ruflo/AgentDB memory is plugin-scoped (leave it); the competing "unify/consolidate memory" skills were archived to `_archive\skills\` in the 2026-07 audit. Do not reintroduce a second general-purpose memory system.
+- The standalone MCP `memory` knowledge-graph server is unused — a candidate for removal from the home-level `.claude.json → mcpServers` if it never earns invocations.
 
 ## Auth & Secrets
 
