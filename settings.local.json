@@ -45,7 +45,10 @@
       "Bash(git -C C:/Users/JeremyWilliams/.claude branch --set-upstream-to=origin/master master)",
       "Bash(gh repo *)",
       "Bash(npx ruflo *)",
-      "Bash(gh --version)"
+      "Bash(gh --version)",
+      "Bash(powershell.exe -NoProfile -Command \"[Environment]::GetEnvironmentVariable\\('Path','User'\\)\")",
+      "Bash(echo \"exit=$?\")",
+      "Bash(npx --yes ccg-workflow status)"
     ],
     "deny": [],
     "ask": []

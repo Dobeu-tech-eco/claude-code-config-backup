@@ -2,3 +2,5 @@
 - [WSL Claude config mirror](wsl-claude-config-mirror.md) — WSL now mirrors ~/.claude via sync-from-windows.sh; plus Git-Bash→wsl.exe scripting gotchas (MSYS_NO_PATHCONV, variable-eating).
 - [AgentBox + Ruflo Windows setup](agentbox-ruflo-windows-setup.md) — both installed/working; the rsync symlink fix, CODEX_BIN_PATH, ruflo MCP dedup, and pending E2B/Vercel providers.
 - [claude-flow v3 core repo](claude-flow-v3-core-repo.md) — new repos\claude-flow-v3-core: DDD foundation + task-management done; 4 domains remain.
+- [OMC setup (preserve mode)](omc-setup-preserve-2026-07.md) — OMC installed global-preserve; v4.15.4 shipped without the coordinator .cjs (had to rebuild it).
+- [CCG multi-model local setup](ccg-multi-model-local-setup.md) — ccg-workflow provisioned; routing = Claude frontend + Codex backend; Gemini free-tier dead; ECC /ecc:multi-* hardcode gemini (substitute --backend claude).

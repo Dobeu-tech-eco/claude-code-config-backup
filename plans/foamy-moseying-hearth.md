@@ -59,6 +59,16 @@ These phases mutate `~/.claude/settings.json` and `~/.claude/.omc-config.json` (
 
 If anything looks wrong: restore `~/.claude/CLAUDE.md` from the coordinator-reported backup, delete `~/.claude/CLAUDE-omc.md`, and remove any added settings.json keys. The coordinator auto-rolls-back on its own failures.
 
+## Execution status (as of this session)
+
+- ✅ Phase 1 CLAUDE.md preserve — CLAUDE-omc.md created, base CLAUDE.md + one import block, backup `917d1ad…` verified byte-identical to original.
+- ✅ `.omc-config.json` — `defaultExecutionMode: ultrawork` + team ops defaults (3 / claude) + taskTool builtin.
+- ✅ Agent teams — already enabled (`CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` pre-existing).
+- ✅ `omc` CLI installed (v4.15.5). Caveat: `better-sqlite3` native script blocked → `npm install -g --allow-scripts=better-sqlite3` if needed.
+- 🛠 Fixed a packaging bug: built the missing `bridge/claude-md-coordinator.cjs` from source (esbuild in scratch, embeds v4.15.4 + docs/CLAUDE.md hash) so the sanctioned installer could run.
+- ✅ HUD statusline — DECISION: **keep existing `statusline.ps1`**, skip OMC HUD (tmux features unavailable on native Windows). No settings.json change.
+- ⏸ ONLY REMAINING STEP: mark setup complete → `bash ".../scripts/setup-progress.sh" complete 4.15.4` (writes `setupCompleted` into `~/.claude/.omc-config.json`). Then verify final state and clear any setup progress state.
+
 ## Confirmed decisions
 
 - Global config handling: **preserve** (base `~/.claude/CLAUDE.md` untouched except one managed-import block + backup).
