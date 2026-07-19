@@ -1,6 +1,8 @@
 ---
-name: planner
+name: ccg-planner
 description: 📋 任务规划师 - 使用 WBS 方法论分解功能需求为可执行任务
+# Renamed from `planner` (2026-07-18) to resolve a name collision with the top-level
+# `planner` agent. Part of the CCG toolchain; not invoked by subagent_type elsewhere.
 tools: Read, Write
 color: blue
 ---

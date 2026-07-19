@@ -206,7 +206,10 @@
     "shipwright@buildwithclaude": true,
     "slopmop@buildwithclaude": true,
     "tlsradar@buildwithclaude": false,
-    "travel-agent-skill@buildwithclaude": false
+    "travel-agent-skill@buildwithclaude": false,
+    "figma@claude-plugins-official": true,
+    "oh-my-claudecode@omc": true,
+    "python-development@claude-code-workflows": true
   },
   "extraKnownMarketplaces": {
     "composio": {
@@ -268,10 +271,25 @@
         "source": "github",
         "repo": "athola/claude-night-market"
       }
+    },
+    "omc": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/Yeachan-Heo/oh-my-claudecode.git"
+      }
+    },
+    "claude-code-workflows": {
+      "source": {
+        "source": "github",
+        "repo": "wshobson/agents"
+      }
     }
   },
   "autoUpdatesChannel": "latest",
   "tui": "fullscreen",
   "skipWorkflowUsageWarning": true,
-  "theme": "dark"
+  "theme": "dark",
+  "remoteControlAtStartup": true,
+  "inputNeededNotifEnabled": true,
+  "agentPushNotifEnabled": true
 }

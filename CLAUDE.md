@@ -44,6 +44,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working in this
 - Each agent in `agents/` has specific expertise (e.g., `react-pro`, `backend-architect`, `code-reviewer`).
 - Use specialized agents via the Task tool when appropriate; `agent-organizer` orchestrates
   complex multi-agent tasks.
+- **The roster is layered:** flat `agents/` (implementers + rich generalists), `ecc:*` (language
+  review/build-fix + specialists), `ruflo-*` (swarm/memory/cost), plus codex/gemini/grok/vercel/ops.
+  Never recreate a language reviewer or swarm/cost agent flat — delegate to the plugin layer.
+  Full routing + ownership model: `~/.claude/rules/agents.md`.
+- **`automation-architect`** — Composio/Make/Rube tool-routing + cross-system automation (embodies the
+  "Automation Architect" section below). **`memory-curator`** — native file-memory hygiene
+  (dedup/prune/index), scoped to native memory only (not ruflo AgentDB).
 
 ## MCP
 
@@ -384,3 +391,8 @@ progressively smarter, more integrated automation system.
 When working on multi-file tasks or complex features, use ToolSearch to find and invoke ruflo MCP tools.
 Key tools: memory_store, memory_search, hooks_route, swarm_init, agent_spawn.
 Check system-reminder tags for [INTELLIGENCE] pattern suggestions before starting work.
+
+
+<!-- OMC:IMPORT:START -->
+@CLAUDE-omc.md
+<!-- OMC:IMPORT:END -->

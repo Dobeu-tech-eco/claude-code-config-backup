@@ -2,9 +2,31 @@
 
 See also: **startup.md** for the session boot sequence and agent routing table.
 
-## Available Agents
+<!-- review: 2026-07-18 — table reconciled to real roster (removed 3 archived agents), added layered model + ownership + 2 new agents -->
 
-Located in `~/.claude/agents/`:
+## The roster is layered — invoke the right layer
+
+Agents come from five layers. Bare names resolve to the flat `~/.claude/agents/` set; plugin agents are prefixed (`ecc:`, `ruflo-*`). Bare and prefixed names do NOT collide.
+
+| Layer | Owns | Invoke as |
+|-------|------|-----------|
+| Built-in | broad search / planning primitives | `Explore`, `Plan`, `general-purpose` |
+| **Flat `~/.claude/agents/`** | implementers + rich generalists (below) | bare name |
+| `ecc:*` (67 agents) | language-specific **review** + **build-fix** + specialists | `ecc:rust-reviewer`, `ecc:java-build-resolver`, … |
+| `ruflo-*` | swarm coordination, AgentDB memory, cost | `ruflo-swarm:coordinator`, … |
+| codex/gemini/grok, magic-codex, vercel, ops | second-opinion, deploy, ops | `codex:codex-rescue`, … |
+
+**Ownership rule:** flat keeps only what plugins don't provide. Never recreate a language reviewer/build-resolver flat — delegate to `ecc:*`. Never recreate swarm/cost/AgentDB-memory flat — delegate to `ruflo-*`.
+
+## Flat agents (`~/.claude/agents/`)
+
+**Implementers (`*-pro`) — unique to the flat layer; `ecc:*` has no implementers:**
+`golang-pro`, `python-pro`, `typescript-pro`, `react-pro`, `nextjs-pro`, `frontend-developer`
+
+**Rich generalists (flat fork is deliberately more detailed than the `ecc:` namesake — flat is canonical, `ecc:` is fallback):**
+`security-reviewer`, `e2e-runner`, `build-error-resolver`, `doc-updater`, `refactor-cleaner`
+
+**Other flat:**
 
 | Agent | Purpose | When to Use |
 |-------|---------|-------------|
@@ -12,22 +34,23 @@ Located in `~/.claude/agents/`:
 | architect | System design | Architectural decisions |
 | tdd-guide | Test-driven development | New features, bug fixes |
 | code-reviewer | Code review | After writing code |
-| security-reviewer | Security analysis | Before commits |
-| build-error-resolver | Fix build errors | When build fails |
-| e2e-runner | E2E testing | Critical user flows |
-| refactor-cleaner | Dead code cleanup | Code maintenance |
-| doc-updater | Documentation | Updating docs |
-| api-designer | API design | REST/GraphQL/gRPC endpoints |
+| agent-organizer | Multi-agent orchestration | Tasks spanning many domains |
+| api-designer / api-documenter | API design / docs | REST/GraphQL/gRPC endpoints |
 | database-migrator | Schema migrations | Database changes |
 | docker-specialist | Containerization | Docker/compose setup |
 | ci-cd-generator | CI/CD pipelines | GitHub Actions, deployment |
-| deployment-manager | Release management | Production deployments |
-| fullstack-architect | Full-stack design | End-to-end system design |
+| deployment-engineer | Release management | Production deployments |
+| backend-architect / fullstack-architect / cloud-architect | Architecture lanes | Backend / end-to-end / cloud design |
 | infrastructure-engineer | Cloud infrastructure | AWS/GCP/Azure setup |
-| integration-tester | Integration tests | API and service testing |
-| performance-tester | Performance analysis | Profiling, optimization |
-| unit-test-generator | Unit test creation | Test generation, coverage |
+| integration-tester / test-automator | Integration & test automation | API/service testing, coverage |
+| performance-engineer | Performance analysis | Profiling, optimization |
 | accessibility-auditor | A11y compliance | WCAG audits, fixes |
+| **automation-architect** | Composio/Make/Rube tool-routing + cross-system automation | Any task spanning 2+ external systems |
+| **memory-curator** | Native file-memory hygiene (dedup/prune/index) | Capture a durable learning; memory audits |
+
+**`ccg/` subdir** backs the installed CCG toolchain (`/ccg:*`): `init-architect`, `team-architect`, `team-qa`, `team-reviewer`, `ccg-planner`, `get-current-datetime`. `ui-ux-designer` is present but not wired to any `/ccg` command (orphaned, kept for ad-hoc use).
+
+> Removed from this table in the 2026-07-18 reconciliation because they are **archived, not flat**: `deployment-manager` → use `deployment-engineer`; `performance-tester` → `performance-engineer`; `unit-test-generator` → `test-automator` / `integration-tester`.
 
 ## Immediate Agent Usage
 
