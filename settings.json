@@ -3,6 +3,7 @@
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
     "CLAUDE_FLOW_V3_ENABLED": "true",
     "CLAUDE_FLOW_HOOKS_ENABLED": "true",
+    "CLAUDE_FLOW_MCP_TOOLS": "memory,swarm,agent,hooks",
     "ECC_DISABLED_HOOKS": "pre:edit-write:gateguard-fact-force,pre:bash:gateguard-fact-force,pre:config-protection",
     "GATEGUARD_BASH_ROUTINE_DISABLED": "1"
   },
@@ -75,7 +76,7 @@
     "command": "pwsh -NoProfile -File C:/Users/JeremyWilliams/.claude/statusline.ps1"
   },
   "enabledPlugins": {
-    "agent-drugs@2389-research": true,
+    "agent-drugs@2389-research": false,
     "agents-ai-agents@buildwithclaude": false,
     "agents-blockchain-web3@buildwithclaude": false,
     "agents-business-finance@buildwithclaude": false,
@@ -153,7 +154,7 @@
     "hooks-testing@buildwithclaude": false,
     "interview@buildwithclaude": true,
     "jam@2389-research": true,
-    "journal@2389-research": true,
+    "journal@2389-research": false,
     "kegg-mcp-server@buildwithclaude": false,
     "landing-page-design@2389-research": true,
     "magic-cc-codex-worker@buildwithclaude": true,
@@ -205,7 +206,7 @@
     "simmer@2389-research": true,
     "skill-creator@claude-plugins-official": false,
     "slopmop@buildwithclaude": true,
-    "socialmedia@2389-research": true,
+    "socialmedia@2389-research": false,
     "summarize-meetings@2389-research": true,
     "superpowers@claude-plugins-official": true,
     "terminal-title@2389-research": true,
