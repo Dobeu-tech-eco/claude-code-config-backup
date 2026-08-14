@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "project": "AI Stack Config Sync",
+  "features": [
+    {
+      "id": "bootstrap-hub",
+      "category": "bootstrap",
+      "description": "Move agent root to .claude, establish a pre-sync baseline, and scaffold the sync hub.",
+      "steps": ["Set workspace root", "Record git baseline", "Create checkpoint state"],
+      "status": "in_progress",
+      "passes": false,
+      "priority": 1,
+      "dependencies": []
+    },
+    {
+      "id": "cp0-backup",
+      "category": "backup",
+      "description": "Create a secret-safe CP0 backup of live configuration surfaces and mirror it to Google Drive.",
+      "steps": ["Select safe config files", "Copy to timestamped backup", "Mirror to Drive", "Verify hashes"],
+      "status": "pending",
+      "passes": false,
+      "priority": 1,
+      "dependencies": ["bootstrap-hub"]
+    },
+    {
+      "id": "ruflo-online",
+      "category": "runtime",
+      "description": "Initialize and verify Ruflo, including a memory round trip.",
+      "steps": ["Initialize project", "Run doctor", "Run status", "Verify MCP", "Test memory"],
+      "status": "pending",
+      "passes": false,
+      "priority": 1,
+      "dependencies": ["cp0-backup"]
+    },
+    {
+      "id": "deep-audit",
+      "category": "audit",
+      "description": "Normalize the cross-tool inventory and prior decisions into a hashed current-state record.",
+      "steps": ["Inventory surfaces", "Hash files", "Import prior art", "Store baseline memory"],
+      "status": "pending",
+      "passes": false,
+      "priority": 2,
+      "dependencies": ["ruflo-online"]
+    },
+    {
+      "id": "synthesis",
+      "category": "research",
+      "description": "Produce an evidence-graded synthesis, parity matrix, and discrepancy register.",
+      "steps": ["Gather findings", "Grade evidence", "Resolve conflicts", "Write synthesis"],
+      "status": "pending",
+      "passes": false,
+      "priority": 2,
+      "dependencies": ["deep-audit"]
+    },
+    {
+      "id": "canonical-registry",
+      "category": "configuration",
+      "description": "Build the canonical MCP, instruction, rule, hook, plugin, and skill registries.",
+      "steps": ["Define MCP policy", "Define instructions", "Define hooks", "Map plugins", "Map skills"],
+      "status": "pending",
+      "passes": false,
+      "priority": 2,
+      "dependencies": ["synthesis"]
+    },
+    {
+      "id": "emitters",
+      "category": "implementation",
+      "description": "Implement idempotent per-tool emitters and SHA256 drift verification.",
+      "steps": ["Implement emitters", "Implement drift check", "Test dry run", "Test idempotence"],
+      "status": "pending",
+      "passes": false,
+      "priority": 2,
+      "dependencies": ["canonical-registry"]
+    },
+    {
+      "id": "consult-gates",
+      "category": "review",
+      "description": "Review the plugin and self-sustaining design with specialist agents and validation skills.",
+      "steps": ["Review agents", "Review plugin design", "Validate plugin", "Review metaharness design"],
+      "status": "pending",
+      "passes": false,
+      "priority": 3,
+      "dependencies": ["emitters"]
+    },
+    {
+      "id": "metaharness-baseline",
+      "category": "quality",
+      "description": "Run score, genome, MCP scan, and threat-model quality gates.",
+      "steps": ["Run score", "Run genome", "Run MCP scan", "Run threat model"],
+      "status": "pending",
+      "passes": false,
+      "priority": 3,
+      "dependencies": ["consult-gates"]
+    },
+    {
+      "id": "figma-diagrams",
+      "category": "visualization",
+      "description": "Create current-state and target-state architecture diagrams with a Mermaid fallback.",
+      "steps": ["Create Mermaid sources", "Generate FigJam diagrams", "Record links"],
+      "status": "pending",
+      "passes": false,
+      "priority": 3,
+      "dependencies": ["canonical-registry"]
+    },
+    {
+      "id": "apply-per-tool",
+      "category": "deployment",
+      "description": "Transactionally apply and validate canonical configuration for each supported tool.",
+      "steps": ["Backup tool", "Preview diff", "Apply", "Validate", "Rollback on failure"],
+      "status": "pending",
+      "passes": false,
+      "priority": 4,
+      "dependencies": ["metaharness-baseline", "figma-diagrams"]
+    },
+    {
+      "id": "cross-validate",
+      "category": "validation",
+      "description": "Run peer validation, metaharness audit, memory learning, and NotebookLM upload.",
+      "steps": ["Peer review", "Consensus", "OIA audit", "Store learning", "Upload report"],
+      "status": "pending",
+      "passes": false,
+      "priority": 4,
+      "dependencies": ["apply-per-tool"]
+    },
+    {
+      "id": "self-sustaining",
+      "category": "automation",
+      "description": "Install recurring drift detection, safe remediation, and periodic quality improvement.",
+      "steps": ["Schedule drift check", "Install fallback task", "Schedule audit", "Define improvement loop"],
+      "status": "pending",
+      "passes": false,
+      "priority": 4,
+      "dependencies": ["cross-validate"]
+    },
+    {
+      "id": "docs-handoff",
+      "category": "handoff",
+      "description": "Finalize documentation, state, memory, and backup verification.",
+      "steps": ["Update README", "Update changelog", "Update state", "Verify backup", "Write handoff"],
+      "status": "pending",
+      "passes": false,
+      "priority": 5,
+      "dependencies": ["self-sustaining"]
+    }
+  ]
+}

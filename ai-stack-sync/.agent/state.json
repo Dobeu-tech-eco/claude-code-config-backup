@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "project": "AI Stack Config Sync",
+  "workingDirectory": "C:\\Users\\JeremyWilliams\\.claude",
+  "syncHub": "C:\\Users\\JeremyWilliams\\.claude\\ai-stack-sync",
+  "git": {
+    "branch": "master",
+    "baselineCommit": "885015284908b1b88f9828f37a3ab8f062ac26a7",
+    "remotePushAuthorized": false
+  },
+  "platform": {
+    "os": "Windows 11",
+    "shell": "PowerShell 7"
+  },
+  "currentFeature": "bootstrap-hub",
+  "buildStatus": "not_run",
+  "testStatus": "not_run",
+  "connections": {
+    "rufloMcp": "not_loaded_in_cursor_session",
+    "figmaMcp": "available",
+    "googleDriveMcp": "available",
+    "notebookLm": "local_skill_available"
+  },
+  "handoffNotes": "Continue with CP0 secret-safe backup after the bootstrap checkpoint."
+}

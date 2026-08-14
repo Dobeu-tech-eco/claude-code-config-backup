@@ -27,12 +27,15 @@
 !/skills/
 !/plans/
 !/_archive/
+!/ai-stack-sync/
 
 # 3a) …but never volatile/secret content inside those dirs
 hooks/*.log
 **/.env
 **/.env.*
 *.credentials.json
+/ai-stack-sync/backups/**
+!/ai-stack-sync/backups/.gitkeep
 
 # 4) Memory files only, out of the otherwise-ignored projects/ tree
 !/projects/
