@@ -6,20 +6,29 @@
   "git": {
     "branch": "master",
     "baselineCommit": "885015284908b1b88f9828f37a3ab8f062ac26a7",
+    "bootstrapCommit": "a4776d3",
     "remotePushAuthorized": false
   },
   "platform": {
     "os": "Windows 11",
     "shell": "PowerShell 7"
   },
-  "currentFeature": "bootstrap-hub",
+  "currentFeature": "ruflo-online",
   "buildStatus": "not_run",
   "testStatus": "not_run",
+  "cp0": {
+    "id": "CP0-20260814-192811",
+    "backupRoot": "C:\\Users\\JeremyWilliams\\.claude\\ai-stack-sync\\backups\\CP0-20260814-192811",
+    "entryCount": 58,
+    "skippedCount": 5,
+    "driveMirrored": true,
+    "drivePath": "G:\\My Drive\\claude\\ai-stack-sync-backups\\CP0-20260814-192811"
+  },
   "connections": {
     "rufloMcp": "not_loaded_in_cursor_session",
     "figmaMcp": "available",
     "googleDriveMcp": "available",
     "notebookLm": "local_skill_available"
   },
-  "handoffNotes": "Continue with CP0 secret-safe backup after the bootstrap checkpoint."
+  "handoffNotes": "CP0 complete. Next: bring Ruflo online or engage B1 PowerShell fallback."
 }
