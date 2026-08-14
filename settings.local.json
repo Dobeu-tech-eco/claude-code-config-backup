@@ -48,7 +48,10 @@
       "Bash(gh --version)",
       "Bash(powershell.exe -NoProfile -Command \"[Environment]::GetEnvironmentVariable\\('Path','User'\\)\")",
       "Bash(echo \"exit=$?\")",
-      "Bash(npx --yes ccg-workflow status)"
+      "Bash(npx --yes ccg-workflow status)",
+      "mcp__plugin_ruflo-core_ruflo__wasm_agent_list",
+      "mcp__plugin_ruflo-core_ruflo__wasm_gallery_list",
+      "mcp__plugin_ruflo-core_ruflo__wasm_gallery_categories"
     ],
     "deny": [],
     "ask": []
