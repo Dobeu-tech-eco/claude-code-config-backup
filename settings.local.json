@@ -55,5 +55,6 @@
     ],
     "deny": [],
     "ask": []
-  }
+  },
+  "outputStyle": "Proactive"
 }

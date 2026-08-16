@@ -27,8 +27,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working in this
 
 ## Memory (system of record)
 
-- **Canonical store = native file-memory** at `projects\C--Users-JeremyWilliams\memory\` (`MEMORY.md` index + one file per fact). It is the memory auto-loaded each session and the single source of truth.
-- Other backends are secondary: ruflo/AgentDB memory is plugin-scoped (leave it); the competing "unify/consolidate memory" skills were archived to `_archive\skills\` in the 2026-07 audit. Do not reintroduce a second general-purpose memory system.
+- **Canonical store = native file-memory** at `projects\C--Users-JeremyWilliams\memory\` (`MEMORY.md` index + one file per fact). It is the memory Claude Code itself auto-loads each session and the single source of truth for Claude's own user/feedback/project/reference facts. Never point Claude's own memory reads/writes at ruflo/AgentDB instead of this store.
+- ruflo/AgentDB memory is a separate, plugin-scoped system that exists for ruflo's own internal swarm/agent coordination — not a competitor to native file-memory. General rule: leave it alone.
+- **Exception (2026-08-16):** consolidating ruflo's *own* internal legacy memory backends (MemoryManager, DistributedMemorySystem, SwarmMemory, AdvancedMemoryManager, SQLiteBackend, MarkdownBackend, HybridBackend) into ruflo's AgentDB+HNSW store is in-scope maintenance of ruflo's plugin-scoped memory, not "a second general-purpose memory system" — the `/v3-memory-unification` skill (or equivalent) may be run with ruflo as the explicit target for this purpose. Scope guardrails: it must never touch, mirror, or duplicate native file-memory, and the unified AgentDB store must not become something Claude Code itself reads/writes facts to.
+- The 2026-07 audit archived the *general-purpose* "unify/consolidate memory" skills (Claude-facing memory unification) to `_archive\skills\` — that prohibition still stands. The exception above is narrower: ruflo-internal backend consolidation only.
 - The standalone MCP `memory` knowledge-graph server is unused — a candidate for removal from the home-level `.claude.json → mcpServers` if it never earns invocations.
 
 ## Auth & Secrets
