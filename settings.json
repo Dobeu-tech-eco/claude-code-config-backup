@@ -18,7 +18,7 @@
       "PowerShell(pwsh -NoProfile -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\JeremyWilliams\\\\.claude\\\\plugins\\\\cache\\\\2389-research\\\\terminal-title\\\\1.2.0\\\\skills\\\\scripts\\\\set_title.ps1\" \"Forge WebUI\" \"Ruflo Loop Worker\")",
       "PowerShell(npx @claude-flow/cli@latest hooks worker dispatch --trigger audit)"
     ],
-    "defaultMode": "plan"
+    "defaultMode": "auto"
   },
   "hooks": {
     "PreToolUse": [
