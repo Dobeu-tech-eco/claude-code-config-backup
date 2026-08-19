@@ -215,7 +215,8 @@
     "tlsradar@buildwithclaude": false,
     "travel-agent-skill@buildwithclaude": false,
     "vercel@claude-plugins-official": true,
-    "xtool@2389-research": true
+    "xtool@2389-research": true,
+    "dak@data-agent-kit-starter-pack-marketplace": true
   },
   "extraKnownMarketplaces": {
     "2389-research": {
@@ -294,6 +295,12 @@
       "source": {
         "source": "github",
         "repo": "ruvnet/ruflo"
+      }
+    },
+    "data-agent-kit-starter-pack-marketplace": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/gemini-cli-extensions/data-agent-kit-starter-pack.git"
       }
     }
   },
