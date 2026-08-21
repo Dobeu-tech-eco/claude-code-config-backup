@@ -215,8 +215,7 @@
     "tlsradar@buildwithclaude": false,
     "travel-agent-skill@buildwithclaude": false,
     "vercel@claude-plugins-official": true,
-    "xtool@2389-research": true,
-    "dak@data-agent-kit-starter-pack-marketplace": true
+    "xtool@2389-research": true
   },
   "extraKnownMarketplaces": {
     "2389-research": {
