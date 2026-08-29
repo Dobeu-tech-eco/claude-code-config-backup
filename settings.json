@@ -303,13 +303,16 @@
       }
     }
   },
+  "feedbackDrafts": "notify",
   "fastMode": true,
-  "autoUpdatesChannel": "latest",
+  "autoUpdatesChannel": "stable",
+  "minimumVersion": "2.1.251",
   "tui": "fullscreen",
   "skipWorkflowUsageWarning": true,
   "theme": "dark",
   "verbose": true,
   "remoteControlAtStartup": true,
+  "crossSessionInbound": "accept",
   "inputNeededNotifEnabled": true,
   "agentPushNotifEnabled": true
 }

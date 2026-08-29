@@ -1,0 +1,2 @@
+- [No worktrees on RouteReady](no-worktrees-routeready.md) — work directly on the branch; file isolation buys nothing against a shared remote DB
+- [Migrations are sequential](routeready-sequential-migrations.md) — one live Supabase project, ordered migrations; parallelize review, never DDL

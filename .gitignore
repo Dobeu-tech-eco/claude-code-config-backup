@@ -43,3 +43,6 @@ hooks/*.log
 !/projects/*/
 /projects/*/*
 !/projects/*/memory/
+
+# SDD scratch workspaces (subagent-driven-development)
+.superpowers/
