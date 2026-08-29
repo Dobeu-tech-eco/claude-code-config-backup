@@ -4,9 +4,9 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Stop the recurring whole-host freezes by treating them as the driver-level DPC fault the evidence actually shows, instrument the machine so the next freeze is explainable without a crash dump, then port the Windows Claude Code config into WSL Ubuntu-24.04.
+**Goal:** Stop the recurring whole-host freezes by treating them as the driver-level DPC fault the evidence actually shows, instrument the machine so the next freeze is explainable without a crash dump, then port the portable Windows Claude Code and Codex configuration into WSL Ubuntu-24.04.
 
-**Architecture:** Two stages. Stage A (Tasks 1–5) addresses the freeze: the confirmed signature is `0x133 DPC_WATCHDOG_VIOLATION`, not memory exhaustion, so the work is instrumentation plus a driver update, not resource caps. Stage B (Tasks 6–13) is the config port, unchanged in substance — ~7 MB of genuinely portable config out of a 1,030 MB tree, with `plugins/` and `projects/` rebuilt natively rather than copied.
+**Architecture:** Two stages. Stage A (Tasks 1–5) addresses the freeze: the confirmed signature is `0x133 DPC_WATCHDOG_VIOLATION`, not memory exhaustion, so the work is instrumentation plus a driver update, not resource caps. Stage B (Tasks 6–16) ports Claude Code and Codex declaratively: portable instructions, agents, skills, rules, and OS-neutral settings cross the boundary; plugin caches, native binaries, OAuth/auth files, SQLite/session state, browser/CUA state, project history, and trusted-hook hashes are rebuilt natively rather than copied.
 
 **Tech Stack:** Windows 11 Insider 26340.9233 · PowerShell 7 · `logman`/`schtasks` for instrumentation · WSL 2.9.8.0 / kernel 6.18.40.1-1 · Ubuntu-24.04 (user `jeremyw`, `/home/jeremyw`) · bash + rsync + jq + node/nvm guest-side.
 
@@ -69,6 +69,9 @@ The original plan's Tasks 1–3 were built on a diagnosis that the evidence does
 | `/home/jeremyw/.claude/projects/<linux-slug>/memory/` | Canonical file-memory | **Copy to slug-corrected path** (Task 11) |
 | `/home/jeremyw/.claude/CLAUDE.md` | Environment instructions | **Author fresh** (Task 12) |
 | `~/.claude/sync-from-windows.sh` | Repeatable mirror | **Rewrite** (Task 8) |
+| `/home/jeremyw/.codex/config.toml` | Linux-native Codex declarative configuration | **Translate** (Task 15) |
+| `/home/jeremyw/.codex/AGENTS.md` | Linux-native global Codex instructions | **Author/translate** (Task 15) |
+| `/home/jeremyw/.codex/sync-from-windows.sh` | Repeatable portable Codex mirror | **Create** (Task 15) |
 
 ---
 
@@ -87,6 +90,8 @@ The original plan's Tasks 1–3 were built on a diagnosis that the evidence does
 ---
 
 ## Task 2: Install the FreezeWatch counter log
+
+**Status:** ✅ COMPLETE. `FreezeWatch` is running at a 1-second interval, writes growing CSV segments under `C:\PerfLogs`, and scheduled task `FreezeWatchBoot` successfully restarted it after the AMD-driver reboot.
 
 **Files:**
 - Create: `C:\PerfLogs\FreezeWatch*.csv` (collector output)
@@ -187,6 +192,8 @@ If running and not wanted: `npx @claude-flow/cli@latest daemon stop`. The daemon
 
 ## Task 4: Update the AMD Radeon 860M display driver
 
+**Status:** ✅ COMPLETE. AMD Radeon 860M changed from `32.0.13050.18` (2025-04-14, `oem23.inf`) to `32.0.31041.1004` (2026-08-16, `oem5.inf`). FreezeWatch remained `Running` after the required reboot.
+
 **Files:** none — driver package.
 
 **Interfaces:**
@@ -273,11 +280,13 @@ Relax `processors` back to `6` in `.wslconfig` **and** remove `sparseVhd=true` i
 
 ---
 
-# STAGE B — Port the Claude Code config into WSL
+# STAGE B — Port Claude Code and Codex into WSL
 
 Substance unchanged from the original plan; two preflight rulings are now baked in rather than carried separately.
 
 ## Task 6: Controlled first boot of Ubuntu-24.04
+
+**Status:** ✅ COMPLETE. Ubuntu boots under the caps: 6,217,277,440 bytes RAM, 2 GiB swap, and `nproc=4`.
 
 **Interfaces:**
 - Consumes: Task 1's caps (which *do* govern this VM).
@@ -314,6 +323,8 @@ Expected: total memory ≈ 6 GB (not ~15 GB) and `nproc` = **4** (not 16). If `n
 ---
 
 ## Task 7: Verify the WSL runtime baseline
+
+**Status:** ✅ COMPLETE (2026-08-29). `wsl --update` reports the newest WSL channel already installed; Ubuntu packages were fully upgraded (42 packages, zero remaining), `dpkg --audit` is clean, and `jq 1.7`, `git 2.43.0`, `rsync 3.2.7`, Node 22.23.1, npm 10.9.8, and Claude Code 2.1.214 are available. Known upstream warning: WSL 2.9.x leaves `systemd-binfmt.service` failed because `/proc/sys/fs/binfmt_misc/status` is read-only while `WSLInterop` remains functional; do not mask it without an official fix.
 
 **Interfaces:** produces `claude`, `node`, `npx`, `jq`, `git`, `rsync` on PATH. Every later task depends on these; `jq` is required by every bash hook.
 
@@ -592,6 +603,59 @@ It contains 41 absolute paths to `skills/ccg/domains/` — a directory that **do
   - [ ] Host monitor: `vmmem` ≤6 GB, free RAM stable
   - [ ] `jq -r '..|.command?//empty' ~/.claude/settings.json` shows no `pwsh` or `C:/`
   - [ ] `logman query FreezeWatch` still `Running`
+
+---
+
+## Task 14: Install native Codex in WSL
+
+**Status:** ✅ COMPLETE (2026-08-29). Native `@openai/codex@0.151.0` is installed under the WSL nvm Node 22 prefix and resolves to `/home/jeremyw/.nvm/versions/node/v22.23.1/bin/codex`, not the Windows shim exposed through `/mnt/c`.
+
+**Rules:**
+- Match the verified Windows CLI version before migrating config.
+- Never use `/mnt/c/Users/JeremyWilliams/.local/bin/codex` as the WSL runtime.
+- Never copy Windows `auth.json`; WSL authenticates independently.
+
+---
+
+## Task 15: Translate the Windows Codex configuration
+
+**Status:** ✅ COMPLETE (2026-08-29). Linux-native TOML, AGENTS guidance, hooks, portable skills/agents/rules, personal marketplace metadata, and 91 small authored plugin bundles are installed. Windows caches, app-server runtime, auth, sessions, and machine state were excluded.
+
+**Files:**
+- Create `/home/jeremyw/.codex/config.toml`
+- Create `/home/jeremyw/.codex/AGENTS.md`
+- Create `/home/jeremyw/.codex/sync-from-windows.sh`
+- Mirror portable roots: `agents/`, `skills/`, `prompts/`, `rules/`
+
+**Portable declarative state:**
+- Preserve top-level model/reasoning/approval/sandbox/service-tier choices, except the Windows-only `notify` executable.
+- Preserve plugin enablement only for OpenAI-curated plugins and the portable `codex-marketplace-global` personal catalog.
+- Drop every Windows Git marketplace snapshot. Live validation showed the copied Claude-oriented repositories do not contain a supported Codex marketplace manifest; Codex automatically discovers `~/.agents/plugins/marketplace.json` instead.
+- Preserve `[features]`, `[memories]`, and OS-neutral TUI values.
+- Preserve portable MCP definitions: Composio, Context7, sequential-thinking, grok, amplitude, amplitude-com, comfy-cloud, and chrome-devtools.
+- Drop machine-local MCP definitions: Codex App `node_repl`, GitKraken `.exe`, `devfleet` localhost, plugin-root-dependent `ruflo`/`t`, and `runapi` because its secret value must not be copied.
+- Drop `[desktop]`, `[windows]`, all Windows `[projects.*]`, `[hooks.state.*]` trusted hashes, and Windows node-repl shell-environment paths.
+- Recreate only portable shell policy values (`CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS`, `CLAUDE_FLOW_*`, `ECC_DISABLED_HOOKS`).
+
+**Never copy:** `auth.json`, `.codex-global-state.json*`, `installation_id`, `cap_sid`, `.sandbox*`, `secrets/`, `sessions/`, `archived_sessions/`, `browser/`, `computer-use/`, `mcp-oauth-locks/`, `sqlite/`, `*.sqlite*`, `history.jsonl`, `session_index.jsonl`, plugin `cache/`, `.plugin-appserver/`, plugin staging/snapshots, `tmp/`, attachments, logs, worktrees, or thread/process-manager state. The small top-level authored plugin bundles referenced by the personal marketplace are portable and may be copied explicitly.
+
+- [x] Back up any pre-existing WSL `.codex` declarative files (none existed; no backup was needed).
+- [x] Dry-run/reconcile the portable rsync; final portable payload is about 12 MB and contains no excluded cache/app-server/auth/session state.
+- [x] Mirror portable roots and install the translated TOML/AGENTS/sync script.
+- [x] Parse-test `config.toml` with native Codex (`codex --version`, `codex mcp list`, `codex plugin list --available --json`).
+- [x] Verify no `C:\\`, `C:/`, `G:\\`, `.exe`, `auth.json`, or literal secret-bearing MCP env values remain.
+
+---
+
+## Task 16: Authenticate and verify WSL Codex
+
+**Status:** ⏸ READY FOR USER LOGIN (2026-08-29). All non-secret verification is complete. WSL Codex correctly reports `Not logged in`; authentication is intentionally not copied or automated.
+
+- [ ] Run `codex login` interactively in WSL; do not copy the Windows auth file.
+- [ ] Re-authenticate remote OAuth MCP servers only when needed (Composio, Figma, Vercel, Amplitude, Comfy Cloud).
+- [ ] Install only verified Codex-compatible marketplace plugins after login; do not re-add the incompatible Claude Git marketplace declarations or copy native cache state.
+- [x] Verify `command -v codex` points under `/home/jeremyw/.nvm/`, `codex --version` is `0.151.0`, config parses, portable MCPs enumerate, and no Windows paths appear in `/home/jeremyw/.codex/config.toml`.
+- [x] Keep Codex Desktop on Windows separate from Codex CLI in WSL; desktop-only browser/CUA/notification settings are intentionally not portable.
 
 ---
 
