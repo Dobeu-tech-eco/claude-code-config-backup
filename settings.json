@@ -215,7 +215,8 @@
     "tlsradar@buildwithclaude": false,
     "travel-agent-skill@buildwithclaude": false,
     "vercel@claude-plugins-official": true,
-    "xtool@2389-research": true
+    "xtool@2389-research": true,
+    "magicpath@magicpath": true
   },
   "extraKnownMarketplaces": {
     "2389-research": {
@@ -300,6 +301,12 @@
       "source": {
         "source": "git",
         "url": "https://github.com/gemini-cli-extensions/data-agent-kit-starter-pack.git"
+      }
+    },
+    "magicpath": {
+      "source": {
+        "source": "github",
+        "repo": "MagicPathAI/magicpath-agent-plugin"
       }
     }
   },
