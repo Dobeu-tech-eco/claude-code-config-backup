@@ -2,21 +2,20 @@
 
 See also: **startup.md** for the session boot sequence and agent routing table.
 
-<!-- review: 2026-07-18 — table reconciled to real roster (removed 3 archived agents), added layered model + ownership + 2 new agents -->
+<!-- review: 2026-09-09 — removed the swarm/memory/cost plugin layer (purged from config) -->
 
 ## The roster is layered — invoke the right layer
 
-Agents come from five layers. Bare names resolve to the flat `~/.claude/agents/` set; plugin agents are prefixed (`ecc:`, `ruflo-*`). Bare and prefixed names do NOT collide.
+Agents come from four layers. Bare names resolve to the flat `~/.claude/agents/` set; plugin agents are prefixed (`ecc:`, etc.). Bare and prefixed names do NOT collide.
 
 | Layer | Owns | Invoke as |
 |-------|------|-----------|
 | Built-in | broad search / planning primitives | `Explore`, `Plan`, `general-purpose` |
 | **Flat `~/.claude/agents/`** | implementers + rich generalists (below) | bare name |
 | `ecc:*` (67 agents) | language-specific **review** + **build-fix** + specialists | `ecc:rust-reviewer`, `ecc:java-build-resolver`, … |
-| `ruflo-*` | swarm coordination, AgentDB memory, cost | `ruflo-swarm:coordinator`, … |
-| codex/gemini/grok, magic-codex, vercel, ops | second-opinion, deploy, ops | `codex:codex-rescue`, … |
+| codex/gemini/grok, magic-codex, vercel, ops, oh-my-claudecode | second-opinion, deploy, ops, orchestration | `codex:codex-rescue`, `oh-my-claudecode:executor`, … |
 
-**Ownership rule:** flat keeps only what plugins don't provide. Never recreate a language reviewer/build-resolver flat — delegate to `ecc:*`. Never recreate swarm/cost/AgentDB-memory flat — delegate to `ruflo-*`.
+**Ownership rule:** flat keeps only what plugins don't provide. Never recreate a language reviewer/build-resolver flat — delegate to `ecc:*`. Never recreate swarm coordination flat — delegate to `oh-my-claudecode:*`.
 
 ## Flat agents (`~/.claude/agents/`)
 
@@ -48,7 +47,10 @@ Agents come from five layers. Bare names resolve to the flat `~/.claude/agents/`
 | **automation-architect** | Composio/Make/Rube tool-routing + cross-system automation | Any task spanning 2+ external systems |
 | **memory-curator** | Native file-memory hygiene (dedup/prune/index) | Capture a durable learning; memory audits |
 
-**`ccg/` subdir** backs the installed CCG toolchain (`/ccg:*`): `init-architect`, `team-architect`, `team-qa`, `team-reviewer`, `ccg-planner`, `get-current-datetime`. `ui-ux-designer` is present but not wired to any `/ccg` command (orphaned, kept for ad-hoc use).
+> **CCG is not installed here (verified 2026-09-09).** There is no `agents/ccg/` subdir, no
+> `commands/ccg/`, and no `skills/ccg/` on either the Windows or WSL side, so the `/ccg:*` toolchain
+> and its agents (`init-architect`, `team-architect`, `team-qa`, `team-reviewer`, `ccg-planner`)
+> do not resolve. Use `oh-my-claudecode:*` for orchestration and `ecc:*` for language review instead.
 
 > Removed from this table in the 2026-07-18 reconciliation because they are **archived, not flat**: `deployment-manager` → use `deployment-engineer`; `performance-tester` → `performance-engineer`; `unit-test-generator` → `test-automator` / `integration-tester`.
 

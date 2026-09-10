@@ -1,3 +1,8 @@
+> **INACTIVE (verified 2026-09-09).** The `/ccg:*` commands below are **NOT INSTALLED on this
+> machine** (`~/.claude/commands/ccg/` does not exist). Use the OMC equivalents instead —
+> `/oh-my-claudecode:review`, `/oh-my-claudecode:verify`, `/oh-my-claudecode:execute` — or the
+> `ecc:*` reviewer agents. Kept for reference only; safe to delete.
+
 # CCG Quality Gates — Auto-trigger Rules
 
 When working in a project, automatically invoke the corresponding quality gate skills based on the scenario below. These skills are installed at `C:/Users/JeremyWilliams/.claude/skills/ccg/` and can be called directly.

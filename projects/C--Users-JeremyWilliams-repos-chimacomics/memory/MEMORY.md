@@ -1,0 +1,2 @@
+- [Bun is not on this Windows machine — use npx](bun-not-on-windows-use-npx.md) — CLAUDE.md's `bun run` commands only work from WSL.
+- [WSL updates break plugin installPaths](wsl-updates-break-plugin-installpaths.md) — a /mnt/c path makes a plugin load nothing, silently.

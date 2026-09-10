@@ -6,7 +6,9 @@
 #   { "tool_name": "Bash", "tool_input": { "command": "..." }, "cwd": "..." }
 #
 # If the command is a `git commit`, scans staged files for secrets.
-# BLOCKING: exit 1 on a hit (aborts the commit). Otherwise exit 0.
+# BLOCKING: exit 2 on a hit (aborts the commit). PreToolUse blocks on exit 2 ONLY —
+# exit 1 is treated as a non-blocking error and the command runs anyway, so NEVER use
+# exit 1 on the secret-hit path. Otherwise exit 0.
 # Fails open: no git, no repo, malformed payload, or any unexpected error -> exit 0 silently.
 
 Set-StrictMode -Off
@@ -28,10 +30,17 @@ $PrefixPatterns = @(
 $MaxFileBytes = 2MB   # skip anything bigger; it is not hand-written source
 
 try {
-    # ---------- read + parse payload ----------
+    # ---------- read payload ----------
     $raw = [Console]::In.ReadToEnd()
     if ([string]::IsNullOrWhiteSpace($raw)) { exit 0 }
 
+    # ---------- CHEAPEST FAST PATH: no "commit" substring anywhere in the raw payload ----------
+    # This fires on EVERY Bash call, so skip JSON parsing entirely for the common case.
+    # Over-inclusive by design (a plain substring check can false-positive on unrelated
+    # text containing "commit") — it must never false-negative and skip a real commit.
+    if ($raw -notmatch '(?i)commit') { exit 0 }
+
+    # ---------- parse payload ----------
     $payload = $raw | ConvertFrom-Json -ErrorAction Stop
     $cmd = $payload.tool_input.command
     if ([string]::IsNullOrWhiteSpace($cmd)) { exit 0 }
@@ -94,7 +103,7 @@ try {
         foreach ($f in $findings) { [Console]::Error.WriteLine($f) }
         [Console]::Error.WriteLine('[Hook] Unstage or scrub these values before committing.')
         [Console]::Error.WriteLine('[Hook] If this is a false positive, move the value to an env var or .env (gitignored).')
-        exit 1
+        exit 2
     }
 
     exit 0

@@ -1,22 +1,13 @@
 {
   "env": {
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
-    "CLAUDE_FLOW_V3_ENABLED": "true",
-    "CLAUDE_FLOW_HOOKS_ENABLED": "true",
-    "CLAUDE_FLOW_MCP_TOOLS": "memory,swarm,agent,hooks",
     "ECC_DISABLED_HOOKS": "pre:edit-write:gateguard-fact-force,pre:bash:gateguard-fact-force,pre:config-protection",
     "GATEGUARD_BASH_ROUTINE_DISABLED": "1"
   },
   "permissions": {
     "allow": [
-      "Bash(npx @claude-flow*)",
-      "Bash(npx claude-flow*)",
       "Bash(node .claude/*)",
-      "mcp__claude-flow__*",
-      "Bash(*codeagent-wrapper*)",
-      "Bash(set-terminal-title \"Forge WebUI\" \"Ruflo Loop Worker\")",
-      "PowerShell(pwsh -NoProfile -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\JeremyWilliams\\\\.claude\\\\plugins\\\\cache\\\\2389-research\\\\terminal-title\\\\1.2.0\\\\skills\\\\scripts\\\\set_title.ps1\" \"Forge WebUI\" \"Ruflo Loop Worker\")",
-      "PowerShell(npx @claude-flow/cli@latest hooks worker dispatch --trigger audit)"
+      "Bash(*codeagent-wrapper*)"
     ],
     "defaultMode": "auto"
   },
@@ -27,45 +18,9 @@
         "hooks": [
           {
             "type": "command",
-            "command": "pwsh -NoProfile -File C:/Users/JeremyWilliams/.claude/hooks/pre-commit-secret-scan.ps1"
-          }
-        ]
-      },
-      {
-        "matcher": "Bash|Agent",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node C:/Users/JeremyWilliams/.claude/hooks/ccg/subagent-context.js",
-            "timeout": 15000
-          }
-        ]
-      }
-    ],
-    "UserPromptSubmit": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node C:/Users/JeremyWilliams/.claude/hooks/ccg/workflow-state.js",
-            "timeout": 10000
-          },
-          {
-            "type": "command",
-            "command": "node C:/Users/JeremyWilliams/.claude/hooks/ccg/skill-router.js",
-            "timeout": 5000
-          }
-        ]
-      }
-    ],
-    "SessionStart": [
-      {
-        "matcher": "startup|clear|compact",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node C:/Users/JeremyWilliams/.claude/hooks/ccg/session-start.js",
-            "timeout": 15000
+            "command": "node \"${CLAUDE_PROJECT_DIR}/.claude/hooks/win-only-hook.js\" pre-commit-secret-scan.ps1",
+            "timeout": 20,
+            "statusMessage": "Scanning staged files for secrets"
           }
         ]
       }
@@ -73,7 +28,7 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "pwsh -NoProfile -File C:/Users/JeremyWilliams/.claude/statusline.ps1"
+    "command": "node C:/Users/JeremyWilliams/.claude/hud/omc-hud.mjs"
   },
   "enabledPlugins": {
     "agent-drugs@2389-research": false,
@@ -167,40 +122,6 @@
     "python-development@claude-code-workflows": true,
     "remote-system-maintenance@2389-research": true,
     "review-squad@2389-research": true,
-    "ruflo-adr@ruflo": true,
-    "ruflo-agent@ruflo": true,
-    "ruflo-agentdb@ruflo": true,
-    "ruflo-aidefence@ruflo": true,
-    "ruflo-arena@ruflo": true,
-    "ruflo-autopilot@ruflo": true,
-    "ruflo-browser@ruflo": true,
-    "ruflo-core@ruflo": true,
-    "ruflo-cost-tracker@ruflo": true,
-    "ruflo-daa@ruflo": true,
-    "ruflo-ddd@ruflo": true,
-    "ruflo-docs@ruflo": true,
-    "ruflo-federation@ruflo": true,
-    "ruflo-goals@ruflo": true,
-    "ruflo-intelligence@ruflo": true,
-    "ruflo-iot-cognitum@ruflo": true,
-    "ruflo-jujutsu@ruflo": true,
-    "ruflo-knowledge-graph@ruflo": true,
-    "ruflo-loop-workers@ruflo": true,
-    "ruflo-market-data@ruflo": true,
-    "ruflo-metaharness@ruflo": true,
-    "ruflo-migrations@ruflo": true,
-    "ruflo-neural-trader@ruflo": true,
-    "ruflo-observability@ruflo": true,
-    "ruflo-plugin-creator@ruflo": true,
-    "ruflo-rag-memory@ruflo": true,
-    "ruflo-ruvector@ruflo": true,
-    "ruflo-ruvllm@ruflo": true,
-    "ruflo-rvf@ruflo": true,
-    "ruflo-security-audit@ruflo": true,
-    "ruflo-sparc@ruflo": true,
-    "ruflo-swarm@ruflo": true,
-    "ruflo-testgen@ruflo": true,
-    "ruflo-workflows@ruflo": true,
     "scenario-testing@2389-research": true,
     "shipwright@buildwithclaude": true,
     "simmer@2389-research": true,
@@ -291,12 +212,6 @@
         "repo": "openai/codex-plugin-cc"
       }
     },
-    "ruflo": {
-      "source": {
-        "source": "github",
-        "repo": "ruvnet/ruflo"
-      }
-    },
     "data-agent-kit-starter-pack-marketplace": {
       "source": {
         "source": "git",
@@ -321,5 +236,6 @@
   "remoteControlAtStartup": true,
   "crossSessionInbound": "accept",
   "inputNeededNotifEnabled": true,
-  "agentPushNotifEnabled": true
+  "agentPushNotifEnabled": true,
+  "model": "sonnet"
 }

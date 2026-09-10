@@ -1,3 +1,10 @@
+> **INACTIVE (verified 2026-09-09).** The CCG toolchain is **NOT INSTALLED on this machine** —
+> `~/.claude/skills/ccg/`, `~/.claude/bin/codeagent-wrapper`, `~/.claude/commands/ccg/` and
+> `~/.claude/agents/ccg/` do not exist on either the WSL or Windows side. Every path below resolves
+> to nothing, so none of this routing fires. Skill routing is handled by the **oh-my-claudecode**
+> plugin's `UserPromptSubmit` hooks (`keyword-detector` + `skill-injector`). Kept for reference
+> only; safe to delete.
+
 # CCG Domain Knowledge — Auto-routing Rules
 
 When the user's request matches trigger keywords below, automatically READ the corresponding skill file to gain domain expertise before responding. These knowledge files are installed at `C:/Users/JeremyWilliams/.claude/skills/ccg/domains/`.

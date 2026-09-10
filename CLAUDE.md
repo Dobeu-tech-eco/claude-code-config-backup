@@ -2,7 +2,7 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working in this user's global configuration (~/.claude) on Windows 11.
 
-> **Scope:** This file governs **global defaults** — environment, the `agents/` catalog, tool routing, and auth. The repo-level `C:\Users\JeremyWilliams\CLAUDE.md` governs the **active Ruflo swarm/project** and tightens (never loosens) these defaults. When both apply, the more specific project file wins.
+> **Scope:** This file governs **global defaults** — environment, the `agents/` catalog, tool routing, and auth. The repo-level `C:\Users\JeremyWilliams\CLAUDE.md` governs the **workspace root** and tightens (never loosens) these defaults. When both apply, the more specific project file wins.
 
 ## Environment
 
@@ -15,11 +15,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working in this
 
 ## Directory Structure
 
-- **agents/** - 31 active agent markdown files (30 top-level + `custom/`). The former
-  claude-flow/ruflo bundle and role-duplicates were moved to `_archive/agents/` (94 files)
-  in the 2026-07 audit — the `ruflo-core` plugin provides those live. Restore from `_archive/` if needed.
-- **skills/** - 41 active skills. 33 redundant claude-flow/agentdb/swarm/github/memory skills
-  were moved to `_archive/skills/` in the same audit. Restore from `_archive/` if needed.
+- **agents/** - 31 active agent markdown files (30 top-level + `custom/`). Role-duplicates were
+  moved to `_archive/agents/` (94 files) in the 2026-07 audit. Restore from `_archive/` if needed.
+- **skills/** - 41 active skills. 33 redundant agentdb/swarm/github/memory skills were moved to
+  `_archive/skills/` in the same audit. Restore from `_archive/` if needed.
 - **_archive/** - reversible parking lot for deduped agents/skills (versioned in git backup).
 - **projects/**, **todos/**, **shell-snapshots/** - session data (regenerated locally, not restored)
 - **settings.local.json** - permission allowlist (Windows paths)
@@ -27,10 +26,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working in this
 
 ## Memory (system of record)
 
-- **Canonical store = native file-memory** at `projects\C--Users-JeremyWilliams\memory\` (`MEMORY.md` index + one file per fact). It is the memory Claude Code itself auto-loads each session and the single source of truth for Claude's own user/feedback/project/reference facts. Never point Claude's own memory reads/writes at ruflo/AgentDB instead of this store.
-- ruflo/AgentDB memory is a separate, plugin-scoped system that exists for ruflo's own internal swarm/agent coordination — not a competitor to native file-memory. General rule: leave it alone.
-- **Exception (2026-08-16):** consolidating ruflo's *own* internal legacy memory backends (MemoryManager, DistributedMemorySystem, SwarmMemory, AdvancedMemoryManager, SQLiteBackend, MarkdownBackend, HybridBackend) into ruflo's AgentDB+HNSW store is in-scope maintenance of ruflo's plugin-scoped memory, not "a second general-purpose memory system" — the `/v3-memory-unification` skill (or equivalent) may be run with ruflo as the explicit target for this purpose. Scope guardrails: it must never touch, mirror, or duplicate native file-memory, and the unified AgentDB store must not become something Claude Code itself reads/writes facts to.
-- The 2026-07 audit archived the *general-purpose* "unify/consolidate memory" skills (Claude-facing memory unification) to `_archive\skills\` — that prohibition still stands. The exception above is narrower: ruflo-internal backend consolidation only.
+- **Canonical store = native file-memory** at `projects\C--Users-JeremyWilliams\memory\` (`MEMORY.md` index + one file per fact). It is the memory Claude Code itself auto-loads each session and the single source of truth for Claude's own user/feedback/project/reference facts.
+- The 2026-07 audit archived general-purpose "unify/consolidate memory" skills to `_archive\skills\` — native file-memory is not to be replaced or shadowed by another general-purpose memory system.
 - The standalone MCP `memory` knowledge-graph server is unused — a candidate for removal from the home-level `.claude.json → mcpServers` if it never earns invocations.
 
 ## Auth & Secrets
@@ -47,12 +44,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working in this
 - Use specialized agents via the Task tool when appropriate; `agent-organizer` orchestrates
   complex multi-agent tasks.
 - **The roster is layered:** flat `agents/` (implementers + rich generalists), `ecc:*` (language
-  review/build-fix + specialists), `ruflo-*` (swarm/memory/cost), plus codex/gemini/grok/vercel/ops.
-  Never recreate a language reviewer or swarm/cost agent flat — delegate to the plugin layer.
+  review/build-fix + specialists), plus codex/gemini/grok/vercel/ops/oh-my-claudecode.
+  Never recreate a language reviewer flat — delegate to the plugin layer.
   Full routing + ownership model: `~/.claude/rules/agents.md`.
 - **`automation-architect`** — Composio/Make/Rube tool-routing + cross-system automation (embodies the
   "Automation Architect" section below). **`memory-curator`** — native file-memory hygiene
-  (dedup/prune/index), scoped to native memory only (not ruflo AgentDB).
+  (dedup/prune/index).
 
 ## MCP
 
@@ -388,12 +385,6 @@ After every completed task, provide:
 
 Your job is not just to finish tasks. Your job is to turn the connected environment into a
 progressively smarter, more integrated automation system.
-
-# Ruflo Integration (auto-generated by ruflo init)
-When working on multi-file tasks or complex features, use ToolSearch to find and invoke ruflo MCP tools.
-Key tools: memory_store, memory_search, hooks_route, swarm_init, agent_spawn.
-Check system-reminder tags for [INTELLIGENCE] pattern suggestions before starting work.
-
 
 <!-- OMC:IMPORT:START -->
 @CLAUDE-omc.md

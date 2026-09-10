@@ -32,8 +32,6 @@
       "Bash(agentbox claude *)",
       "Bash(agentbox dashboard *)",
       "Bash(agentbox prune *)",
-      "Bash(set-terminal-title \"Ruflo\" \"V3 Core Implementation\")",
-      "Bash(pwsh -NoProfile -ExecutionPolicy Bypass -File \"C:/Users/JeremyWilliams/.claude/plugins/cache/2389-research/terminal-title/1.2.0/skills/scripts/set_title.ps1\" \"Ruflo\" \"V3 Core Implementation\")",
       "Bash(npx --yes ccg-workflow)",
       "Bash(git -C \"C:/Users/JeremyWilliams/.claude\" push -u origin main)",
       "Bash(git -C C:/Users/JeremyWilliams/.claude branch --show-current)",
@@ -44,14 +42,11 @@
       "Bash(git -C C:/Users/JeremyWilliams/.claude rev-list --left-right --count master...origin/master)",
       "Bash(git -C C:/Users/JeremyWilliams/.claude branch --set-upstream-to=origin/master master)",
       "Bash(gh repo *)",
-      "Bash(npx ruflo *)",
       "Bash(gh --version)",
       "Bash(powershell.exe -NoProfile -Command \"[Environment]::GetEnvironmentVariable\\('Path','User'\\)\")",
       "Bash(echo \"exit=$?\")",
       "Bash(npx --yes ccg-workflow status)",
-      "mcp__plugin_ruflo-core_ruflo__wasm_agent_list",
-      "mcp__plugin_ruflo-core_ruflo__wasm_gallery_list",
-      "mcp__plugin_ruflo-core_ruflo__wasm_gallery_categories"
+      "Bash(python3 *)"
     ],
     "deny": [],
     "ask": []

@@ -1,6 +1,5 @@
 - [Claude config restore 2026-07](claude-config-restore-2026-07.md) — canonical config repo, and four leaked API keys still awaiting rotation.
 - [WSL Claude config mirror](wsl-claude-config-mirror.md) — WSL now mirrors ~/.claude via sync-from-windows.sh; plus Git-Bash→wsl.exe scripting gotchas (MSYS_NO_PATHCONV, variable-eating).
-- [AgentBox + Ruflo Windows setup](agentbox-ruflo-windows-setup.md) — both installed/working; the rsync symlink fix, CODEX_BIN_PATH, ruflo MCP dedup, and pending E2B/Vercel providers.
-- [claude-flow v3 core repo](claude-flow-v3-core-repo.md) — new repos\claude-flow-v3-core: DDD foundation + task-management done; 4 domains remain.
 - [OMC setup (preserve mode)](omc-setup-preserve-2026-07.md) — global-preserve mode; upgraded to 5.0.2 (2026-08-28) — v5 retires ultrawork, disables graph exec on Windows, and the "legacy hooks" warning is a false positive.
 - [CCG multi-model local setup](ccg-multi-model-local-setup.md) — ccg-workflow provisioned; routing = Claude frontend + Codex backend; Gemini free-tier dead; ECC /ecc:multi-* hardcode gemini (substitute --backend claude).
+- [WSL DNS + host firewall](wsl-dns-and-host-firewall.md) — DNS died from systemd-resolved having no upstream (fixed); Windows still blocks all WSL→host traffic.
