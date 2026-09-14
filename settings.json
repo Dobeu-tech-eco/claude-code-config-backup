@@ -237,5 +237,6 @@
   "crossSessionInbound": "accept",
   "inputNeededNotifEnabled": true,
   "agentPushNotifEnabled": true,
-  "model": "sonnet"
+  "model": "sonnet",
+  "outputStyle": "Proactive"
 }

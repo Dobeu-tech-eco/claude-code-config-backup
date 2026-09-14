@@ -1,3 +1,5 @@
 - [No worktrees on RouteReady](no-worktrees-routeready.md) — work directly on the branch; file isolation buys nothing against a shared remote DB
 - [Migrations are sequential](routeready-sequential-migrations.md) — one live Supabase project, ordered migrations; parallelize review, never DDL
 - [Harness config cleanup](harness-config-cleanup.md) — Gemini stop-gate RESOLVED (off switch is per-workspace state.json `stopReviewGate`, not settings.json); shadowed skills + MCP still open
+- [origin plugin = wenlan](origin-is-wenlan-windows-install.md) — origin CLI renamed wenlan; installed natively at ~\.wenlan\bin, task `WenlanServer` on :7878, MCP `wenlan` user-scope; never run /origin:init on Windows
+- [Windows Node is scoop nodejs-lts](windows-node-is-scoop-nodejs-lts.md) — PATH entries can vanish; `scoop reset nodejs-lts` restores them
