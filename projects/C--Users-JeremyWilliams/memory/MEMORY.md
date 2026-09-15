@@ -3,3 +3,5 @@
 - [OMC setup (preserve mode)](omc-setup-preserve-2026-07.md) — global-preserve mode; upgraded to 5.0.2 (2026-08-28) — v5 retires ultrawork, disables graph exec on Windows, and the "legacy hooks" warning is a false positive.
 - [CCG multi-model local setup](ccg-multi-model-local-setup.md) — ccg-workflow provisioned; routing = Claude frontend + Codex backend; Gemini free-tier dead; ECC /ecc:multi-* hardcode gemini (substitute --backend claude).
 - [WSL DNS + host firewall](wsl-dns-and-host-firewall.md) — DNS died from systemd-resolved having no upstream (fixed); Windows still blocks all WSL→host traffic.
+- [Cursor Origin git forge](cursor-origin-git-forge.md) — mirror is one-way (GitHub stays truth); `dobeutech` namespace is flat and permanent.
+- [repos → Origin migration 2026-09](repos-origin-migration-2026-09.md) — 57/61 repos repointed; 4 skipped and still undecided.

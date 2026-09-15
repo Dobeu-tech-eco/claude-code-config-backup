@@ -225,8 +225,13 @@
       }
     }
   },
+  "outputStyle": "Proactive",
   "feedbackDrafts": "notify",
+  "advisorModel": "opus",
   "fastMode": true,
+  "remote": {
+    "defaultEnvironmentId": "env_01HknyLfcnWW25fgLABFDJpn"
+  },
   "autoUpdatesChannel": "stable",
   "minimumVersion": "2.1.251",
   "tui": "fullscreen",
@@ -237,6 +242,5 @@
   "crossSessionInbound": "accept",
   "inputNeededNotifEnabled": true,
   "agentPushNotifEnabled": true,
-  "model": "sonnet",
-  "outputStyle": "Proactive"
+  "model": "sonnet"
 }

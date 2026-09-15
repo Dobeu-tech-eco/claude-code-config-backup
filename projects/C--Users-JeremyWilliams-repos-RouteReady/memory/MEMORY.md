@@ -3,3 +3,9 @@
 - [Harness config cleanup](harness-config-cleanup.md) — Gemini stop-gate RESOLVED (off switch is per-workspace state.json `stopReviewGate`, not settings.json); shadowed skills + MCP still open
 - [origin plugin = wenlan](origin-is-wenlan-windows-install.md) — origin CLI renamed wenlan; installed natively at ~\.wenlan\bin, task `WenlanServer` on :7878, MCP `wenlan` user-scope; never run /origin:init on Windows
 - [Windows Node is scoop nodejs-lts](windows-node-is-scoop-nodejs-lts.md) — PATH entries can vanish; `scoop reset nodejs-lts` restores them
+- [Notion CLI on Windows](notion-cli-windows-npm-only.md) — install with `npm install -g ntn`; the ntn.dev bash installer refuses Windows
+- [RouteReady node_modules is bun-authored](routeready-bun-authored-node-modules.md) — npm cannot repair it; bun.lock pins 34 pkgs to Lovable's GCP registry
+- [repos\ is Google Drive synced](repos-is-google-drive-synced.md) — Drive has no per-folder ignore; keep node_modules-heavy projects out of it
+- [ntn-dts-work lives in WSL](ntn-dts-work-lives-in-wsl.md) — ~/ntn-dts-work on ext4, deliberately not under repos; do not move it back
+- [RouteReady design system sync](routeready-design-system-sync.md) — Claude Design project 8be0c06f…; app-not-package shape needs two declared design-sync lib forks
+- [Playwright cache pins chromium 1228](playwright-cache-pins-chromium-1228.md) — use playwright@1.61.0 here; a newer install cannot launch
