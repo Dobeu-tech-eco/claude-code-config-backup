@@ -11,6 +11,7 @@
     ],
     "defaultMode": "auto"
   },
+  "model": "sonnet",
   "hooks": {
     "PreToolUse": [
       {
@@ -227,7 +228,7 @@
   },
   "outputStyle": "Proactive",
   "feedbackDrafts": "notify",
-  "advisorModel": "opus",
+  "advisorModel": "fable",
   "fastMode": true,
   "remote": {
     "defaultEnvironmentId": "env_01HknyLfcnWW25fgLABFDJpn"
@@ -241,6 +242,5 @@
   "remoteControlAtStartup": true,
   "crossSessionInbound": "accept",
   "inputNeededNotifEnabled": true,
-  "agentPushNotifEnabled": true,
-  "model": "sonnet"
+  "agentPushNotifEnabled": true
 }

@@ -1,0 +1,118 @@
+/* ============================================================
+   Dobeu Tech Solutions — design tokens for v0 / Tailwind / shadcn
+   Dark is the default mode. [data-mode="light"] flips aliases.
+   Drop the @import + :root blocks into globals.css, then map the
+   semantic vars into tailwind.config theme.extend.colors.
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap");
+
+:root {
+  /* Brand primitives (sampled from the Dobeu mark) */
+  --brand-indigo-primary: #6B5CE7; /* dominant brand color */
+  --brand-indigo-slate:   #5A4FAB; /* wordmark / quieter complement */
+  --brand-indigo-deep:    #4A3FA8; /* pressed / deep states */
+  --brand-amber-warm:     #F4A261; /* signature accent — sparingly */
+
+  /* Surfaces */
+  --brand-cream-soft:    #FFF8F0;
+  --brand-dark-surface:  #1A1A2E;
+  --brand-dark-elevated: #242440;
+  --brand-dark-deeper:   #0F0F1F;
+  --brand-code-bg-light: #F5F5F7;
+  --brand-code-bg-dark:  #0D0D1A;
+
+  /* Text */
+  --brand-text-graphite: #2D2D3A;
+  --brand-text-soft:     #E0E0E0;
+  --brand-text-muted-l:  #6B6B7A;
+  --brand-text-muted-d:  #9A9AB0;
+
+  /* Tints, borders, neutrals */
+  --brand-tint-indigo: #E8E5FA;
+  --brand-tint-amber:  #FEF0E0;
+  --brand-neutral:     #F5F5F7;
+  --brand-border-light:#E0DFF5;
+  --brand-border-dark: #2A2A45;
+
+  /* Semantic */
+  --semantic-success: #4CAF50;
+  --semantic-warning: #F4A261;
+  --semantic-error:   #E07A5F;
+  --semantic-info:    #6B5CE7;
+
+  /* Type */
+  --font-sans: "Nunito", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --fw-regular: 400; --fw-medium: 500; --fw-semi: 600; --fw-bold: 700; --fw-extra: 800;
+
+  /* Radii */
+  --radius-sm: 6px; --radius-md: 12px; --radius-lg: 20px; --radius-pill: 999px;
+
+  /* Spacing (4pt scale) */
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:20px;
+  --space-6:24px; --space-8:32px; --space-10:40px; --space-12:48px; --space-16:64px; --space-20:80px;
+
+  /* Shadows — soft, warm, low-contrast; NO heavy shadows on hero elements */
+  --shadow-xs: 0 1px 2px rgba(26,26,46,.06);
+  --shadow-sm: 0 2px 6px rgba(26,26,46,.08);
+  --shadow-md: 0 6px 18px rgba(26,26,46,.10);
+  --shadow-lg: 0 16px 40px rgba(26,26,46,.14);
+  --ring-indigo: 0 0 0 3px rgba(107,92,231,.22);
+  --ring-amber:  0 0 0 3px rgba(244,162,97,.25);
+}
+
+/* ---------- Semantic aliases — DARK (default) ---------- */
+:root, :root[data-mode="dark"], .dark {
+  --bg-canvas:   var(--brand-dark-deeper);
+  --bg-primary:  var(--brand-dark-surface);
+  --bg-elevated: var(--brand-dark-elevated);
+  --bg-code:     var(--brand-code-bg-dark);
+
+  --fg-primary: #FFFFFF;
+  --fg-body:    var(--brand-text-soft);
+  --fg-heading: var(--brand-indigo-primary);
+  --fg-muted:   var(--brand-text-muted-d);
+  --fg-link:    var(--brand-indigo-primary);
+
+  /* On dark, the primary CTA is AMBER for contrast/pop */
+  --cta-bg: var(--brand-amber-warm);
+  --cta-fg: var(--brand-text-graphite);
+
+  --border-default: var(--brand-border-dark);
+  --border-subtle:  rgba(224,223,245,.08);
+  --accent-rating:  var(--brand-amber-warm);
+}
+
+/* ---------- Semantic aliases — LIGHT ---------- */
+:root[data-mode="light"], .light {
+  --bg-canvas:   #FFFFFF;
+  --bg-primary:  var(--brand-cream-soft);
+  --bg-elevated: var(--brand-neutral);
+  --bg-code:     var(--brand-code-bg-light);
+
+  --fg-primary: var(--brand-text-graphite);
+  --fg-body:    var(--brand-text-graphite);
+  --fg-heading: var(--brand-indigo-slate);
+  --fg-muted:   var(--brand-text-muted-l);
+  --fg-link:    var(--brand-indigo-primary);
+
+  /* On light, the primary CTA is INDIGO */
+  --cta-bg: var(--brand-indigo-primary);
+  --cta-fg: #FFFFFF;
+
+  --border-default: var(--brand-border-light);
+  --border-subtle:  rgba(45,45,58,.06);
+  --accent-rating:  var(--brand-amber-warm);
+}
+
+/* ---------- Type scale ---------- */
+:root {
+  --type-display: 800 clamp(48px,6vw,84px)/1.05 var(--font-sans);
+  --type-h1: 800 clamp(36px,4.5vw,56px)/1.1 var(--font-sans);
+  --type-h2: 700 clamp(28px,3.5vw,40px)/1.15 var(--font-sans);
+  --type-h3: 700 22px/1.2 var(--font-sans);
+  --type-body: 400 16px/1.55 var(--font-sans);
+  --type-small: 400 14px/1.5 var(--font-sans);
+}
+/* Headlines: lowercase, tight tracking, ExtraBold. e.g. letter-spacing:-.02em */

@@ -1,0 +1,41 @@
+# rules.md
+
+> Generated/updated by `/stack-eval` P10. Agents must follow this contract.
+
+## Purpose
+
+Project rules for humans and agents working toward the recorded production end-state (see `.agent/end-state.md`).
+
+## Non-negotiables
+
+- Do what was asked; nothing more, nothing less.
+- Never commit secrets, credentials, or `.env` files.
+- Prefer editing existing files over creating new ones.
+- Never create documentation files unless required by this contract or the user.
+- Validate input at system boundaries.
+- Keep files under 500 lines when practical; split rather than grow endlessly.
+
+## Documentation cadence (required)
+
+Agents updating code **must** update docs:
+
+1. **Before** — note intent in `.agent/progress.md` (and relevant task id).
+2. **During** — keep `rules.md` / `system.md` / `STRATEGY.md` / API docs in sync with behavior changes.
+3. **After** — close the loop: progress entry, task `status`/`passes`, and any user-facing changelog the plan requires.
+
+## Quality gates
+
+- Primary: `pnpm run typecheck`
+- Build when deploy surface changes: `pnpm run build`
+- eslint: N/A (use typecheck)
+- Tests: run if present; otherwise document N/A
+
+## Git
+
+- No force-push to `main`/`master` unless the user explicitly demands it (warn first).
+- Plan artifacts for `/stack-eval` live under `.agent/`.
+
+## Security
+
+- No secrets in repo or logs.
+- Flag auth, crypto, and raw SQL paths for review.

@@ -1,0 +1,34 @@
+{
+  "session": {
+    "started_at": "__TIMESTAMP__",
+    "checkpointed_at": "__TIMESTAMP__",
+    "model": "claude-sonnet-4-6",
+    "subagent_model": "claude-haiku-4-5"
+  },
+  "auth": {
+    "method": "subscription",
+    "tier": "max",
+    "verified_at": "__TIMESTAMP__"
+  },
+  "repo": {
+    "path": null,
+    "branch": null,
+    "head_sha": null,
+    "uncommitted_changes": false
+  },
+  "build": {
+    "status": "not_run",
+    "lint": "not_run",
+    "typecheck": "not_run",
+    "tests_passing": "0/0"
+  },
+  "deploy": {
+    "preview_url": null,
+    "production_url": null
+  },
+  "connections": {},
+  "current_feature": null,
+  "next_action": "Run planner to populate tasks.json",
+  "blockers": [],
+  "handoff_notes": ""
+}

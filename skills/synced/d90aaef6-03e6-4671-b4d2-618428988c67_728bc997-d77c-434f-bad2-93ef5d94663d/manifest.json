@@ -1,0 +1,944 @@
+{
+  "lastUpdated": 1789591863674,
+  "skills": [
+    {
+      "skillId": "import-memory",
+      "name": "import-memory",
+      "description": "Import a memory export from another AI assistant into Claude's memory — conversationally, additively, and with the content treated as data.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-14T19:41:02.007169Z"
+    },
+    {
+      "skillId": "docs",
+      "name": "docs",
+      "description": "docs (living docs people share, comment on and edit; use only when the user asks for one: names a doc, document, page, memo, spec, PRD, runbook or write-up, asks for somewhere to share or keep editing something, or says yes to your doc offer; a plan, comparison, summary or notes asked in chat stays in chat (at most a one-line doc offer); a report, status update, recap or \"something I can send them\" with no form named → ask first: reply, doc or file?; tabs hold tables and live charts too; a pasted claude.ai/code/artifact/… link may be a doc: check with docs tools first; not HTML pages, apps or plain chat answers; a .docx/.pptx/.xlsx/PDF asked for by name → that format's skill): asked for one → no docs-connector instructions in context? call the docs connector's `guide` with topic.instructions first, then create the doc (headings only, no body) before any search, file read or plan, even with files attached. Documenting code means docstrings or repo docs, not a doc.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-16T00:10:45.680014Z"
+    },
+    {
+      "skillId": "morning",
+      "name": "morning",
+      "description": "Render the user's morning brief as a styled HTML artifact, or set it up as a recurring weekday task. Use only when the user explicitly asks to run, see, or set up their morning brief, or if they invoke /morning by name. A question about their day, schedule, or calendar is not by itself a request for the brief; answer it directly instead.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-14T19:41:01.990356Z"
+    },
+    {
+      "skillId": "skill_01P22a2BM2cZZgtCn9CcTfoN",
+      "name": "artistic",
+      "description": "High-contrast, expressive style with creative typography and bold color choices for visually striking interfaces.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:19:31.010053Z"
+    },
+    {
+      "skillId": "skill_01QDq4xYbVEyjhfskX4wohZT",
+      "name": "baldor-weekly-safety-update",
+      "description": "Build the BNY Weekly Safety Performance Update sent Monday 11am — incident dashboard, true-up, significant events, top-3 observations, owner-and-date action items, safety messages, and recognition.",
+      "source": "plugin",
+      "updatedAt": "2026-09-14T14:54:23.141485Z",
+      "backingPluginId": "plugin_0125CwJ6MBpFwoquAkTXA4WG"
+    },
+    {
+      "skillId": "skill_01TF9Nh27ZkugvWV4FGDHBXf",
+      "name": "bold",
+      "description": "Strong visual presence with heavyweight typography, high-contrast colors, and commanding layouts.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:19:03.568513Z"
+    },
+    {
+      "skillId": "skill_01AdhobLXtkMgfg9V9QKQyxQ",
+      "name": "agentic",
+      "description": "Conversational AI-first interface with minimal controls, clear outcomes, and delegated task flows for agentic workflows.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:19:27.227128Z"
+    },
+    {
+      "skillId": "skill_01XdSjLM3xCi2ZniJL4LWcKG",
+      "name": "ant",
+      "description": "Structured, enterprise-focused design system emphasizing clarity, consistency, and efficiency for data-dense web applications.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:19:29.368414Z"
+    },
+    {
+      "skillId": "skill_017tNmPz29xq7L673muTJHQT",
+      "name": "npm-package-publisher",
+      "description": "Scaffolds and publishes Node.js npm packages to the public npm registry (registry.npmjs.org) and/or GitHub Packages (npm.pkg.github.com) via GitHub Actions release-triggered workflows. Use this whenever the user wants to publish, release, ship, or deploy an npm package, set up CI publishing, create a release-package.yml workflow, scope a package under an owner, configure .npmrc or publishConfig registry routing, wire NODE_AUTH_TOKEN, NPM_TOKEN, or GITHUB_TOKEN auth, add npm provenance or trusted publishing, or turn a repo into a publishable package — even if they only say npm, GitHub Packages, release a package, or CI publish. Do NOT use for installing or consuming packages, PyPI or other non-npm registries, Docker or container image publishing, or generic GitHub Actions workflows unrelated to package publishing.",
+      "source": "custom",
+      "updatedAt": "2026-08-18T01:55:02.294892Z"
+    },
+    {
+      "skillId": "skill_01K2UHPAygH1Ezuqp8eAHbc2",
+      "name": "dobeu-eco-connector-audit",
+      "description": "Runs Jeremy Williams' weekly READ-ONLY connector & instrumentation audit for the Dobeu-tech-eco GitHub org — smoke-tests Amplitude, Mixpanel, Datadog, PostHog, Google Analytics, Intercom, and GitHub via Composio, rebuilds the repo x analytics-platform instrumentation matrix across the 14 active app repos, checks whether already-rolled-out apps are actually emitting events, appends a dated section to the analytics-observability goal-plan doc in the \"Ruflo my GitHub\" claude.ai Project, and pushes a notification only when something regressed. Use this skill whenever Jeremy asks to \"run the connector audit\", \"check the Dobeu instrumentation matrix\", \"audit analytics/observability across my repos\", \"see if PostHog is still broken\", or similar — even if he doesn't name every platform, and even outside the Monday schedule (e.g. \"run this now\", \"did anything change since last week\"). Never use this to install, merge, push, or delete anything — it is strictly a read-and-report skill.",
+      "source": "custom",
+      "updatedAt": "2026-08-18T22:57:17.950635Z"
+    },
+    {
+      "skillId": "skill_01R6QPx3YW82RuJGvF8RdPy8",
+      "name": "brutalism",
+      "description": "Raw, anti-design aesthetic inspired by concrete architecture with unadorned elements, jarring layouts, and functional minimalism.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:18:59.686096Z"
+    },
+    {
+      "skillId": "skill_011ND8VtKxTxoJ1qUfMmfMvK",
+      "name": "basic",
+      "description": "Print-inspired visual language for books, magazines, and reports with editorial grids and expressive typography.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:19:32.619616Z"
+    },
+    {
+      "skillId": "skill_01NesnFNEL9Wcy58UhEqKswy",
+      "name": "dobeu-v0-design",
+      "description": "Use this skill whenever the user is designing or building UI on v0.app (or any Next.js / React / Tailwind / shadcn-ui frontend) for the Dobeu brand (Dobeu Tech Solutions, dobeu.net). It applies the Dobeu design system as code-ready tokens, an expert designer-engineer workflow, accessibility standards, and ethical marketing-psychology principles. Trigger it for prompts like \"build a landing page\", \"design a hero\", \"make a pricing section\", \"v0 prompt for...\", \"Dobeu UI\", \"on-brand component\", \"dark mode page\", \"design system in Tailwind\", or any request to produce or critique branded web UI — even when the user doesn't say \"Dobeu\" or \"v0\" explicitly but is clearly working on Dobeu's site or in v0.",
+      "source": "custom",
+      "updatedAt": "2026-08-14T14:40:50.443095Z"
+    },
+    {
+      "skillId": "skill_01UY9QwUqGrPcHwRPvpbk51n",
+      "name": "skills-exporter",
+      "description": "Combine every skill an AI agent can access into one portable, multi-agent bundle and produce a downloadable .zip. Use this skill whenever the user wants to export, combine, bundle, back up, share, or migrate their skills — including any request to \"put all my skills into one skills.md\", \"export my skills to Codex / AGENTS.md\", \"make a skills.zip\", \"bundle my skills for v0.app\", \"combine all skills into one file\", \"give me a downloadable copy of my skills\", or move skills between Codex, Claude, skills.sh, and v0.app. The bundle contains a single combined skills.md index, a Codex-compatible AGENTS.md, individual per-skill SKILL.md folders (Claude / skills.sh layout), a v0.app name+description list, and a manifest.csv — delivered as one .zip.",
+      "source": "custom",
+      "updatedAt": "2026-08-15T16:28:31.744164Z"
+    },
+    {
+      "skillId": "skill_01Hqy2JK5ao1ujvJmzH19M4A",
+      "name": "cafe",
+      "description": "Cozy cafe-inspired interface with warm tones, soft typography, and clean layouts for a relaxed browsing experience.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:18:58.189677Z"
+    },
+    {
+      "skillId": "skill_01HGpW1MXCBuDSR2daSP2GvS",
+      "name": "clean",
+      "description": "Simplicity-focused design with ample whitespace, legible typography, and a limited color palette to reduce visual clutter.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:18:53.484898Z"
+    },
+    {
+      "skillId": "skill_01M8giph7QxFbwLRmDdD6eiR",
+      "name": "stack-eval",
+      "description": "End-to-end stack evaluation and production gap-closure orchestrator. Discovers current codebase state, plans the path to a production end-state (asks first; defaults to Vercel-oriented production), gates on human approval, commits/pushes, then executes via swarm with hard completion gates. Use when the user invokes /stack-eval, asks for stack evaluation, production readiness, gap analysis to prod/Vercel, or plan-then-swarm execution.",
+      "source": "custom",
+      "updatedAt": "2026-07-23T15:06:01.350715Z"
+    },
+    {
+      "skillId": "skill_01HAuNuK29gd1NrdgnBF3wgw",
+      "name": "contemporary",
+      "description": "Current-era minimalist design with bento grids, dark mode support, and high-performance accessible layouts.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:18:43.951680Z"
+    },
+    {
+      "skillId": "skill_017aTmzj2ixebJpDoAudr6C9",
+      "name": "dithered",
+      "description": "Dot-pattern rendering technique that simulates shades with a limited palette for nostalgic, retro, high-contrast visuals.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:18:35.987520Z"
+    },
+    {
+      "skillId": "skill_01TmRQS82WVocgxA1kx1HhzC",
+      "name": "claymorphism",
+      "description": "Soft, rounded 3D-like shapes mimicking malleable clay with playful, puffy elements and colorful surfaces.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:18:52.021193Z"
+    },
+    {
+      "skillId": "skill_01Qo7VrSrV7BmAkQSAdvKGfQ",
+      "name": "corporate",
+      "description": "Professional, brand-aligned design with structured grids, minimalist layouts, and consistent enterprise patterns.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:18:38.735186Z"
+    },
+    {
+      "skillId": "skill_0193PQtpJ3K48jua9L1sfLRs",
+      "name": "cosmic",
+      "description": "Futuristic sci-fi aesthetic with dark themes, vibrant neon accents, and immersive spatial elements.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:18:37.969066Z"
+    },
+    {
+      "skillId": "skill_01Af1zysSfAJbco3oacQhbLN",
+      "name": "creative",
+      "description": "Playful, character-driven design with expressive typography and bold graphics for landing pages and creative projects.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:18:34.030956Z"
+    },
+    {
+      "skillId": "skill_01AbdN2Mfkhky5HeZhajngR2",
+      "name": "colorful",
+      "description": "Vibrant, high-contrast palettes and gradients for engaging, memorable, and modern user experiences.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:18:45.699102Z"
+    },
+    {
+      "skillId": "skill_01YMEs9okvSCkD4qryXLd6Yv",
+      "name": "codex",
+      "description": "A radically minimal, blank-canvas interface built as a pure edge-to-edge surface, with almost no color and typography carrying the visual weight. Black serves as the only filled color, the only divider, and the sole surface tone cards.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:18:47.050450Z"
+    },
+    {
+      "skillId": "skill_01W8vjiB8PQP4C2rEfmZb3rc",
+      "name": "doodle",
+      "description": "Hand-drawn, sketch-like style with doodles, handwritten fonts, and imperfect lines for a playful, informal feel.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:18:31.298032Z"
+    },
+    {
+      "skillId": "skill_013Gp7AWhtetD3yroLaLhonV",
+      "name": "editorial",
+      "description": "Magazine-inspired editorial layout with refined serif typography, structured grids, and elegant reading experiences.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:18:26.349896Z"
+    },
+    {
+      "skillId": "skill_017gq8LjbDBDFYqSNAdRz5qi",
+      "name": "enterprise",
+      "description": "Dark-themed cloud-platform aesthetic with modular grids, glass-like panels, and strong data hierarchy for productivity dashboards.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:18:23.791862Z"
+    },
+    {
+      "skillId": "skill_01MMQYdhJo9hWE3SC5eZJviR",
+      "name": "dramatic",
+      "description": "High-contrast, theatrical design with bold layouts, immersive visuals, and unconventional compositions that command attention.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:18:30.010519Z"
+    },
+    {
+      "skillId": "skill_01GuoJsn9782DxPMBZZtofzG",
+      "name": "expressive",
+      "description": "Vibrant, personality-driven design with bold colors, playful graphics, and dynamic layouts that balance creativity with structure.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:18:22.615793Z"
+    },
+    {
+      "skillId": "skill_0197n4rmfaaT8mNWBBPikvW3",
+      "name": "fantasy",
+      "description": "Game-inspired fantasy aesthetic with bold, premium visuals, rich color palettes, and immersive thematic elements.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:18:20.896500Z"
+    },
+    {
+      "skillId": "skill_019V4DzUg3dupLaLAEAdHE1o",
+      "name": "gradient",
+      "description": "Smooth color transitions and gradient-rich surfaces for modern, playful interfaces with visual depth.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:17:58.742175Z"
+    },
+    {
+      "skillId": "skill_019995jZ9fUmxkPdwvMYYmCH",
+      "name": "immersive",
+      "description": "An immersive, interactive, exhibit-style interface that blends storytelling, animation, and gamified elements to create a playful, experience-driven journey. The entire app sits on a single continuous brand-colored canvas (deep green)",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:17:57.535254Z"
+    },
+    {
+      "skillId": "skill_01AiZdFxxcDqz3ojENyc4URR",
+      "name": "fiction",
+      "description": "A playful, energetic, cartoonesque interface inspired by friendly children's-book illustrations — warm cream backgrounds, big bold custom display typography, saturated brand color blocks, thick black outlines, generously rounded shapes",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:18:11.614132Z"
+    },
+    {
+      "skillId": "skill_01PubE3Kv98HXArMaobvtgww",
+      "name": "friendly",
+      "description": "Approachable, intuitive design with rounded elements, ample whitespace, and soft pastel color palettes.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:18:04.890398Z"
+    },
+    {
+      "skillId": "skill_01HsEvRAjG2TohoZFgBDopBZ",
+      "name": "flat",
+      "description": "Two-dimensional minimalist style with vibrant colors, clean typography, and no 3D effects for fast, user-friendly interfaces.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:18:09.877020Z"
+    },
+    {
+      "skillId": "skill_01TvsEDNV9Yn983Vd48M3mZz",
+      "name": "glassmorphism",
+      "description": "Frosted glass effect with translucent layers, subtle blur, and luminous borders for depth and modern elegance.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:18:07.739328Z"
+    },
+    {
+      "skillId": "skill_01UravZkbHxVNqPeEqpUbAx7",
+      "name": "geometric",
+      "description": "Geometric, structured design with clean typography, neutral colors, precise shapes, and intuitive layouts that stay out of the way.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:18:08.228554Z"
+    },
+    {
+      "skillId": "skill_011N2AMmM8NF93Sw7VpXuih4",
+      "name": "futuristic",
+      "description": "Forward-looking design with tech-inspired typography, modern layouts, and a sleek, innovation-driven aesthetic.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:18:00.631851Z"
+    },
+    {
+      "skillId": "skill_01YMN3hyPq1iboLoCn4JWi2V",
+      "name": "levels",
+      "description": "Conversion-focused design that removes friction and guides users toward action through clarity, trust, and speed.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:17:56.394824Z"
+    },
+    {
+      "skillId": "skill_01Ek9qR2nqMS1WE23Rt3zamR",
+      "name": "impeccable",
+      "description": "A modern, graphic, editorial-poster aesthetic — warm and confident — built on alternating cream and burnt orange sections, an amber brand color.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:17:54.691804Z"
+    },
+    {
+      "skillId": "skill_01DiJFFwNymxXjnJe828khZL",
+      "name": "minimal",
+      "description": "Stripped-back design emphasizing whitespace, clean typography, and restrained color for maximum clarity and focus.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:17:50.330013Z"
+    },
+    {
+      "skillId": "skill_01S9vzzcHdrs5Bg3vXyXZ89L",
+      "name": "matrix",
+      "description": "A cyber-slick, dark-only Matrix-inspired interface defined by minimalist fashion, high-tech digital elements",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:17:48.647686Z"
+    },
+    {
+      "skillId": "skill_01QGSDMjWCmsD5XkCwS2zwer",
+      "name": "modern",
+      "description": "Contemporary editorial style with serif typography, minimal palettes, and clean layouts for polished digital products.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:17:25.977292Z"
+    },
+    {
+      "skillId": "skill_01Luv53wtewW85cjp3aBqtDC",
+      "name": "mono",
+      "description": "Monospace-driven, matrix-inspired design with high-contrast elements, compact density, and a hacker-chic aesthetic.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:17:24.331678Z"
+    },
+    {
+      "skillId": "skill_01BaTG3q2NanmdccusKGaj8Z",
+      "name": "paper",
+      "description": "Paper-textured, print-inspired design with minimal colors, clean serif/sans typography, and tactile surface qualities.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:17:12.882691Z"
+    },
+    {
+      "skillId": "skill_011EAqaM3wf5RFTnsjucvaj4",
+      "name": "power",
+      "description": "High-end dark aesthetic with bold headings, monochromatic palette, and premium feel for premium brand experiences.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:17:10.015046Z"
+    },
+    {
+      "skillId": "skill_01MfEEtLmVdc5LUba883H5un",
+      "name": "professional",
+      "description": "Polished, business-ready design with modern typography, structured layouts, and a trustworthy visual identity.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:17:04.309238Z"
+    },
+    {
+      "skillId": "skill_01H4gay1fN7cjdx4BCKLBHpa",
+      "name": "refined",
+      "description": "Carefully curated, modern minimal style with elegant serif typography and understated, sophisticated palettes.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:16:56.138600Z"
+    },
+    {
+      "skillId": "skill_01E6L3494sitcsXv68dg2w5P",
+      "name": "neobrutalism",
+      "description": "Modern take on brutalism with bold borders, vivid accent colors, and raw, high-contrast layouts on warm surfaces.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:17:22.755613Z"
+    },
+    {
+      "skillId": "skill_01GgVjm7Gnu9k5e6NPMCFd6e",
+      "name": "pulse",
+      "description": "Dynamic, vibrant style with thick borders, geometric shapes, high-contrast colors, and expressive typography conveying motion and vitality.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:17:06.239014Z"
+    },
+    {
+      "skillId": "skill_01DmvRSaPhtDpd1UJCSwwBKe",
+      "name": "pacman",
+      "description": "Retro arcade-inspired design with pixel fonts, dotted borders, playful high-contrast colors, and 8-bit game aesthetics.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:17:14.375734Z"
+    },
+    {
+      "skillId": "skill_016ma8oH63fqRr2vnmq6rxaF",
+      "name": "perspective",
+      "description": "Spatial depth design with isometric views, vanishing points, and layered elements that guide attention through 3D-like realism.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:17:11.249840Z"
+    },
+    {
+      "skillId": "skill_011UingXfAg2hzwDkWWTY5Yf",
+      "name": "retro",
+      "description": "Throwback design with vintage-inspired typography, high-contrast retro palettes, and nostalgic visual elements.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:16:37.434484Z"
+    },
+    {
+      "skillId": "skill_013pohbR8gUUAdsidXWu7D2y",
+      "name": "material",
+      "description": "Google's Material Design with layered surfaces, dynamic theming, built-in motion, and responsive cross-platform patterns.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:16:43.853093Z"
+    },
+    {
+      "skillId": "skill_014EVFo5PV4ZYppVCXnrxzcX",
+      "name": "premium",
+      "description": "Apple-inspired premium aesthetic with precise spacing, modern typography, and a refined, polished visual language.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:17:08.415639Z"
+    },
+    {
+      "skillId": "skill_01Rcxajnwk2ziASWBb3vRZem",
+      "name": "neumorphism",
+      "description": "Soft, extruded UI elements with inner and outer shadows on monochromatic surfaces for a tactile, embedded look.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:17:16.457174Z"
+    },
+    {
+      "skillId": "skill_01EDiR4P1t4FQ8cfQjYn9smq",
+      "name": "lingo",
+      "description": "Playful, minimal design with bright colors, rounded shapes, tactile 3D borders, and friendly illustrations for approachable interfaces.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:16:42.316405Z"
+    },
+    {
+      "skillId": "skill_014yWu9p3NYjH273xyNm8Zwk",
+      "name": "neon",
+      "description": "Electric neon glow effects with high-contrast color pairings for bold, attention-grabbing interfaces.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:17:20.044922Z"
+    },
+    {
+      "skillId": "skill_017PfsdPRukTZHYVEL3hpWUL",
+      "name": "roku",
+      "description": "App dashboard with purple-themed aesthetic, top-bar navigation, card-based layouts, and developer-first workflows.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:16:33.302827Z"
+    },
+    {
+      "skillId": "skill_01ApTySWg5wgAAbA3WKF5T2Y",
+      "name": "tetris",
+      "description": "Classic block-game inspired design with playful colors, bold display fonts, and compact, high-energy layouts.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:15:58.518493Z"
+    },
+    {
+      "skillId": "skill_01PjGhGxH7kuU9ZQKNyf2qn2",
+      "name": "square",
+      "description": "Graceful, refined aesthetic with delicate typography, minimal palettes, and polished layouts that exude sophistication.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:16:04.908340Z"
+    },
+    {
+      "skillId": "skill_01NYFDLdX94rFbby8498rrJh",
+      "name": "riso",
+      "description": "A playful, joyful, two-color risograph print aesthetic built on a single warm off-white paper surface running through every section",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:16:31.773445Z"
+    },
+    {
+      "skillId": "skill_01QiYRhSE2VdZa6wqNk7vV2c",
+      "name": "stitch",
+      "description": "Clean, high-contrast enterprise design for data-driven workflows with intuitive drag-and-drop patterns and structured layouts.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:16:03.692850Z"
+    },
+    {
+      "skillId": "skill_014Yj5nxDgnWrzHmhpnUpgN3",
+      "name": "vibrant",
+      "description": "Lively, colorful design with bold playful typography, warm accents, and dynamic visual energy.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:15:55.729037Z"
+    },
+    {
+      "skillId": "skill_01Ue9QjRRjr35pN8siLyCKsM",
+      "name": "sega",
+      "description": "A playful, arcade-inspired interface for games — built on the VT323 pixel typeface, hard-edged 0px corners, chunky pill buttons that physically press into solid offset blocks",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:16:24.292614Z"
+    },
+    {
+      "skillId": "skill_01XduMp5eV2nM1Jfqdd3EYfn",
+      "name": "vintage",
+      "description": "1950s-1990s nostalgia with skeuomorphic touches, grainy textures, retro color palettes, and pixel-style typography.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:15:53.763906Z"
+    },
+    {
+      "skillId": "skill_01LyJoSzW6w2nrip7j3yBmrH",
+      "name": "spacious",
+      "description": "Generous whitespace, consistent padding, and grid-based layouts for clean, readable, and breathing interfaces.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:16:06.987530Z"
+    },
+    {
+      "skillId": "skill_01Fu2pih7ozhFgXy9F7XyjA9",
+      "name": "storytelling",
+      "description": "Narrative-driven design using visuals, copy, and interaction to guide users through engaging, emotionally resonant journeys.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:16:02.235888Z"
+    },
+    {
+      "skillId": "skill_01QejqnsXWD5FReVkWVBbtsz",
+      "name": "sleek",
+      "description": "Modern minimalist aesthetic with clean lines, intentional color palette, subtle interactions, and consistent spacing.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:16:10.715549Z"
+    },
+    {
+      "skillId": "skill_01SrgQNAnrgFRQpZmvgyfnWs",
+      "name": "terracotta",
+      "description": "A sun-baked, clay-toned editorial interface built on warm cream surfaces, ink-brown headlines set in a display serif, and a single terracotta accent.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:16:00.865460Z"
+    },
+    {
+      "skillId": "skill_01RnrY3jc3BE2c7HpGDGkVTW",
+      "name": "skeumorphism",
+      "description": "Real-world mimicry with textured surfaces, 3D effects, and familiar physical metaphors for intuitive digital interfaces.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:16:12.996211Z"
+    },
+    {
+      "skillId": "skill_011AUmrXVdn7PA478EMkaYSC",
+      "name": "shadcn",
+      "description": "Shadcn/ui-inspired design with minimal, clean components, monochrome palette, and utility-first patterns.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:16:30.229102Z"
+    },
+    {
+      "skillId": "skill_01SQx8yvA4Gt1T6coLigJEKP",
+      "name": "sketch",
+      "description": "A friendly, hand-drawn sketch interface inspired by pencil illustrations on warm cream paper. Soft teal brand accents, hand-written display headings, rounded pill controls.",
+      "source": "custom",
+      "updatedAt": "2026-07-07T18:16:20.855974Z"
+    },
+    {
+      "skillId": "skill_0154MANZpzx2wE5aJECDNrtE",
+      "name": "herdr",
+      "description": "Control herdr from inside it. Manage workspaces and tabs, split panes, spawn agents, read output, and wait for state changes — all via CLI commands that talk to the running herdr instance over a local unix socket. Use when running inside herdr (HERDR_ENV=1).",
+      "source": "custom",
+      "updatedAt": "2026-06-26T10:48:26.181364Z"
+    },
+    {
+      "skillId": "skill_01LWEWbCci2PcNzgSFrbSQJh",
+      "name": "domain-name-brainstormer",
+      "description": "Generates creative domain name ideas for your project and checks availability across multiple TLDs (.com, .io, .dev, .ai, etc.). Saves hours of brainstorming and manual checking.",
+      "source": "custom",
+      "updatedAt": "2026-06-26T09:55:31.901619Z"
+    },
+    {
+      "skillId": "skill_01PnHiPzS5Q8FiSCGkuvSEra",
+      "name": "install-rho",
+      "description": "Install and configure Rho from scratch (Doom-style init.toml + sync). Only prereq: a coding agent that can run shell commands.",
+      "source": "custom",
+      "updatedAt": "2026-06-26T10:48:24.973389Z"
+    },
+    {
+      "skillId": "skill_0116ZKPgbjCoWFg2f9scpAmT",
+      "name": "lead-research-assistant",
+      "description": "Identifies high-quality leads for your product or service by analyzing your business, searching for target companies, and providing actionable contact strategies. Perfect for sales, business development, and marketing professionals.",
+      "source": "custom",
+      "updatedAt": "2026-06-26T09:51:42.373492Z"
+    },
+    {
+      "skillId": "skill_01AV9BeYCAjuJNS1R6cBGiau",
+      "name": "template-skill",
+      "description": "Replace with description of the skill and when Claude should use it.",
+      "source": "custom",
+      "updatedAt": "2026-06-26T09:52:32.043715Z"
+    },
+    {
+      "skillId": "skill_01RJKNNxRGdbNSyTAs4Ph3mi",
+      "name": "skill-share",
+      "description": "A skill that creates new Claude skills and automatically shares them on Slack using Rube for seamless team collaboration and skill discovery.",
+      "source": "custom",
+      "updatedAt": "2026-06-26T09:52:17.109693Z"
+    },
+    {
+      "skillId": "skill_011HoZ8g7CjR61wv2HjKVS9u",
+      "name": "video-downloader",
+      "description": "Download YouTube videos with customizable quality and format options. Use this skill when the user asks to download, save, or grab YouTube videos. Supports various quality settings (best, 1080p, 720p, 480p, 360p), multiple formats (mp4, webm, mkv), and audio-only downloads as MP3.",
+      "source": "custom",
+      "updatedAt": "2026-06-26T09:52:33.693148Z"
+    },
+    {
+      "skillId": "skill_01LaSjZdLBoLaDJAvzWRtZjn",
+      "name": "lettabot",
+      "description": "Set up and run LettaBot - a multi-channel AI assistant for Telegram, Slack, Discord, WhatsApp, and Signal. Supports both interactive wizard and non-interactive (agent-friendly) configuration.",
+      "source": "custom",
+      "updatedAt": "2026-06-26T10:48:24.222603Z"
+    },
+    {
+      "skillId": "skill_01USzQxu4PcwAmf3RmKuKLD8",
+      "name": "image-enhancer",
+      "description": "Improves the quality of images, especially screenshots, by enhancing resolution, sharpness, and clarity. Perfect for preparing images for presentations, documentation, or social media posts.",
+      "source": "custom",
+      "updatedAt": "2026-06-26T09:55:44.480405Z"
+    },
+    {
+      "skillId": "skill_01VMkS7sgKiLSYi9ytKvfWWe",
+      "name": "meeting-insights-analyzer",
+      "description": "Analyzes meeting transcripts and recordings to uncover behavioral patterns, communication insights, and actionable feedback. Identifies when you avoid conflict, use filler words, dominate conversations, or miss opportunities to listen. Perfect for professionals seeking to improve their communication and leadership skills.",
+      "source": "custom",
+      "updatedAt": "2026-06-26T09:51:54.631324Z"
+    },
+    {
+      "skillId": "skill_01LJHGWWL6FqaZUUXwpQJchE",
+      "name": "raffle-winner-picker",
+      "description": "Picks random winners from lists, spreadsheets, or Google Sheets for giveaways, raffles, and contests. Ensures fair, unbiased selection with transparency.",
+      "source": "custom",
+      "updatedAt": "2026-06-26T09:52:16.199743Z"
+    },
+    {
+      "skillId": "skill_019uTWxEacHAKLDqatnRXnxW",
+      "name": "twitter-algorithm-optimizer",
+      "description": "Analyze and optimize tweets for maximum reach using Twitter's open-source algorithm insights. Rewrite and edit user tweets to improve engagement and visibility based on how the recommendation system ranks content.",
+      "source": "custom",
+      "updatedAt": "2026-06-26T09:52:32.887412Z"
+    },
+    {
+      "skillId": "skill_012PqNyfzbK4QAHcVsFBNKJH",
+      "name": "tailored-resume-generator",
+      "description": "Analyzes job descriptions and generates tailored resumes that highlight relevant experience, skills, and achievements to maximize interview chances",
+      "source": "custom",
+      "updatedAt": "2026-06-26T09:52:18.056621Z"
+    },
+    {
+      "skillId": "skill_01EnEHBS8SqoyY3GLpZ7Dawn",
+      "name": "langsmith-fetch",
+      "description": "Debug LangChain and LangGraph agents by fetching execution traces from LangSmith Studio. Use when debugging agent behavior, investigating errors, analyzing tool calls, checking memory operations, or examining agent performance. Automatically fetches recent traces and analyzes execution patterns. Requires langsmith-fetch CLI installed.",
+      "source": "custom",
+      "updatedAt": "2026-06-26T09:51:41.566154Z"
+    },
+    {
+      "skillId": "skill_01Nf66ornZ6uqEBR7qKY2qk2",
+      "name": "webapp-testing",
+      "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.",
+      "source": "custom",
+      "updatedAt": "2026-06-26T09:52:45.701054Z"
+    },
+    {
+      "skillId": "skill_01NhSP8eUwKJYbz14k19V1PW",
+      "name": "invoice-organizer",
+      "description": "Automatically organizes invoices and receipts for tax preparation by reading messy files, extracting key information, renaming them consistently, and sorting them into logical folders. Turns hours of manual bookkeeping into minutes of automated organization.",
+      "source": "custom",
+      "updatedAt": "2026-06-26T09:51:40.706400Z"
+    },
+    {
+      "skillId": "skill_01NtCzYV47pGACQpeNoohcWy",
+      "name": "content-research-writer",
+      "description": "Assists in writing high-quality content by conducting research, adding citations, improving hooks, iterating on outlines, and providing real-time feedback on each section. Transforms your writing process from solo effort to collaborative partnership.",
+      "source": "custom",
+      "updatedAt": "2026-06-26T09:49:59.458292Z"
+    },
+    {
+      "skillId": "skill_01DuwQrK44P3KTnfsVr6Ldw7",
+      "name": "file-organizer",
+      "description": "Intelligently organizes your files and folders across your computer by understanding context, finding duplicates, suggesting better structures, and automating cleanup tasks. Reduces cognitive load and keeps your digital workspace tidy without manual effort.",
+      "source": "custom",
+      "updatedAt": "2026-06-26T09:46:44.737400Z"
+    },
+    {
+      "skillId": "skill_018t2gebKwFwt9RxUodWRsk5",
+      "name": "expert-implementer-style",
+      "description": "Custom writing style: Expert Implementer. Apply only when the user explicitly requests this skill by its exact name 'expert-implementer-style'.",
+      "source": "custom",
+      "updatedAt": "2026-06-07T04:45:25.103707Z"
+    },
+    {
+      "skillId": "skill_017qzxaxAMEVrTUTkS3XCmGE",
+      "name": "developer-growth-analysis",
+      "description": "Analyzes your recent Claude Code chat history to identify coding patterns, development gaps, and areas for improvement, curates relevant learning resources from HackerNews, and automatically sends a personalized growth report to your Slack DMs.",
+      "source": "custom",
+      "updatedAt": "2026-06-26T09:50:00.256642Z"
+    },
+    {
+      "skillId": "skill_01TGAiPyyPvGf3TZKdXkAHZB",
+      "name": "tech-venture-architect-style",
+      "description": "Custom writing style: Tech Venture Architect. Apply only when the user explicitly requests this skill by its exact name 'tech-venture-architect-style'.",
+      "source": "custom",
+      "updatedAt": "2026-06-07T04:14:04.474408Z"
+    },
+    {
+      "skillId": "skill_018mR1ytKLneKgQU9sDF5rYY",
+      "name": "expert-practitioner-style",
+      "description": "Custom writing style: Expert Practitioner. Apply only when the user explicitly requests this skill by its exact name 'expert-practitioner-style'.",
+      "source": "custom",
+      "updatedAt": "2026-06-07T04:20:52.159375Z"
+    },
+    {
+      "skillId": "skill_01DKNvuMsSkonJ6GQ5RFNjZE",
+      "name": "competitive-ads-extractor",
+      "description": "Extracts and analyzes competitors' ads from ad libraries (Facebook, LinkedIn, etc.) to understand what messaging, problems, and creative approaches are working. Helps inspire and improve your own ad campaigns.",
+      "source": "custom",
+      "updatedAt": "2026-06-26T09:49:58.638234Z"
+    },
+    {
+      "skillId": "skill_01WoUvaP6gSvV6o2i317bQri",
+      "name": "connect-apps",
+      "description": "Connect Claude to external apps like Gmail, Slack, GitHub. Use this skill when the user wants to send emails, create issues, post messages, or take actions in external services.",
+      "source": "custom",
+      "updatedAt": "2026-06-26T09:48:02.035898Z"
+    },
+    {
+      "skillId": "skill_01W7uwxtigX42piJUYpqVp9X",
+      "name": "straight-talk-nutritionist-style",
+      "description": "Custom writing style: Straight-Talk Nutritionist. Apply only when the user explicitly requests this skill by its exact name 'straight-talk-nutritionist-style'.",
+      "source": "custom",
+      "updatedAt": "2026-06-07T04:32:54.001776Z"
+    },
+    {
+      "skillId": "skill_01EnqFPQHcJ3sosRbQUapMmR",
+      "name": "tech-solutions-architect-style",
+      "description": "Custom writing style: Tech Solutions Architect. Apply only when the user explicitly requests this skill by its exact name 'tech-solutions-architect-style'.",
+      "source": "custom",
+      "updatedAt": "2026-06-07T03:42:08.929038Z"
+    },
+    {
+      "skillId": "skill_015mTM7qpS4WGgeLjS3E7sjE",
+      "name": "changelog-generator",
+      "description": "Automatically creates user-facing changelogs from git commits by analyzing commit history, categorizing changes, and transforming technical commits into clear, customer-friendly release notes. Turns hours of manual changelog writing into minutes of automated generation.",
+      "source": "custom",
+      "updatedAt": "2026-06-26T09:48:00.271681Z"
+    },
+    {
+      "skillId": "skill_012o8o2ZhSGCJj2yBNiYtSEJ",
+      "name": "artifacts-builder",
+      "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.",
+      "source": "custom",
+      "updatedAt": "2026-06-26T09:47:24.927422Z"
+    },
+    {
+      "skillId": "skill_018YYen5H2YczLcStzCbovji",
+      "name": "dobeu-figma-make-design",
+      "description": "Use this skill whenever the user is designing or building in Figma Make (Figma's prompt-to-code / AI app builder) for the Dobeu brand (Dobeu Tech Solutions, dobeu.net). It applies the Dobeu design system as code-ready tokens, an expert designer-engineer workflow, accessibility standards, and ethical marketing-psychology principles — and it knows how to use Figma Make's strengths: turning a pasted Figma frame or design-system selection into a working, on-brand React + Tailwind app. Trigger it for prompts like \"make a Dobeu landing page in Figma Make\", \"turn this frame into a working prototype\", \"build a hero from my Figma design\", \"Figma Make prompt for...\", \"make this interactive\", \"on-brand component\", or any request to generate or critique branded web UI inside Figma Make — even when the user doesn't say \"Dobeu\" explicitly but is clearly working on Dobeu's product.",
+      "source": "custom",
+      "updatedAt": "2026-06-19T02:02:18.848751Z"
+    },
+    {
+      "skillId": "skill_01H2btupSkPUWU2hRt1wQgXd",
+      "name": "connect",
+      "description": "Connect Claude to any app. Send emails, create issues, post messages, update databases - take real actions across Gmail, Slack, GitHub, Notion, and 1000+ services.",
+      "source": "custom",
+      "updatedAt": "2026-06-26T09:48:01.188742Z"
+    },
+    {
+      "skillId": "skill_01XbjxBq9ruDA8Y6Y4Tkjh8b",
+      "name": "grok-review",
+      "description": "Send the current artifact, plan, or piece of work to Grok (a different model family) for an independent, adversarial second opinion, then surface Grok's review and structured verdict. Use this whenever the user asks for \"Grok's take\", \"a second set of eyes\", \"cross-review with Grok\", \"have Grok check this\", \"push this to Grok\", \"what does Grok think\", or wants a planner/evaluator ensemble where Claude proposes and Grok critiques (or vice versa). Trigger it for code, plans, architecture decisions, SOPs, specs, and document outlines — even when the user doesn't say the word \"skill\". Requires a Claude Code or Cowork session with the `grok` CLI installed, an XAI_API_KEY, or a Composio xAI bridge; it does not run in plain claude.ai chat.",
+      "source": "custom",
+      "updatedAt": "2026-06-20T01:11:30.165321Z"
+    },
+    {
+      "skillId": "skill_01LcLCVLfw7W4W4XKPaJXuqf",
+      "name": "ui-ux-design-maestro-style",
+      "description": "Custom writing style: UI / UX Design Maestro. Apply only when the user explicitly requests this skill by its exact name 'ui-ux-design-maestro-style'.",
+      "source": "custom",
+      "updatedAt": "2026-06-07T03:03:18.641482Z"
+    },
+    {
+      "skillId": "skill_01LmcFeqNFVDuk1CoRdfCRHV",
+      "name": "growth-strategist-north-star-style",
+      "description": "Custom writing style: Growth Strategist - North Star. Apply only when the user explicitly requests this skill by its exact name 'growth-strategist-north-star-style'.",
+      "source": "custom",
+      "updatedAt": "2026-06-07T03:02:43.304813Z"
+    },
+    {
+      "skillId": "skill_01MaSoPtGjEmitC8GGhUfbtj",
+      "name": "deal-architect-style",
+      "description": "Custom writing style: Deal Architect. Apply only when the user explicitly requests this skill by its exact name 'deal-architect-style'.",
+      "source": "custom",
+      "updatedAt": "2026-06-07T03:13:26.175444Z"
+    },
+    {
+      "skillId": "skill_016ttn8k56XkAVx8Sf7kiUdJ",
+      "name": "executive-strategist-style",
+      "description": "Custom writing style: Executive Strategist. Apply only when the user explicitly requests this skill by its exact name 'executive-strategist-style'.",
+      "source": "custom",
+      "updatedAt": "2026-06-07T03:19:59.304635Z"
+    },
+    {
+      "skillId": "skill_01WPNJq1A4ECxQyFv2FxEjKh",
+      "name": "diligent-investigator-style",
+      "description": "Custom writing style: Diligent Investigator. Apply only when the user explicitly requests this skill by its exact name 'diligent-investigator-style'.",
+      "source": "custom",
+      "updatedAt": "2026-06-07T03:16:39.885816Z"
+    },
+    {
+      "skillId": "skill_01R1GfUSAH2xXGLmKwmbYLuD",
+      "name": "data-storyteller-style",
+      "description": "Custom writing style: Data Storyteller. Apply only when the user explicitly requests this skill by its exact name 'data-storyteller-style'.",
+      "source": "custom",
+      "updatedAt": "2026-06-07T03:01:51.012628Z"
+    },
+    {
+      "skillId": "skill_019to5JAw4cVdM8t5tsymt5B",
+      "name": "content-craft-pro-style",
+      "description": "Custom writing style: Content Craft Pro. Apply only when the user explicitly requests this skill by its exact name 'content-craft-pro-style'.",
+      "source": "custom",
+      "updatedAt": "2026-06-07T03:03:28.225736Z"
+    },
+    {
+      "skillId": "learn",
+      "name": "learn",
+      "description": "Use this skill when the user wants intellectual understanding — learning how or why something works, not getting a task done or soliciting Claude's judgment.\n\nTrigger for:\n- Explicit learning requests: teach, explain, ELI5, walk me through, quiz me, flashcards, \"I'm rusty on\"; definitions (\"what is X\")\n- Terse concept names implying \"help me understand this\": \"Galois theory,\" \"transformers, from scratch\"\n- Confusion signals: \"won't stick,\" \"keep mixing these up,\" \"not getting it\"\n- Learning-path questions: prerequisites, sequencing, what to study before X\n- Conceptual questions about mechanisms, causes, or dynamics\n\nDon't trigger for:\n- Tasks: coding, writing, calculation, translation, factual lookup, news updates\n- Personal troubleshooting; resource/textbook recommendations\n- Claude's evaluative verdict: opinion prompts (\"do you think X\", \"settle this\", \"honest take\", \"is X dead / still taken seriously\") and interpretive takes (\"was X really as harsh as people say\")\n",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-14T19:41:01.663866Z"
+    },
+    {
+      "skillId": "skill_01LMNTvF3Foo1NhM9HrooJbT",
+      "name": "systematic-insight-style",
+      "description": "Custom writing style: Systematic Insight. Apply only when the user explicitly requests this skill by its exact name 'systematic-insight-style'.",
+      "source": "custom",
+      "updatedAt": "2026-06-06T20:18:52.860684Z"
+    },
+    {
+      "skillId": "skill_017RNXRitfSLKQvDyiekHeqa",
+      "name": "compliance-authority-style",
+      "description": "Custom writing style: Compliance Authority. Apply only when the user explicitly requests this skill by its exact name 'compliance-authority-style'.",
+      "source": "custom",
+      "updatedAt": "2026-06-06T19:47:25.036686Z"
+    },
+    {
+      "skillId": "skill_014pUjEh67JEG2MsRqRyBKTf",
+      "name": "expert-auditor-style",
+      "description": "Custom writing style: Expert Auditor. Apply only when the user explicitly requests this skill by its exact name 'expert-auditor-style'.",
+      "source": "custom",
+      "updatedAt": "2026-06-06T20:01:29.979301Z"
+    },
+    {
+      "skillId": "skill_014CeoWkELaHaHZynY9j8agL",
+      "name": "baldor-create-sop",
+      "description": "Create Baldor Specialty Foods SOP documents (.docx) using standardized corporate formatting — Aptos font, CONFIDENTIAL footer, versioned header, and structured sections (Purpose, Scope, Responsibilities, Procedure, Documentation & Records, Governance). Use this skill whenever the user mentions 'Baldor SOP', 'SOP for Baldor', 'standard operating procedure' in a Baldor context, 'Baldor document', 'Baldor policy', 'Baldor procedure', or asks to convert any content into a Baldor-formatted Word document. Also trigger when the user references /Baldor-Create-SOP or asks to create safety, compliance, training, or operational documents for Baldor Specialty Foods. This skill applies to ALL output surfaces — Claude.ai chat, Claude Code, Cowork, Claude for Word, and any environment with file-creation capability.",
+      "source": "custom",
+      "updatedAt": "2026-04-21T15:03:33.796503Z"
+    },
+    {
+      "skillId": "skill_01RfAjFdpMxj8raReRaKmPRc",
+      "name": "notebooklm",
+      "description": "Ingest Dobeu Tech Solutions session artifacts into the canonical NotebookLM notebook for citation-grounded retrieval. Invoke whenever the user types /notebooklm, at any session checkpoint, or when the session-exit checklist fires. Identifies new/modified checkpoint files, Implementation/ plan docs, runbooks, prompt files, and session-export markdown from the dobeu-eco workspace and uploads them to notebook 500e078b-c6a4-440c-b3ea-26b948a41d7c. This is Step 2 of the mandatory Dobeu session-exit checklist (Step 1 is Drive sync). Always trigger this skill when the user mentions \"notebooklm ingest\", \"sync to notebook\", \"checkpoint NotebookLM\", \"session exit checklist\", or \"upload to NotebookLM\". Do not skip even if Drive sync already ran — they serve different purposes.",
+      "source": "custom",
+      "updatedAt": "2026-04-28T17:04:44.846096Z"
+    },
+    {
+      "skillId": "skill_01LeZ6YCMy69s13ohdyzSDKS",
+      "name": "baldor-ppt",
+      "description": "Transform any PowerPoint presentation into a Baldor Specialty Foods branded deck. Use this skill whenever the user asks to rebrand, restyle, or convert a PowerPoint (.pptx) to Baldor branding — including applying Baldor colors, fonts, layouts, and corporate identity. Also trigger when the user mentions 'Baldor presentation', 'Baldor deck', 'Baldor slides', 'brand a deck for Baldor', 'Baldor PowerPoint', or wants to create a new presentation that follows Baldor brand guidelines. This skill applies to ALL PowerPoint work involving the Baldor Specialty Foods brand.",
+      "source": "custom",
+      "updatedAt": "2026-04-24T13:28:48.180621Z"
+    },
+    {
+      "skillId": "doc-coauthoring",
+      "name": "doc-coauthoring",
+      "description": "Guide users through a structured workflow for co-authoring documentation. Use when user wants to write documentation, proposals, technical specs, decision docs, or similar structured content. This workflow helps users efficiently transfer context, refine content through iteration, and verify the doc works for readers. Trigger when user mentions writing docs, creating proposals, drafting specs, or similar documentation tasks.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-14T19:41:01.438795Z"
+    },
+    {
+      "skillId": "brand-guidelines",
+      "name": "brand-guidelines",
+      "description": "Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-14T19:41:01.567716Z"
+    },
+    {
+      "skillId": "slack-gif-creator",
+      "name": "slack-gif-creator",
+      "description": "Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Slack like \"make me a GIF of X doing Y for Slack.\"",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-14T19:41:01.634383Z"
+    },
+    {
+      "skillId": "internal-comms",
+      "name": "internal-comms",
+      "description": "A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-14T19:41:01.586209Z"
+    },
+    {
+      "skillId": "algorithmic-art",
+      "name": "algorithmic-art",
+      "description": "Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-14T19:41:01.521631Z"
+    },
+    {
+      "skillId": "mcp-builder",
+      "name": "mcp-builder",
+      "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-14T19:41:01.618801Z"
+    },
+    {
+      "skillId": "web-artifacts-builder",
+      "name": "web-artifacts-builder",
+      "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-14T19:41:01.557439Z"
+    },
+    {
+      "skillId": "theme-factory",
+      "name": "theme-factory",
+      "description": "Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-14T19:41:01.654356Z"
+    },
+    {
+      "skillId": "skill_01Q6LMjPV7dTLRu95nD1SWaW",
+      "name": "composio-fullstack-pipeline",
+      "description": "Drives a long-horizon agentic full-stack build from raw idea to production deployment using Claude Code (Max-subscription auth via `/login`) and Composio for cross-system integration. Use this skill whenever the user wants to build, ship, or deploy a real software project end-to-end with an agent — landing pages, SaaS apps, internal tools, AI features, mobile/web full-stack, MVPs, side projects, or production systems. Trigger on phrases like \"build me an app,\" \"take this idea to production,\" \"agentic coding,\" \"code this for me,\" \"ship a prototype,\" \"scaffold a SaaS,\" \"deploy to Vercel/Supabase/Netlify,\" \"I have an idea for X,\" and any multi-day or multi-session coding workflow that needs checkpoints, GitHub/Linear/Vercel/Supabase/Sentry/PostHog/Stripe integration, or a planner→generator→evaluator harness. Use it even when the user hasn't explicitly named \"Composio\" or \"Claude Code\" — if the request is \"build me a thing end-to-end,\" this skill applies.",
+      "source": "custom",
+      "updatedAt": "2026-04-29T22:56:39.054115Z"
+    },
+    {
+      "skillId": "skill-creator",
+      "name": "skill-creator",
+      "description": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-14T19:41:01.499089Z"
+    },
+    {
+      "skillId": "pdf",
+      "name": "pdf",
+      "description": "Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging multiple PDFs into one, splitting PDFs apart, rotating pages, adding watermarks, creating new PDFs, filling PDF forms, encrypting/decrypting PDFs, extracting images, and OCR on scanned PDFs to make them searchable. If the user mentions a .pdf file or asks to produce one, use this skill.",
+      "source": "anthropic",
+      "updatedAt": "2026-07-10T19:23:15.432550Z"
+    },
+    {
+      "skillId": "xlsx",
+      "name": "xlsx",
+      "description": "Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user wants to: open, read, edit, or fix an existing .xlsx, .xlsm, .xltx, .csv, or .tsv file (e.g., adding columns, computing formulas, formatting, charting, cleaning messy data); create a new spreadsheet from scratch or from other data sources; or convert between tabular file formats. Trigger especially when the user references a spreadsheet file by name or path — even casually (like \"the xlsx in my downloads\") — and wants something done to it or produced from it. Also trigger for cleaning or restructuring messy tabular data files (malformed rows, misplaced headers, junk data) into proper spreadsheets. The deliverable must be a spreadsheet file. Do NOT trigger when the primary deliverable is a Word document, HTML report, standalone Python script, database pipeline, or Google Sheets API integration, even if tabular data is involved.",
+      "source": "anthropic",
+      "updatedAt": "2026-09-14T21:00:33.324012Z"
+    },
+    {
+      "skillId": "pptx",
+      "name": "pptx",
+      "description": "Use this skill any time a .pptx or .potx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or presentations as PowerPoint (.pptx) files; reading, parsing, or extracting text from any .pptx or .potx file (even if the extracted content will be used elsewhere, like in an email, summary, or creating a different type of slide deck); editing, modifying, or updating existing presentations; combining or splitting slide files; working with templates (.potx), layouts, speaker notes, or comments. Trigger whenever the user asks for a PowerPoint or .pptx file, or references a .pptx or .potx filename, regardless of what they plan to do with the content afterward. However, when the user asks for a deck, slides, a slide deck, or a presentation without naming a file format, default to using a dedicated slide-deck artifact type or a separate slides skill if this session offers one; otherwise, use this skill.",
+      "source": "anthropic",
+      "updatedAt": "2026-09-14T21:00:33.306681Z"
+    },
+    {
+      "skillId": "docx",
+      "name": "docx",
+      "description": "Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx) or Word templates (.dotx). Triggers include: any mention of 'Word doc', 'word document', '.docx', '.dotx', or requests to produce professional documents with formatting like tables of contents, page numbers, or letterheads. Also use when extracting or reorganizing content from .docx or .dotx files, inserting or replacing images in documents, find-and-replace in Word files, working with tracked changes or comments, or converting content into a polished Word document. If the user asks for a 'report', 'memo', 'letter', 'template', or similar deliverable as a Word or .docx file (to download, email or print), use this skill. However, if they ask for a document, page, report, memo, or notes WITHOUT naming a file format and the session offers Claude's own dedicated document or page skill or connector, use that instead. Do NOT use for PDFs, spreadsheets, Google Docs, or coding unrelated to document generation.",
+      "source": "anthropic",
+      "updatedAt": "2026-09-14T21:00:33.279708Z"
+    },
+    {
+      "skillId": "canvas-design",
+      "name": "canvas-design",
+      "description": "Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-14T19:41:01.576619Z"
+    }
+  ]
+}
