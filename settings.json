@@ -24,6 +24,77 @@
             "statusMessage": "Scanning staged files for secrets"
           }
         ]
+      },
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"C:\\Users\\JeremyWilliams\\.ccassist\\ccassist-hook.js\" \"C:\\Users\\JeremyWilliams\\.ccassist\\hook-events.jsonl\""
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"C:\\Users\\JeremyWilliams\\.ccassist\\ccassist-hook.js\" \"C:\\Users\\JeremyWilliams\\.ccassist\\hook-events.jsonl\""
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"C:\\Users\\JeremyWilliams\\.ccassist\\ccassist-hook.js\" \"C:\\Users\\JeremyWilliams\\.ccassist\\hook-events.jsonl\""
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"C:\\Users\\JeremyWilliams\\.ccassist\\ccassist-hook.js\" \"C:\\Users\\JeremyWilliams\\.ccassist\\hook-events.jsonl\""
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"C:\\Users\\JeremyWilliams\\.ccassist\\ccassist-hook.js\" \"C:\\Users\\JeremyWilliams\\.ccassist\\hook-events.jsonl\""
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"C:\\Users\\JeremyWilliams\\.ccassist\\ccassist-hook.js\" \"C:\\Users\\JeremyWilliams\\.ccassist\\hook-events.jsonl\""
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"C:\\Users\\JeremyWilliams\\.ccassist\\ccassist-hook.js\" \"C:\\Users\\JeremyWilliams\\.ccassist\\hook-events.jsonl\""
+          }
+        ]
       }
     ]
   },
@@ -138,7 +209,8 @@
     "travel-agent-skill@buildwithclaude": false,
     "vercel@claude-plugins-official": true,
     "xtool@2389-research": true,
-    "magicpath@magicpath": true
+    "magicpath@magicpath": true,
+    "si-agent@dobeu-tech-eco": true
   },
   "extraKnownMarketplaces": {
     "2389-research": {
@@ -223,6 +295,12 @@
       "source": {
         "source": "github",
         "repo": "MagicPathAI/magicpath-agent-plugin"
+      }
+    },
+    "dobeu-tech-eco": {
+      "source": {
+        "source": "github",
+        "repo": "Dobeu-tech-eco/si-agent-core"
       }
     }
   },
