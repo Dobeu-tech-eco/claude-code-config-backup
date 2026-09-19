@@ -5,3 +5,4 @@
 - [WSL DNS + host firewall](wsl-dns-and-host-firewall.md) — DNS died from systemd-resolved having no upstream (fixed); Windows still blocks all WSL→host traffic.
 - [Cursor Origin git forge](cursor-origin-git-forge.md) — mirror is one-way (GitHub stays truth); `dobeutech` namespace is flat and permanent.
 - [repos → Origin migration 2026-09](repos-origin-migration-2026-09.md) — 57/61 repos repointed; 4 skipped and still undecided.
+- [browser-use Windows setup](browser-use-windows-setup.md) — `skill install` self-locks the uv venv on Windows; use `skill show`; Chrome needs manual launch with `--remote-debugging-port`.
