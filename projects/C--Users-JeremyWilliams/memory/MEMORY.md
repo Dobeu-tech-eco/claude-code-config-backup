@@ -6,3 +6,4 @@
 - [Cursor Origin git forge](cursor-origin-git-forge.md) — mirror is one-way (GitHub stays truth); `dobeutech` namespace is flat and permanent.
 - [repos → Origin migration 2026-09](repos-origin-migration-2026-09.md) — 57/61 repos repointed; 4 skipped and still undecided.
 - [browser-use Windows setup](browser-use-windows-setup.md) — `skill install` self-locks the uv venv on Windows; use `skill show`; Chrome needs manual launch with `--remote-debugging-port`.
+- [Local AI stack: Forge + LM Studio](local-ai-stack-forge-lmstudio-2026-08.md) — SD WebUI Forge 2.0.1 launch/ports, LM Studio :1234, `update.bat` wipes the api.py patch.

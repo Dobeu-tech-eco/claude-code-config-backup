@@ -103,7 +103,6 @@
     "command": "node C:/Users/JeremyWilliams/.claude/hud/omc-hud.mjs"
   },
   "enabledPlugins": {
-    "agent-drugs@2389-research": false,
     "agents-ai-agents@buildwithclaude": false,
     "agents-blockchain-web3@buildwithclaude": false,
     "agents-business-finance@buildwithclaude": false,
@@ -166,7 +165,7 @@
     "figma@claude-plugins-official": true,
     "fresh-eyes-review@2389-research": true,
     "frontend-design-pro@buildwithclaude": true,
-    "frontend-design@claude-plugins-official": false,
+    "frontend-design@claude-plugins-official": true,
     "gemini@abiswas97-gemini": true,
     "git-repo-prep@2389-research": true,
     "gitkraken-hooks@gitkraken": true,
@@ -181,7 +180,6 @@
     "hooks-testing@buildwithclaude": false,
     "interview@buildwithclaude": true,
     "jam@2389-research": true,
-    "journal@2389-research": false,
     "kegg-mcp-server@buildwithclaude": false,
     "landing-page-design@2389-research": true,
     "magic-cc-codex-worker@buildwithclaude": true,
@@ -199,7 +197,6 @@
     "simmer@2389-research": true,
     "skill-creator@claude-plugins-official": false,
     "slopmop@buildwithclaude": true,
-    "socialmedia@2389-research": false,
     "summarize-meetings@2389-research": true,
     "superpowers@claude-plugins-official": true,
     "terminal-title@2389-research": true,
@@ -210,7 +207,10 @@
     "vercel@claude-plugins-official": true,
     "xtool@2389-research": true,
     "magicpath@magicpath": true,
-    "si-agent@dobeu-tech-eco": true
+    "si-agent@dobeu-tech-eco": true,
+    "context7@claude-plugins-official": true,
+    "ralph-loop@claude-plugins-official": true,
+    "supabase@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "2389-research": {
