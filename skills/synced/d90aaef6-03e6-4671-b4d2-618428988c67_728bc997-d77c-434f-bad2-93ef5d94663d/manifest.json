@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1789591863674,
+  "lastUpdated": 1790200741484,
   "skills": [
     {
       "skillId": "import-memory",
@@ -48,8 +48,9 @@
       "skillId": "skill_01AdhobLXtkMgfg9V9QKQyxQ",
       "name": "agentic",
       "description": "Conversational AI-first interface with minimal controls, clear outcomes, and delegated task flows for agentic workflows.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:19:27.227128Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:19:27.226200Z",
+      "backingPluginId": "plugin_01EaVxPvhVAoh2NpBQBo7Jrj"
     },
     {
       "skillId": "skill_01XdSjLM3xCi2ZniJL4LWcKG",
@@ -63,7 +64,8 @@
       "name": "npm-package-publisher",
       "description": "Scaffolds and publishes Node.js npm packages to the public npm registry (registry.npmjs.org) and/or GitHub Packages (npm.pkg.github.com) via GitHub Actions release-triggered workflows. Use this whenever the user wants to publish, release, ship, or deploy an npm package, set up CI publishing, create a release-package.yml workflow, scope a package under an owner, configure .npmrc or publishConfig registry routing, wire NODE_AUTH_TOKEN, NPM_TOKEN, or GITHUB_TOKEN auth, add npm provenance or trusted publishing, or turn a repo into a publishable package — even if they only say npm, GitHub Packages, release a package, or CI publish. Do NOT use for installing or consuming packages, PyPI or other non-npm registries, Docker or container image publishing, or generic GitHub Actions workflows unrelated to package publishing.",
       "source": "custom",
-      "updatedAt": "2026-08-18T01:55:02.294892Z"
+      "updatedAt": "2026-08-18T01:55:02.294892Z",
+      "backingPluginId": "plugin_01EjxfEEo66F1mmwzZxMG7WK"
     },
     {
       "skillId": "skill_01K2UHPAygH1Ezuqp8eAHbc2",
@@ -83,8 +85,9 @@
       "skillId": "skill_011ND8VtKxTxoJ1qUfMmfMvK",
       "name": "basic",
       "description": "Print-inspired visual language for books, magazines, and reports with editorial grids and expressive typography.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:19:32.619616Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:19:32.619497Z",
+      "backingPluginId": "plugin_01Q72BYpoFySUhPPj7pF9VVq"
     },
     {
       "skillId": "skill_01NesnFNEL9Wcy58UhEqKswy",
@@ -132,8 +135,9 @@
       "skillId": "skill_017aTmzj2ixebJpDoAudr6C9",
       "name": "dithered",
       "description": "Dot-pattern rendering technique that simulates shades with a limited palette for nostalgic, retro, high-contrast visuals.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:18:35.987520Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:18:35.987384Z",
+      "backingPluginId": "plugin_01Jnf8W2dURBWcJdknEPFPg9"
     },
     {
       "skillId": "skill_01TmRQS82WVocgxA1kx1HhzC",
@@ -153,22 +157,25 @@
       "skillId": "skill_0193PQtpJ3K48jua9L1sfLRs",
       "name": "cosmic",
       "description": "Futuristic sci-fi aesthetic with dark themes, vibrant neon accents, and immersive spatial elements.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:18:37.969066Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:18:37.967907Z",
+      "backingPluginId": "plugin_01BytPF4qRY6WsJbsZfVEB4E"
     },
     {
       "skillId": "skill_01Af1zysSfAJbco3oacQhbLN",
       "name": "creative",
       "description": "Playful, character-driven design with expressive typography and bold graphics for landing pages and creative projects.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:18:34.030956Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:18:34.030820Z",
+      "backingPluginId": "plugin_01RiqC3ZDevDfHaC3J7XxKP7"
     },
     {
       "skillId": "skill_01AbdN2Mfkhky5HeZhajngR2",
       "name": "colorful",
       "description": "Vibrant, high-contrast palettes and gradients for engaging, memorable, and modern user experiences.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:18:45.699102Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:18:45.698943Z",
+      "backingPluginId": "plugin_01Vb7ysJNiBMRi3W86oGtRHP"
     },
     {
       "skillId": "skill_01YMEs9okvSCkD4qryXLd6Yv",
@@ -188,15 +195,17 @@
       "skillId": "skill_013Gp7AWhtetD3yroLaLhonV",
       "name": "editorial",
       "description": "Magazine-inspired editorial layout with refined serif typography, structured grids, and elegant reading experiences.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:18:26.349896Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:18:26.349789Z",
+      "backingPluginId": "plugin_01Gw1MrVX8Gyf6eRy7isohWQ"
     },
     {
       "skillId": "skill_017gq8LjbDBDFYqSNAdRz5qi",
       "name": "enterprise",
       "description": "Dark-themed cloud-platform aesthetic with modular grids, glass-like panels, and strong data hierarchy for productivity dashboards.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:18:23.791862Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:18:23.791750Z",
+      "backingPluginId": "plugin_01MwpXfiCmkgm2AiDvkJyayE"
     },
     {
       "skillId": "skill_01MMQYdhJo9hWE3SC5eZJviR",
@@ -216,29 +225,33 @@
       "skillId": "skill_0197n4rmfaaT8mNWBBPikvW3",
       "name": "fantasy",
       "description": "Game-inspired fantasy aesthetic with bold, premium visuals, rich color palettes, and immersive thematic elements.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:18:20.896500Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:18:20.896371Z",
+      "backingPluginId": "plugin_011MjuKX8vy71dtviju1V3ZH"
     },
     {
       "skillId": "skill_019V4DzUg3dupLaLAEAdHE1o",
       "name": "gradient",
       "description": "Smooth color transitions and gradient-rich surfaces for modern, playful interfaces with visual depth.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:17:58.742175Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:17:58.741975Z",
+      "backingPluginId": "plugin_018cmA6MnyDF7CYGctTxJhZP"
     },
     {
       "skillId": "skill_019995jZ9fUmxkPdwvMYYmCH",
       "name": "immersive",
       "description": "An immersive, interactive, exhibit-style interface that blends storytelling, animation, and gamified elements to create a playful, experience-driven journey. The entire app sits on a single continuous brand-colored canvas (deep green)",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:17:57.535254Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:17:57.535096Z",
+      "backingPluginId": "plugin_01F6WUQEWEWQNtw7R46j13nD"
     },
     {
       "skillId": "skill_01AiZdFxxcDqz3ojENyc4URR",
       "name": "fiction",
       "description": "A playful, energetic, cartoonesque interface inspired by friendly children's-book illustrations — warm cream backgrounds, big bold custom display typography, saturated brand color blocks, thick black outlines, generously rounded shapes",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:18:11.614132Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:18:11.613964Z",
+      "backingPluginId": "plugin_01CscYtBUj2wy6G38u9WzRwN"
     },
     {
       "skillId": "skill_01PubE3Kv98HXArMaobvtgww",
@@ -272,8 +285,9 @@
       "skillId": "skill_011N2AMmM8NF93Sw7VpXuih4",
       "name": "futuristic",
       "description": "Forward-looking design with tech-inspired typography, modern layouts, and a sleek, innovation-driven aesthetic.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:18:00.631851Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:18:00.631736Z",
+      "backingPluginId": "plugin_01F4rZfWYEPyNwaz94zHTG3w"
     },
     {
       "skillId": "skill_01YMN3hyPq1iboLoCn4JWi2V",
@@ -293,8 +307,9 @@
       "skillId": "skill_01DiJFFwNymxXjnJe828khZL",
       "name": "minimal",
       "description": "Stripped-back design emphasizing whitespace, clean typography, and restrained color for maximum clarity and focus.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:17:50.330013Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:17:50.329913Z",
+      "backingPluginId": "plugin_01CiTU6rGwzPtxMq8i93eGpW"
     },
     {
       "skillId": "skill_01S9vzzcHdrs5Bg3vXyXZ89L",
@@ -321,15 +336,17 @@
       "skillId": "skill_01BaTG3q2NanmdccusKGaj8Z",
       "name": "paper",
       "description": "Paper-textured, print-inspired design with minimal colors, clean serif/sans typography, and tactile surface qualities.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:17:12.882691Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:17:12.882483Z",
+      "backingPluginId": "plugin_01HhUWXS1BERyNhSrg7G8XFZ"
     },
     {
       "skillId": "skill_011EAqaM3wf5RFTnsjucvaj4",
       "name": "power",
       "description": "High-end dark aesthetic with bold headings, monochromatic palette, and premium feel for premium brand experiences.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:17:10.015046Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:17:10.014919Z",
+      "backingPluginId": "plugin_01L74W6QW77uR4YjCKHYVPbL"
     },
     {
       "skillId": "skill_01MfEEtLmVdc5LUba883H5un",
@@ -363,36 +380,41 @@
       "skillId": "skill_01DmvRSaPhtDpd1UJCSwwBKe",
       "name": "pacman",
       "description": "Retro arcade-inspired design with pixel fonts, dotted borders, playful high-contrast colors, and 8-bit game aesthetics.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:17:14.375734Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:17:14.375630Z",
+      "backingPluginId": "plugin_014eFA7sFP1PY2b8zAS5PTLv"
     },
     {
       "skillId": "skill_016ma8oH63fqRr2vnmq6rxaF",
       "name": "perspective",
       "description": "Spatial depth design with isometric views, vanishing points, and layered elements that guide attention through 3D-like realism.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:17:11.249840Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:17:11.249720Z",
+      "backingPluginId": "plugin_01JxBP88r7KDcz1RuZx8nCkt"
     },
     {
       "skillId": "skill_011UingXfAg2hzwDkWWTY5Yf",
       "name": "retro",
       "description": "Throwback design with vintage-inspired typography, high-contrast retro palettes, and nostalgic visual elements.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:16:37.434484Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:16:37.434337Z",
+      "backingPluginId": "plugin_01Vg8iy8NqnCzQEoRpAmwZtf"
     },
     {
       "skillId": "skill_013pohbR8gUUAdsidXWu7D2y",
       "name": "material",
       "description": "Google's Material Design with layered surfaces, dynamic theming, built-in motion, and responsive cross-platform patterns.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:16:43.853093Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:16:43.852808Z",
+      "backingPluginId": "plugin_013k1WfV59n6AMvBKAMrMTPW"
     },
     {
       "skillId": "skill_014EVFo5PV4ZYppVCXnrxzcX",
       "name": "premium",
       "description": "Apple-inspired premium aesthetic with precise spacing, modern typography, and a refined, polished visual language.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:17:08.415639Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:17:08.415517Z",
+      "backingPluginId": "plugin_01A3KWyNJsSWAi3RXDg81Fke"
     },
     {
       "skillId": "skill_01Rcxajnwk2ziASWBb3vRZem",
@@ -412,22 +434,25 @@
       "skillId": "skill_014yWu9p3NYjH273xyNm8Zwk",
       "name": "neon",
       "description": "Electric neon glow effects with high-contrast color pairings for bold, attention-grabbing interfaces.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:17:20.044922Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:17:20.044809Z",
+      "backingPluginId": "plugin_012K6QH1Jdn5iMHFPxhWTxS8"
     },
     {
       "skillId": "skill_017PfsdPRukTZHYVEL3hpWUL",
       "name": "roku",
       "description": "App dashboard with purple-themed aesthetic, top-bar navigation, card-based layouts, and developer-first workflows.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:16:33.302827Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:16:33.302724Z",
+      "backingPluginId": "plugin_01SLexhMU3AM4PcuFMwvWbZG"
     },
     {
       "skillId": "skill_01ApTySWg5wgAAbA3WKF5T2Y",
       "name": "tetris",
       "description": "Classic block-game inspired design with playful colors, bold display fonts, and compact, high-energy layouts.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:15:58.518493Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:15:58.518329Z",
+      "backingPluginId": "plugin_01Ny61bGhgJCAm7eDVcMfsGw"
     },
     {
       "skillId": "skill_01PjGhGxH7kuU9ZQKNyf2qn2",
@@ -454,8 +479,9 @@
       "skillId": "skill_014Yj5nxDgnWrzHmhpnUpgN3",
       "name": "vibrant",
       "description": "Lively, colorful design with bold playful typography, warm accents, and dynamic visual energy.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:15:55.729037Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:15:55.728941Z",
+      "backingPluginId": "plugin_01NgbFaLskVPhRdLeGJ36snr"
     },
     {
       "skillId": "skill_01Ue9QjRRjr35pN8siLyCKsM",
@@ -510,8 +536,9 @@
       "skillId": "skill_011AUmrXVdn7PA478EMkaYSC",
       "name": "shadcn",
       "description": "Shadcn/ui-inspired design with minimal, clean components, monochrome palette, and utility-first patterns.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:16:30.229102Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:16:30.228971Z",
+      "backingPluginId": "plugin_01QLpJF2ioQB9c5Yd2wK1Dvz"
     },
     {
       "skillId": "skill_01SQx8yvA4Gt1T6coLigJEKP",
@@ -524,8 +551,9 @@
       "skillId": "skill_0154MANZpzx2wE5aJECDNrtE",
       "name": "herdr",
       "description": "Control herdr from inside it. Manage workspaces and tabs, split panes, spawn agents, read output, and wait for state changes — all via CLI commands that talk to the running herdr instance over a local unix socket. Use when running inside herdr (HERDR_ENV=1).",
-      "source": "custom",
-      "updatedAt": "2026-06-26T10:48:26.181364Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-26T10:48:26.181143Z",
+      "backingPluginId": "plugin_0186PoTc999ULdJbtJxwQDnb"
     },
     {
       "skillId": "skill_01LWEWbCci2PcNzgSFrbSQJh",
@@ -545,15 +573,17 @@
       "skillId": "skill_0116ZKPgbjCoWFg2f9scpAmT",
       "name": "lead-research-assistant",
       "description": "Identifies high-quality leads for your product or service by analyzing your business, searching for target companies, and providing actionable contact strategies. Perfect for sales, business development, and marketing professionals.",
-      "source": "custom",
-      "updatedAt": "2026-06-26T09:51:42.373492Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-26T09:51:42.372930Z",
+      "backingPluginId": "plugin_014uXmDM344KiVuNhp9tmJb2"
     },
     {
       "skillId": "skill_01AV9BeYCAjuJNS1R6cBGiau",
       "name": "template-skill",
       "description": "Replace with description of the skill and when Claude should use it.",
-      "source": "custom",
-      "updatedAt": "2026-06-26T09:52:32.043715Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-26T09:52:32.043545Z",
+      "backingPluginId": "plugin_01JGtGDby6ZMJs3afQc6XsV4"
     },
     {
       "skillId": "skill_01RJKNNxRGdbNSyTAs4Ph3mi",
@@ -566,8 +596,9 @@
       "skillId": "skill_011HoZ8g7CjR61wv2HjKVS9u",
       "name": "video-downloader",
       "description": "Download YouTube videos with customizable quality and format options. Use this skill when the user asks to download, save, or grab YouTube videos. Supports various quality settings (best, 1080p, 720p, 480p, 360p), multiple formats (mp4, webm, mkv), and audio-only downloads as MP3.",
-      "source": "custom",
-      "updatedAt": "2026-06-26T09:52:33.693148Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-26T09:52:33.692975Z",
+      "backingPluginId": "plugin_01QcU5JhtGrYFC6ZfF7bq654"
     },
     {
       "skillId": "skill_01LaSjZdLBoLaDJAvzWRtZjn",
@@ -601,15 +632,17 @@
       "skillId": "skill_019uTWxEacHAKLDqatnRXnxW",
       "name": "twitter-algorithm-optimizer",
       "description": "Analyze and optimize tweets for maximum reach using Twitter's open-source algorithm insights. Rewrite and edit user tweets to improve engagement and visibility based on how the recommendation system ranks content.",
-      "source": "custom",
-      "updatedAt": "2026-06-26T09:52:32.887412Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-26T09:52:32.887302Z",
+      "backingPluginId": "plugin_01HpScbmmPT7idEKLma3b9hA"
     },
     {
       "skillId": "skill_012PqNyfzbK4QAHcVsFBNKJH",
       "name": "tailored-resume-generator",
       "description": "Analyzes job descriptions and generates tailored resumes that highlight relevant experience, skills, and achievements to maximize interview chances",
-      "source": "custom",
-      "updatedAt": "2026-06-26T09:52:18.056621Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-26T09:52:18.056481Z",
+      "backingPluginId": "plugin_01NQTt9YHPrQPMChsbiDBf2N"
     },
     {
       "skillId": "skill_01EnEHBS8SqoyY3GLpZ7Dawn",
@@ -650,15 +683,17 @@
       "skillId": "skill_018t2gebKwFwt9RxUodWRsk5",
       "name": "expert-implementer-style",
       "description": "Custom writing style: Expert Implementer. Apply only when the user explicitly requests this skill by its exact name 'expert-implementer-style'.",
-      "source": "custom",
-      "updatedAt": "2026-06-07T04:45:25.103707Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-07T04:45:25.103621Z",
+      "backingPluginId": "plugin_01MYjbi4aPQpDm1mnbuncLPp"
     },
     {
       "skillId": "skill_017qzxaxAMEVrTUTkS3XCmGE",
       "name": "developer-growth-analysis",
       "description": "Analyzes your recent Claude Code chat history to identify coding patterns, development gaps, and areas for improvement, curates relevant learning resources from HackerNews, and automatically sends a personalized growth report to your Slack DMs.",
-      "source": "custom",
-      "updatedAt": "2026-06-26T09:50:00.256642Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-26T09:50:00.256541Z",
+      "backingPluginId": "plugin_01Tg92jfQAftNPj5Nprq4gA1"
     },
     {
       "skillId": "skill_01TGAiPyyPvGf3TZKdXkAHZB",
@@ -671,15 +706,17 @@
       "skillId": "skill_018mR1ytKLneKgQU9sDF5rYY",
       "name": "expert-practitioner-style",
       "description": "Custom writing style: Expert Practitioner. Apply only when the user explicitly requests this skill by its exact name 'expert-practitioner-style'.",
-      "source": "custom",
-      "updatedAt": "2026-06-07T04:20:52.159375Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-07T04:20:52.159250Z",
+      "backingPluginId": "plugin_016Dknx2yrwx67GD7dNAD4yL"
     },
     {
       "skillId": "skill_01DKNvuMsSkonJ6GQ5RFNjZE",
       "name": "competitive-ads-extractor",
       "description": "Extracts and analyzes competitors' ads from ad libraries (Facebook, LinkedIn, etc.) to understand what messaging, problems, and creative approaches are working. Helps inspire and improve your own ad campaigns.",
-      "source": "custom",
-      "updatedAt": "2026-06-26T09:49:58.638234Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-26T09:49:58.638088Z",
+      "backingPluginId": "plugin_01RUyzAqFix2ALJgWzmJftC6"
     },
     {
       "skillId": "skill_01WoUvaP6gSvV6o2i317bQri",
@@ -706,22 +743,25 @@
       "skillId": "skill_015mTM7qpS4WGgeLjS3E7sjE",
       "name": "changelog-generator",
       "description": "Automatically creates user-facing changelogs from git commits by analyzing commit history, categorizing changes, and transforming technical commits into clear, customer-friendly release notes. Turns hours of manual changelog writing into minutes of automated generation.",
-      "source": "custom",
-      "updatedAt": "2026-06-26T09:48:00.271681Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-26T09:48:00.271530Z",
+      "backingPluginId": "plugin_012kwVvCfoWHdQvqsrHqqhW4"
     },
     {
       "skillId": "skill_012o8o2ZhSGCJj2yBNiYtSEJ",
       "name": "artifacts-builder",
       "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.",
-      "source": "custom",
-      "updatedAt": "2026-06-26T09:47:24.927422Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-26T09:47:24.927286Z",
+      "backingPluginId": "plugin_013fUgszcXnLj5LTiQhKpLF3"
     },
     {
       "skillId": "skill_018YYen5H2YczLcStzCbovji",
       "name": "dobeu-figma-make-design",
       "description": "Use this skill whenever the user is designing or building in Figma Make (Figma's prompt-to-code / AI app builder) for the Dobeu brand (Dobeu Tech Solutions, dobeu.net). It applies the Dobeu design system as code-ready tokens, an expert designer-engineer workflow, accessibility standards, and ethical marketing-psychology principles — and it knows how to use Figma Make's strengths: turning a pasted Figma frame or design-system selection into a working, on-brand React + Tailwind app. Trigger it for prompts like \"make a Dobeu landing page in Figma Make\", \"turn this frame into a working prototype\", \"build a hero from my Figma design\", \"Figma Make prompt for...\", \"make this interactive\", \"on-brand component\", or any request to generate or critique branded web UI inside Figma Make — even when the user doesn't say \"Dobeu\" explicitly but is clearly working on Dobeu's product.",
-      "source": "custom",
-      "updatedAt": "2026-06-19T02:02:18.848751Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-19T02:02:18.848538Z",
+      "backingPluginId": "plugin_012rPD6pBmRw5J5GhiTUtxUs"
     },
     {
       "skillId": "skill_01H2btupSkPUWU2hRt1wQgXd",
@@ -762,8 +802,9 @@
       "skillId": "skill_016ttn8k56XkAVx8Sf7kiUdJ",
       "name": "executive-strategist-style",
       "description": "Custom writing style: Executive Strategist. Apply only when the user explicitly requests this skill by its exact name 'executive-strategist-style'.",
-      "source": "custom",
-      "updatedAt": "2026-06-07T03:19:59.304635Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-07T03:19:59.304503Z",
+      "backingPluginId": "plugin_01HKXJd3DZVhk6DX75xfEwRP"
     },
     {
       "skillId": "skill_01WPNJq1A4ECxQyFv2FxEjKh",
@@ -783,8 +824,9 @@
       "skillId": "skill_019to5JAw4cVdM8t5tsymt5B",
       "name": "content-craft-pro-style",
       "description": "Custom writing style: Content Craft Pro. Apply only when the user explicitly requests this skill by its exact name 'content-craft-pro-style'.",
-      "source": "custom",
-      "updatedAt": "2026-06-07T03:03:28.225736Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-07T03:03:28.225614Z",
+      "backingPluginId": "plugin_015wNejSZJ9pnzrF2hD5pEXF"
     },
     {
       "skillId": "learn",
@@ -804,22 +846,25 @@
       "skillId": "skill_017RNXRitfSLKQvDyiekHeqa",
       "name": "compliance-authority-style",
       "description": "Custom writing style: Compliance Authority. Apply only when the user explicitly requests this skill by its exact name 'compliance-authority-style'.",
-      "source": "custom",
-      "updatedAt": "2026-06-06T19:47:25.036686Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-06T19:47:25.036573Z",
+      "backingPluginId": "plugin_01W9rnCPdf3yoYRE5SJquku5"
     },
     {
       "skillId": "skill_014pUjEh67JEG2MsRqRyBKTf",
       "name": "expert-auditor-style",
       "description": "Custom writing style: Expert Auditor. Apply only when the user explicitly requests this skill by its exact name 'expert-auditor-style'.",
-      "source": "custom",
-      "updatedAt": "2026-06-06T20:01:29.979301Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-06T20:01:29.979194Z",
+      "backingPluginId": "plugin_01GiGRfSfNu258R5Spqr4FaT"
     },
     {
       "skillId": "skill_014CeoWkELaHaHZynY9j8agL",
       "name": "baldor-create-sop",
       "description": "Create Baldor Specialty Foods SOP documents (.docx) using standardized corporate formatting — Aptos font, CONFIDENTIAL footer, versioned header, and structured sections (Purpose, Scope, Responsibilities, Procedure, Documentation & Records, Governance). Use this skill whenever the user mentions 'Baldor SOP', 'SOP for Baldor', 'standard operating procedure' in a Baldor context, 'Baldor document', 'Baldor policy', 'Baldor procedure', or asks to convert any content into a Baldor-formatted Word document. Also trigger when the user references /Baldor-Create-SOP or asks to create safety, compliance, training, or operational documents for Baldor Specialty Foods. This skill applies to ALL output surfaces — Claude.ai chat, Claude Code, Cowork, Claude for Word, and any environment with file-creation capability.",
-      "source": "custom",
-      "updatedAt": "2026-04-21T15:03:33.796503Z"
+      "source": "plugin",
+      "updatedAt": "2026-04-21T15:03:33.796373Z",
+      "backingPluginId": "plugin_01ChgUANdXWoFukj2CHbzQ1E"
     },
     {
       "skillId": "skill_01RfAjFdpMxj8raReRaKmPRc",
@@ -924,14 +969,14 @@
       "name": "pptx",
       "description": "Use this skill any time a .pptx or .potx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or presentations as PowerPoint (.pptx) files; reading, parsing, or extracting text from any .pptx or .potx file (even if the extracted content will be used elsewhere, like in an email, summary, or creating a different type of slide deck); editing, modifying, or updating existing presentations; combining or splitting slide files; working with templates (.potx), layouts, speaker notes, or comments. Trigger whenever the user asks for a PowerPoint or .pptx file, or references a .pptx or .potx filename, regardless of what they plan to do with the content afterward. However, when the user asks for a deck, slides, a slide deck, or a presentation without naming a file format, default to using a dedicated slide-deck artifact type or a separate slides skill if this session offers one; otherwise, use this skill.",
       "source": "anthropic",
-      "updatedAt": "2026-09-14T21:00:33.306681Z"
+      "updatedAt": "2026-09-22T18:00:37.886566Z"
     },
     {
       "skillId": "docx",
       "name": "docx",
-      "description": "Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx) or Word templates (.dotx). Triggers include: any mention of 'Word doc', 'word document', '.docx', '.dotx', or requests to produce professional documents with formatting like tables of contents, page numbers, or letterheads. Also use when extracting or reorganizing content from .docx or .dotx files, inserting or replacing images in documents, find-and-replace in Word files, working with tracked changes or comments, or converting content into a polished Word document. If the user asks for a 'report', 'memo', 'letter', 'template', or similar deliverable as a Word or .docx file (to download, email or print), use this skill. However, if they ask for a document, page, report, memo, or notes WITHOUT naming a file format and the session offers Claude's own dedicated document or page skill or connector, use that instead. Do NOT use for PDFs, spreadsheets, Google Docs, or coding unrelated to document generation.",
+      "description": "Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx) or Word templates (.dotx). Triggers include: any mention of Microsoft Word Documents, such as 'Word doc', 'word document', '.docx', '.dotx', 'microsoft doc'. Also use when extracting or reorganizing content from .docx or .dotx files, inserting or replacing images in documents, find-and-replace in Word files, working with tracked changes or comments, or converting content into a polished Word document. If the user asks for a deliverable as a Word or .docx file (to download, email or print), use this skill. However, if they ask for a document, page, report, memo, or notes WITHOUT naming a file format and the session offers Claude's own dedicated document or page skill or connector, use that instead, even if they will email or print it. Do NOT use for PDFs, spreadsheets, Google Docs, or coding unrelated to document generation.",
       "source": "anthropic",
-      "updatedAt": "2026-09-14T21:00:33.279708Z"
+      "updatedAt": "2026-09-23T04:00:28.352014Z"
     },
     {
       "skillId": "canvas-design",
