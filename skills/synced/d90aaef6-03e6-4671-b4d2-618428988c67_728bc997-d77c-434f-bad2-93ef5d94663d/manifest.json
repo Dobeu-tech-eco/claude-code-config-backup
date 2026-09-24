@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790200741484,
+  "lastUpdated": 1790253303436,
   "skills": [
     {
       "skillId": "import-memory",
@@ -107,15 +107,17 @@
       "skillId": "skill_01Hqy2JK5ao1ujvJmzH19M4A",
       "name": "cafe",
       "description": "Cozy cafe-inspired interface with warm tones, soft typography, and clean layouts for a relaxed browsing experience.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:18:58.189677Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:18:58.189522Z",
+      "backingPluginId": "plugin_01B8Qy8xdBnocyfqSo92bzRR"
     },
     {
       "skillId": "skill_01HGpW1MXCBuDSR2daSP2GvS",
       "name": "clean",
       "description": "Simplicity-focused design with ample whitespace, legible typography, and a limited color palette to reduce visual clutter.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:18:53.484898Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:18:53.484747Z",
+      "backingPluginId": "plugin_01GmuWUwD1NX4eNKYVRsSDkp"
     },
     {
       "skillId": "skill_01M8giph7QxFbwLRmDdD6eiR",
@@ -128,8 +130,9 @@
       "skillId": "skill_01HAuNuK29gd1NrdgnBF3wgw",
       "name": "contemporary",
       "description": "Current-era minimalist design with bento grids, dark mode support, and high-performance accessible layouts.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:18:43.951680Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:18:43.951523Z",
+      "backingPluginId": "plugin_01Cn4QrUd6RwFzPXq8Sf6qEX"
     },
     {
       "skillId": "skill_017aTmzj2ixebJpDoAudr6C9",
@@ -218,8 +221,9 @@
       "skillId": "skill_01GuoJsn9782DxPMBZZtofzG",
       "name": "expressive",
       "description": "Vibrant, personality-driven design with bold colors, playful graphics, and dynamic layouts that balance creativity with structure.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:18:22.615793Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:18:22.615643Z",
+      "backingPluginId": "plugin_019o2zY3Hanb2RKHcatoTDr5"
     },
     {
       "skillId": "skill_0197n4rmfaaT8mNWBBPikvW3",
@@ -264,8 +268,9 @@
       "skillId": "skill_01HsEvRAjG2TohoZFgBDopBZ",
       "name": "flat",
       "description": "Two-dimensional minimalist style with vibrant colors, clean typography, and no 3D effects for fast, user-friendly interfaces.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:18:09.877020Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:18:09.876872Z",
+      "backingPluginId": "plugin_01NLwW5BwEANPadwGQD91JhF"
     },
     {
       "skillId": "skill_01TvsEDNV9Yn983Vd48M3mZz",
@@ -300,8 +305,9 @@
       "skillId": "skill_01Ek9qR2nqMS1WE23Rt3zamR",
       "name": "impeccable",
       "description": "A modern, graphic, editorial-poster aesthetic — warm and confident — built on alternating cream and burnt orange sections, an amber brand color.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:17:54.691804Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:17:54.691675Z",
+      "backingPluginId": "plugin_01VdtV4owS6WHeHENwgKMsHv"
     },
     {
       "skillId": "skill_01DiJFFwNymxXjnJe828khZL",
@@ -359,22 +365,25 @@
       "skillId": "skill_01H4gay1fN7cjdx4BCKLBHpa",
       "name": "refined",
       "description": "Carefully curated, modern minimal style with elegant serif typography and understated, sophisticated palettes.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:16:56.138600Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:16:56.138438Z",
+      "backingPluginId": "plugin_01CZiFxNczR9LAcgDoafaTpE"
     },
     {
       "skillId": "skill_01E6L3494sitcsXv68dg2w5P",
       "name": "neobrutalism",
       "description": "Modern take on brutalism with bold borders, vivid accent colors, and raw, high-contrast layouts on warm surfaces.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:17:22.755613Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:17:22.755379Z",
+      "backingPluginId": "plugin_01AyNuPz8vAP5ayC4G1r9dWd"
     },
     {
       "skillId": "skill_01GgVjm7Gnu9k5e6NPMCFd6e",
       "name": "pulse",
       "description": "Dynamic, vibrant style with thick borders, geometric shapes, high-contrast colors, and expressive typography conveying motion and vitality.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:17:06.239014Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:17:06.238853Z",
+      "backingPluginId": "plugin_01JaazBCd6M2a28WcHJAZLHM"
     },
     {
       "skillId": "skill_01DmvRSaPhtDpd1UJCSwwBKe",
@@ -427,8 +436,9 @@
       "skillId": "skill_01EDiR4P1t4FQ8cfQjYn9smq",
       "name": "lingo",
       "description": "Playful, minimal design with bright colors, rounded shapes, tactile 3D borders, and friendly illustrations for approachable interfaces.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:16:42.316405Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:16:42.315049Z",
+      "backingPluginId": "plugin_01X1goyqB5p2tGAE8AnDEmMd"
     },
     {
       "skillId": "skill_014yWu9p3NYjH273xyNm8Zwk",
@@ -508,8 +518,9 @@
       "skillId": "skill_01Fu2pih7ozhFgXy9F7XyjA9",
       "name": "storytelling",
       "description": "Narrative-driven design using visuals, copy, and interaction to guide users through engaging, emotionally resonant journeys.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:16:02.235888Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:16:02.235716Z",
+      "backingPluginId": "plugin_011hLuZpni85jzZCv4RzagJp"
     },
     {
       "skillId": "skill_01QejqnsXWD5FReVkWVBbtsz",
@@ -648,8 +659,9 @@
       "skillId": "skill_01EnEHBS8SqoyY3GLpZ7Dawn",
       "name": "langsmith-fetch",
       "description": "Debug LangChain and LangGraph agents by fetching execution traces from LangSmith Studio. Use when debugging agent behavior, investigating errors, analyzing tool calls, checking memory operations, or examining agent performance. Automatically fetches recent traces and analyzes execution patterns. Requires langsmith-fetch CLI installed.",
-      "source": "custom",
-      "updatedAt": "2026-06-26T09:51:41.566154Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-26T09:51:41.566034Z",
+      "backingPluginId": "plugin_014HrwfL72B7RL7Mhe1uUtuD"
     },
     {
       "skillId": "skill_01Nf66ornZ6uqEBR7qKY2qk2",
@@ -676,8 +688,9 @@
       "skillId": "skill_01DuwQrK44P3KTnfsVr6Ldw7",
       "name": "file-organizer",
       "description": "Intelligently organizes your files and folders across your computer by understanding context, finding duplicates, suggesting better structures, and automating cleanup tasks. Reduces cognitive load and keeps your digital workspace tidy without manual effort.",
-      "source": "custom",
-      "updatedAt": "2026-06-26T09:46:44.737400Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-26T09:46:44.737251Z",
+      "backingPluginId": "plugin_01NeRgLkg6fWgb6Bjsp3jH5W"
     },
     {
       "skillId": "skill_018t2gebKwFwt9RxUodWRsk5",
@@ -736,8 +749,9 @@
       "skillId": "skill_01EnqFPQHcJ3sosRbQUapMmR",
       "name": "tech-solutions-architect-style",
       "description": "Custom writing style: Tech Solutions Architect. Apply only when the user explicitly requests this skill by its exact name 'tech-solutions-architect-style'.",
-      "source": "custom",
-      "updatedAt": "2026-06-07T03:42:08.929038Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-07T03:42:08.928903Z",
+      "backingPluginId": "plugin_01PfqYm45CGAn56J6XRjFQqg"
     },
     {
       "skillId": "skill_015mTM7qpS4WGgeLjS3E7sjE",
@@ -767,8 +781,9 @@
       "skillId": "skill_01H2btupSkPUWU2hRt1wQgXd",
       "name": "connect",
       "description": "Connect Claude to any app. Send emails, create issues, post messages, update databases - take real actions across Gmail, Slack, GitHub, Notion, and 1000+ services.",
-      "source": "custom",
-      "updatedAt": "2026-06-26T09:48:01.188742Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-26T09:48:01.188607Z",
+      "backingPluginId": "plugin_01YCuuWXmxS6kaEuPwLhc6Fv"
     },
     {
       "skillId": "skill_01XbjxBq9ruDA8Y6Y4Tkjh8b",
