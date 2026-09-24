@@ -1,0 +1,2 @@
+- [Windows uv venv lib64 repair](windows-uv-venv-lib64-repair.md) — dangling .venv/lib64 reparse point blocks uv run; PowerShell Delete() then uv sync --frozen.
+- [Actions must be SHA-pinned](actions-must-be-sha-pinned.md) — a test rejects @tag refs incl. reusable workflows; resolve tags with 'v1^{}' to get the commit.

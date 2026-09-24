@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790253303436,
+  "lastUpdated": 1790286320180,
   "skills": [
     {
       "skillId": "import-memory",
@@ -72,7 +72,8 @@
       "name": "dobeu-eco-connector-audit",
       "description": "Runs Jeremy Williams' weekly READ-ONLY connector & instrumentation audit for the Dobeu-tech-eco GitHub org — smoke-tests Amplitude, Mixpanel, Datadog, PostHog, Google Analytics, Intercom, and GitHub via Composio, rebuilds the repo x analytics-platform instrumentation matrix across the 14 active app repos, checks whether already-rolled-out apps are actually emitting events, appends a dated section to the analytics-observability goal-plan doc in the \"Ruflo my GitHub\" claude.ai Project, and pushes a notification only when something regressed. Use this skill whenever Jeremy asks to \"run the connector audit\", \"check the Dobeu instrumentation matrix\", \"audit analytics/observability across my repos\", \"see if PostHog is still broken\", or similar — even if he doesn't name every platform, and even outside the Monday schedule (e.g. \"run this now\", \"did anything change since last week\"). Never use this to install, merge, push, or delete anything — it is strictly a read-and-report skill.",
       "source": "custom",
-      "updatedAt": "2026-08-18T22:57:17.950635Z"
+      "updatedAt": "2026-08-18T22:57:17.950635Z",
+      "backingPluginId": "plugin_018XYmoCCiuzeHaETgZ4bNAT"
     },
     {
       "skillId": "skill_01R6QPx3YW82RuJGvF8RdPy8",
@@ -570,8 +571,9 @@
       "skillId": "skill_01LWEWbCci2PcNzgSFrbSQJh",
       "name": "domain-name-brainstormer",
       "description": "Generates creative domain name ideas for your project and checks availability across multiple TLDs (.com, .io, .dev, .ai, etc.). Saves hours of brainstorming and manual checking.",
-      "source": "custom",
-      "updatedAt": "2026-06-26T09:55:31.901619Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-26T09:55:31.901429Z",
+      "backingPluginId": "plugin_01XeSmVWSnVBBrWYUywbMoE1"
     },
     {
       "skillId": "skill_01PnHiPzS5Q8FiSCGkuvSEra",
@@ -615,8 +617,9 @@
       "skillId": "skill_01LaSjZdLBoLaDJAvzWRtZjn",
       "name": "lettabot",
       "description": "Set up and run LettaBot - a multi-channel AI assistant for Telegram, Slack, Discord, WhatsApp, and Signal. Supports both interactive wizard and non-interactive (agent-friendly) configuration.",
-      "source": "custom",
-      "updatedAt": "2026-06-26T10:48:24.222603Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-26T10:48:24.222451Z",
+      "backingPluginId": "plugin_01PFHmZHrKZHZfARsEUJ2JwQ"
     },
     {
       "skillId": "skill_01USzQxu4PcwAmf3RmKuKLD8",
@@ -636,8 +639,9 @@
       "skillId": "skill_01LJHGWWL6FqaZUUXwpQJchE",
       "name": "raffle-winner-picker",
       "description": "Picks random winners from lists, spreadsheets, or Google Sheets for giveaways, raffles, and contests. Ensures fair, unbiased selection with transparency.",
-      "source": "custom",
-      "updatedAt": "2026-06-26T09:52:16.199743Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-26T09:52:16.199577Z",
+      "backingPluginId": "plugin_01AZKqNEXEzhsU31svPzTjRo"
     },
     {
       "skillId": "skill_019uTWxEacHAKLDqatnRXnxW",
@@ -796,8 +800,9 @@
       "skillId": "skill_01LcLCVLfw7W4W4XKPaJXuqf",
       "name": "ui-ux-design-maestro-style",
       "description": "Custom writing style: UI / UX Design Maestro. Apply only when the user explicitly requests this skill by its exact name 'ui-ux-design-maestro-style'.",
-      "source": "custom",
-      "updatedAt": "2026-06-07T03:03:18.641482Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-07T03:03:18.641345Z",
+      "backingPluginId": "plugin_015CNW4ehHZXtN6Qqvytic8P"
     },
     {
       "skillId": "skill_01LmcFeqNFVDuk1CoRdfCRHV",
@@ -854,8 +859,9 @@
       "skillId": "skill_01LMNTvF3Foo1NhM9HrooJbT",
       "name": "systematic-insight-style",
       "description": "Custom writing style: Systematic Insight. Apply only when the user explicitly requests this skill by its exact name 'systematic-insight-style'.",
-      "source": "custom",
-      "updatedAt": "2026-06-06T20:18:52.860684Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-06T20:18:52.860562Z",
+      "backingPluginId": "plugin_0191Fqo7gBQkZ5Jwohwbmxok"
     },
     {
       "skillId": "skill_017RNXRitfSLKQvDyiekHeqa",
@@ -892,8 +898,9 @@
       "skillId": "skill_01LeZ6YCMy69s13ohdyzSDKS",
       "name": "baldor-ppt",
       "description": "Transform any PowerPoint presentation into a Baldor Specialty Foods branded deck. Use this skill whenever the user asks to rebrand, restyle, or convert a PowerPoint (.pptx) to Baldor branding — including applying Baldor colors, fonts, layouts, and corporate identity. Also trigger when the user mentions 'Baldor presentation', 'Baldor deck', 'Baldor slides', 'brand a deck for Baldor', 'Baldor PowerPoint', or wants to create a new presentation that follows Baldor brand guidelines. This skill applies to ALL PowerPoint work involving the Baldor Specialty Foods brand.",
-      "source": "custom",
-      "updatedAt": "2026-04-24T13:28:48.180621Z"
+      "source": "plugin",
+      "updatedAt": "2026-04-24T13:28:48.180502Z",
+      "backingPluginId": "plugin_015YUM6JWUufVVBejWpvvEZE"
     },
     {
       "skillId": "doc-coauthoring",
