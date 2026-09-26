@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790372954943,
+  "lastUpdated": 1790436120549,
   "skills": [
     {
       "skillId": "import-memory",
@@ -58,8 +58,9 @@
       "skillId": "skill_01XdSjLM3xCi2ZniJL4LWcKG",
       "name": "ant",
       "description": "Structured, enterprise-focused design system emphasizing clarity, consistency, and efficiency for data-dense web applications.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:19:29.368414Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:19:29.368279Z",
+      "backingPluginId": "plugin_01Et7fyKoXchwvg3PQbRXamx"
     },
     {
       "skillId": "skill_017tNmPz29xq7L673muTJHQT",
@@ -106,7 +107,8 @@
       "name": "skills-exporter",
       "description": "Combine every skill an AI agent can access into one portable, multi-agent bundle and produce a downloadable .zip. Use this skill whenever the user wants to export, combine, bundle, back up, share, or migrate their skills — including any request to \"put all my skills into one skills.md\", \"export my skills to Codex / AGENTS.md\", \"make a skills.zip\", \"bundle my skills for v0.app\", \"combine all skills into one file\", \"give me a downloadable copy of my skills\", or move skills between Codex, Claude, skills.sh, and v0.app. The bundle contains a single combined skills.md index, a Codex-compatible AGENTS.md, individual per-skill SKILL.md folders (Claude / skills.sh layout), a v0.app name+description list, and a manifest.csv — delivered as one .zip.",
       "source": "custom",
-      "updatedAt": "2026-08-15T16:28:31.744164Z"
+      "updatedAt": "2026-08-15T16:28:31.744164Z",
+      "backingPluginId": "plugin_01JCrK3nFSSYipEXJk6eaAGf"
     },
     {
       "skillId": "skill_01Hqy2JK5ao1ujvJmzH19M4A",
@@ -152,8 +154,9 @@
       "skillId": "skill_01TmRQS82WVocgxA1kx1HhzC",
       "name": "claymorphism",
       "description": "Soft, rounded 3D-like shapes mimicking malleable clay with playful, puffy elements and colorful surfaces.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:18:52.021193Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:18:52.021094Z",
+      "backingPluginId": "plugin_017pGkikieVgRGZarYgf34iE"
     },
     {
       "skillId": "skill_01Qo7VrSrV7BmAkQSAdvKGfQ",
@@ -191,15 +194,17 @@
       "skillId": "skill_01YMEs9okvSCkD4qryXLd6Yv",
       "name": "codex",
       "description": "A radically minimal, blank-canvas interface built as a pure edge-to-edge surface, with almost no color and typography carrying the visual weight. Black serves as the only filled color, the only divider, and the sole surface tone cards.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:18:47.050450Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:18:47.050286Z",
+      "backingPluginId": "plugin_01ATdM5aKYeVAxarxkiZ73Kn"
     },
     {
       "skillId": "skill_01W8vjiB8PQP4C2rEfmZb3rc",
       "name": "doodle",
       "description": "Hand-drawn, sketch-like style with doodles, handwritten fonts, and imperfect lines for a playful, informal feel.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:18:31.298032Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:18:31.297904Z",
+      "backingPluginId": "plugin_014VG2ha5pqmAdPMRSsSctGo"
     },
     {
       "skillId": "skill_013Gp7AWhtetD3yroLaLhonV",
@@ -285,15 +290,17 @@
       "skillId": "skill_01TvsEDNV9Yn983Vd48M3mZz",
       "name": "glassmorphism",
       "description": "Frosted glass effect with translucent layers, subtle blur, and luminous borders for depth and modern elegance.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:18:07.739328Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:18:07.739073Z",
+      "backingPluginId": "plugin_01Hr2cfxWDfL58qfBHVWxjcd"
     },
     {
       "skillId": "skill_01UravZkbHxVNqPeEqpUbAx7",
       "name": "geometric",
       "description": "Geometric, structured design with clean typography, neutral colors, precise shapes, and intuitive layouts that stay out of the way.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:18:08.228554Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:18:08.228415Z",
+      "backingPluginId": "plugin_01Urn7Uy6oi9Ue1wQqBU3Jsn"
     },
     {
       "skillId": "skill_011N2AMmM8NF93Sw7VpXuih4",
@@ -307,8 +314,9 @@
       "skillId": "skill_01YMN3hyPq1iboLoCn4JWi2V",
       "name": "levels",
       "description": "Conversion-focused design that removes friction and guides users toward action through clarity, trust, and speed.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:17:56.394824Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:17:56.394535Z",
+      "backingPluginId": "plugin_01RWTjCbqVAPNqpSRe6UKX3a"
     },
     {
       "skillId": "skill_01Ek9qR2nqMS1WE23Rt3zamR",
@@ -514,15 +522,17 @@
       "skillId": "skill_01Ue9QjRRjr35pN8siLyCKsM",
       "name": "sega",
       "description": "A playful, arcade-inspired interface for games — built on the VT323 pixel typeface, hard-edged 0px corners, chunky pill buttons that physically press into solid offset blocks",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:16:24.292614Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:16:24.292483Z",
+      "backingPluginId": "plugin_017NEGJbWhiYKHZh8Xu54641"
     },
     {
       "skillId": "skill_01XduMp5eV2nM1Jfqdd3EYfn",
       "name": "vintage",
       "description": "1950s-1990s nostalgia with skeuomorphic touches, grainy textures, retro color palettes, and pixel-style typography.",
-      "source": "custom",
-      "updatedAt": "2026-07-07T18:15:53.763906Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-07T18:15:53.763768Z",
+      "backingPluginId": "plugin_01QCYKKLguPRCzpbNA3SrPBg"
     },
     {
       "skillId": "skill_01LyJoSzW6w2nrip7j3yBmrH",
@@ -648,15 +658,17 @@
       "skillId": "skill_01USzQxu4PcwAmf3RmKuKLD8",
       "name": "image-enhancer",
       "description": "Improves the quality of images, especially screenshots, by enhancing resolution, sharpness, and clarity. Perfect for preparing images for presentations, documentation, or social media posts.",
-      "source": "custom",
-      "updatedAt": "2026-06-26T09:55:44.480405Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-26T09:55:44.480282Z",
+      "backingPluginId": "plugin_01VTewFskhTNd1sQYAqSaKTp"
     },
     {
       "skillId": "skill_01VMkS7sgKiLSYi9ytKvfWWe",
       "name": "meeting-insights-analyzer",
       "description": "Analyzes meeting transcripts and recordings to uncover behavioral patterns, communication insights, and actionable feedback. Identifies when you avoid conflict, use filler words, dominate conversations, or miss opportunities to listen. Perfect for professionals seeking to improve their communication and leadership skills.",
-      "source": "custom",
-      "updatedAt": "2026-06-26T09:51:54.631324Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-26T09:51:54.631125Z",
+      "backingPluginId": "plugin_0129qcrxyfJgeVRaL9qto9Ge"
     },
     {
       "skillId": "skill_01LJHGWWL6FqaZUUXwpQJchE",
@@ -766,15 +778,17 @@
       "skillId": "skill_01WoUvaP6gSvV6o2i317bQri",
       "name": "connect-apps",
       "description": "Connect Claude to external apps like Gmail, Slack, GitHub. Use this skill when the user wants to send emails, create issues, post messages, or take actions in external services.",
-      "source": "custom",
-      "updatedAt": "2026-06-26T09:48:02.035898Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-26T09:48:02.035768Z",
+      "backingPluginId": "plugin_0168YHfp5h93saeQsbKbLZDz"
     },
     {
       "skillId": "skill_01W7uwxtigX42piJUYpqVp9X",
       "name": "straight-talk-nutritionist-style",
       "description": "Custom writing style: Straight-Talk Nutritionist. Apply only when the user explicitly requests this skill by its exact name 'straight-talk-nutritionist-style'.",
-      "source": "custom",
-      "updatedAt": "2026-06-07T04:32:54.001776Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-07T04:32:54.001658Z",
+      "backingPluginId": "plugin_01Rv8pxc1C6TSYxms6VMdAFt"
     },
     {
       "skillId": "skill_01EnqFPQHcJ3sosRbQUapMmR",
@@ -820,8 +834,9 @@
       "skillId": "skill_01XbjxBq9ruDA8Y6Y4Tkjh8b",
       "name": "grok-review",
       "description": "Send the current artifact, plan, or piece of work to Grok (a different model family) for an independent, adversarial second opinion, then surface Grok's review and structured verdict. Use this whenever the user asks for \"Grok's take\", \"a second set of eyes\", \"cross-review with Grok\", \"have Grok check this\", \"push this to Grok\", \"what does Grok think\", or wants a planner/evaluator ensemble where Claude proposes and Grok critiques (or vice versa). Trigger it for code, plans, architecture decisions, SOPs, specs, and document outlines — even when the user doesn't say the word \"skill\". Requires a Claude Code or Cowork session with the `grok` CLI installed, an XAI_API_KEY, or a Composio xAI bridge; it does not run in plain claude.ai chat.",
-      "source": "custom",
-      "updatedAt": "2026-06-20T01:11:30.165321Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-20T01:11:30.165189Z",
+      "backingPluginId": "plugin_01FFvcHBVzeeYRoCYpxzmSCq"
     },
     {
       "skillId": "skill_01LcLCVLfw7W4W4XKPaJXuqf",
@@ -859,8 +874,9 @@
       "skillId": "skill_01WPNJq1A4ECxQyFv2FxEjKh",
       "name": "diligent-investigator-style",
       "description": "Custom writing style: Diligent Investigator. Apply only when the user explicitly requests this skill by its exact name 'diligent-investigator-style'.",
-      "source": "custom",
-      "updatedAt": "2026-06-07T03:16:39.885816Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-07T03:16:39.885680Z",
+      "backingPluginId": "plugin_01GSSwAFUEM5Ch8CxncxSPGN"
     },
     {
       "skillId": "skill_01R1GfUSAH2xXGLmKwmbYLuD",
@@ -1038,6 +1054,34 @@
       "description": "Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations.",
       "source": "anthropic-example",
       "updatedAt": "2026-09-14T19:41:01.576619Z"
+    },
+    {
+      "skillId": "chrome-browser",
+      "name": "chrome-browser",
+      "description": "Read this skill before the first step that uses Claude in Chrome, the browser extension whose tools are named mcp__claude-in-chrome__* (also called Chrome, the browser extension, or the external browser) and which acts in the person's real Chrome with their own sign-ins; before those tools are turned on there may be a single enable__mcp__claude-in-chrome tool instead. It covers loading the tools in one ToolSearch call, checking the person's open tabs and working in a new tab, site permissions, GIF recordings, console logs, dialogs to avoid, and when to stop and ask. It is not for the built-in browser (mcp__Claude_Browser__* or mcp__remote-devices__Claude_Browser__* tools), which has its own skill, and it does not decide which browser to use.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-18T21:09:50.227858Z"
+    },
+    {
+      "skillId": "computer-use",
+      "name": "computer-use",
+      "description": "Read this skill before the first step of any request to do something in an app on the person's own computer (Notes, Finder, System Settings, any desktop app), to look at their screen, or for \"computer use\". Computer use (desktop control) lets Claude take screenshots of the person's desktop and control it with clicks, typing and scrolling through the Claude desktop app; its tools are named mcp__computer-use__* when the session runs in the desktop app and mcp__remote-devices__computer_* when a cloud session is linked to the person's computer; before computer use is turned on for a conversation there may be no such tools, only an enable__mcp__remote-devices__computer tool, which turns it on. It covers turning it on, picking the right tool, the access flow, and the safety rules for tiered apps, links and financial actions. It is not for websites, which go through Claude in Chrome or the built-in browser and their own skills.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-14T19:41:02.059986Z"
+    },
+    {
+      "skillId": "built-in-browser",
+      "name": "built-in-browser",
+      "description": "Read this skill before the first step that uses the built-in browser, the browser pane inside the Claude desktop app (also called the in-app browser, the browser pane, Claude's browser, or \"your own browser\"), whose tools are named mcp__Claude_Browser__* when the session runs in the desktop app and mcp__remote-devices__Claude_Browser__* when a cloud session is linked to the person's computer; before those tools are turned on there may be a single enable__mcp__remote-devices__Claude_Browser tool instead. It covers the pane's persistent sign-ins, tabs and preview_start, reading pages as text, site approvals, what the pane cannot open, and what to do when it cannot be reached. It is not for Claude in Chrome (mcp__claude-in-chrome__* tools), which has its own skill, and it does not decide which browser to use.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-21T06:00:29.740604Z"
+    },
+    {
+      "skillId": "deep-research",
+      "name": "deep-research",
+      "description": "Use this skill when the user's prompt requires (1) researching a topic across multiple sources, comparing options or alternatives, analyzing trends or history, understanding markets or industries, or reviewing literature or studies and (2) synthesizing that research into a comprehensive, narrative report. If you're planning to search the web or internal knowledge bases, consider using this skill. This skill coordinates research subagents, so use it only when you have a tool for spawning subagents (the Agent or Task tool); otherwise, research the question directly.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-14T19:41:02.015956Z"
     }
   ]
 }
