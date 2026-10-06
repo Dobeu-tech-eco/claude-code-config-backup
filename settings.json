@@ -7,10 +7,12 @@
   "permissions": {
     "allow": [
       "Bash(node .claude/*)",
-      "Bash(*codeagent-wrapper*)"
+      "Bash(*codeagent-wrapper*)",
+      "{\r    \"permissions\": {\r      \"allow\": [\r        \"mcp__claude_ai_Lovable__query_database\"\r      ]                                                                                                                           }"
     ],
     "defaultMode": "auto"
   },
+  "model": "claude-opus-4-7",
   "hooks": {
     "PreToolUse": [
       {
@@ -305,7 +307,7 @@
   },
   "outputStyle": "Proactive",
   "feedbackDrafts": "notify",
-  "advisorModel": "fable",
+  "advisorModel": "opus",
   "fastMode": true,
   "remote": {
     "defaultEnvironmentId": "env_01HknyLfcnWW25fgLABFDJpn"
@@ -320,5 +322,39 @@
   "crossSessionInbound": "accept",
   "inputNeededNotifEnabled": true,
   "agentPushNotifEnabled": true,
-  "model": "sonnet"
+  "autoMode": {
+    "soft_deny": [
+      "$defaults",
+      "Bash(stripe:live*) in chimacomics — any command referencing STRIPE_LIVE_API_KEY or pk_live_ should be treated as a production payment action",
+      "Writes to community feature flags (COMMUNITY_FEED, COMMUNITY_DM, COMMUNITY_MARKET, COMMUNITY_BOARDS) in chimacomics — enabling these is a counsel-review trigger per CLAUDE.md"
+    ],
+    "environment": [
+      "### Org-wide",
+      "**Organization**: Dobeu-tech-eco (GitHub org; this repo's remotes are github.com/Dobeu-tech-eco/chimacomics and a Cursor-hosted mirror origin.cursor.com/dobeutech/chimacomics.git)",
+      "**Cloud provider(s)**: Supabase (via Lovable Cloud) for database/auth/storage; Stripe for payments (via Lovable connector gateway); Datadog for error telemetry; Resend for transactional/marketing email — all scoped to this repo",
+      "**Repository visibility**: private (confirmed via gh for Dobeu-tech-eco/chimacomics)",
+      "**Internal sharing / snippet hosting**: None configured — treat public paste/gist services as outside the trust boundary",
+      "**Secrets management**: GitHub Actions repo secrets (CI references CLAUDE_CODE_OAUTH_TOKEN, E2E_ADULT_EMAIL, E2E_ADULT_PASSWORD, E2E_SUPABASE_PUBLISHABLE_KEY, E2E_SUPABASE_URL, E2E_TEEN_EMAIL, E2E_TEEN_PASSWORD); local secrets via .env (gitignored, .env.example is the template, never commit real values)",
+      "**Default / protected branches**: main is the default branch; a ruleset named \"main branch\" is active on Dobeu-tech-eco/chimacomics (rulesets, not classic branch protection — treat main as protected)",
+      "**CI/CD deploy targets**: GitHub Actions CI (.github/workflows/ci.yml) runs typecheck → lint → test → build; the e2e job is inert unless E2E_SUPABASE_URL (a staging project, never live) is set as a repo secret — do not wire live/production credentials into e2e",
+      "**Network posture**: None configured",
+      "**Host containment**: None configured — assume Claude Code runs on an ordinary developer machine (Windows 11) with open internet",
+      "**Source control**: This repo (chimacomics) and its two remotes — github.com/Dobeu-tech-eco/chimacomics (origin) and the Cursor mirror origin.cursor.com/dobeutech/chimacomics.git (cursor) — no additional orgs configured",
+      "**Trusted internal domains**: None configured",
+      "**Trusted cloud buckets**: digital-goods (Supabase Storage bucket, private, holds paid digital delivery files — config-derived — not a confirmed upload destination; uploads of local data still require confirmation)",
+      "**Key internal services**: None configured",
+      "**Internal package registry**: None configured",
+      "**Sensitive data locations & audiences**: .env (local secrets, gitignored); Supabase tables profiles, user_roles, moderator_allowlist, age_gate_attempts, consent_settings, purchases, entitlements, download_refund_requests hold personal/regulated data (age-gate, payment, account data) — share only with audiences cleared for PII/payment data; tasks/browse-only-secrets-checklist.md flagged as sensitive-looking path",
+      "**Data retention / declassification**: ANALYTICS_EVENT_TTL_DAYS = 14 for analytics events; age_gate_attempts purged via purge_age_gate_attempts cron job (none configured beyond this app-level policy)",
+      "**Sensitive remote targets**: any namespace/host/container with 'prod' or 'production' as a whole word/segment; STRIPE_LIVE_API_KEY / pk_live_ and PAYMENTS_LIVE_WEBHOOK_SECRET / LOVABLE live mode are the production payment surface for this repo — never invoke live Stripe mode from automated/test runs",
+      "**Protected deployment namespaces / environments**: production Supabase project (PRODUCTION_SUPABASE_PROJECT_ID) and Stripe live mode (STRIPE_LIVE_API_KEY, pk_live_) — e2e tests must only target the staging Supabase project (E2E_SUPABASE_URL) and never production",
+      "**Protected IaC scopes**: IAM, RBAC, networking, quota, and node-pool resources; anything whose name or tag carries 'prod' or 'production' as a whole word or name segment",
+      "**Default / protected branches**: main is the default branch; a ruleset named \"main branch\" is active on Dobeu-tech-eco/chimacomics (rulesets, not classic branch protection — treat main as protected; \"Protected branches: none listed\" does not mean unprotected here)",
+      "### User-specific",
+      "**Primary use of Claude Code**: software development (TanStack Start/React site + Supabase/Stripe commerce backend for this repo)",
+      "**Trusted repo**: C:\\Users\\JeremyWilliams\\repos\\chimacomics and its remotes origin (github.com/Dobeu-tech-eco/chimacomics, private) and cursor (origin.cursor.com/dobeutech/chimacomics.git)",
+      "**Org-specific CLIs**: bun (package manager — bun install/run dev/build/test/lint/format/typecheck), bunx, gh",
+      "**routine under <user>/ prefix**: routine commands scoped to C:\\Users\\JeremyWilliams\\repos\\chimacomics\\ (bun/bunx/vitest/playwright invocations within this repo)"
+    ]
+  }
 }

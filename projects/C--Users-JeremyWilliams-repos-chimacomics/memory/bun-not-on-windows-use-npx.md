@@ -1,26 +1,28 @@
 ---
 name: bun-not-on-windows-use-npx
-description: chimacomics CLAUDE.md says to use bun, but bun is not installed on this Windows machine — run the gates with npx instead.
+description: "chimacomics on Windows — bun 1.4.2 is now on PATH via scoop (verified 2026-10-06); plans still write npx commands, and the working copy has stale CRLF files."
 metadata:
+  node_type: memory
   type: project
+  originSessionId: cd424894-0c15-448e-b9fc-ce449ac61baa
+  modified: 2026-10-06T07:40:37.889Z
 ---
 
-`chimacomics/CLAUDE.md` documents every command as `bun run ...`, but there is no
-`bun` on this Windows host (no `bun.exe` under `~/.bun`, `%LOCALAPPDATA%`, or
-`C:\Program Files`; not on PATH in either PowerShell or the Bash tool). Earlier
-work on this repo ran under WSL at `/home/jeremyw/work/chimacomics`, which is
-where bun lives.
+As of 2026-10-06 `bun` and `bunx` 1.4.2 resolve on Windows through scoop shims
+(`~/scoop/shims/bun`), so the husky pre-commit hook (`bunx lint-staged`,
+`bun run typecheck`, `bun run test`) runs natively. An earlier version of this
+note said bun was absent; that is no longer true.
 
-`node_modules` is present and current, so run the gates directly on Windows:
+Plans and briefs for this repo still write the gates as `npx vitest run`,
+`npx tsc --noEmit`, `npx eslint .`, `npx vite build`; both forms work.
 
-- `npx vitest run` (not `--reporter=basic`; that reporter was removed in vitest 3+)
-- `npx tsc --noEmit`
-- `npx eslint .` / `npx eslint . --fix`
-- `npx vite build`
+Gotcha: `core.autocrlf=true` plus a pre-`.gitattributes` checkout leaves ~100
+working-copy files with CRLF endings, so a local `npx eslint .` reports ~10k
+`Delete ␍` prettier errors that CI never sees. `eslint --fix` rewrites them to
+LF and `git diff` then shows only the real formatting changes (index is LF).
 
-**Why:** reaching for `bun run test` on Windows fails with "command not found"
-and reads like a broken repo when the toolchain is actually fine.
+**Why:** a raw local lint count looked like a broken repo; the real CI failure on
+2026-10-06 was 285 prettier errors in 16 files plus 4 rule errors.
 
-**How to apply:** on Windows, substitute the `npx` equivalents above; only use
-the documented `bun` commands from WSL. Keep `.github/workflows/ci.yml` on bun —
-CI runs on ubuntu with `oven-sh/setup-bun`.
+**How to apply:** trust `git diff --stat` after `--fix`, not the raw local
+count; keep `.github/workflows/ci.yml` on bun.

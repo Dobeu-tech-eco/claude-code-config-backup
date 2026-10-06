@@ -1,2 +1,3 @@
-- [Bun is not on this Windows machine — use npx](bun-not-on-windows-use-npx.md) — CLAUDE.md's `bun run` commands only work from WSL.
+- [Bun on Windows and CRLF lint noise](bun-not-on-windows-use-npx.md) — bun 1.4.2 via scoop since 2026-10-06; local eslint shows ~10k CRLF errors CI never sees.
 - [WSL updates break plugin installPaths](wsl-updates-break-plugin-installpaths.md) — a /mnt/c path makes a plugin load nothing, silently.
+- [Backend is Lovable Cloud](backend-is-lovable-cloud.md) — not Supabase; no dashboard/CLI instructions; supabase-named paths are Lovable-generated.
