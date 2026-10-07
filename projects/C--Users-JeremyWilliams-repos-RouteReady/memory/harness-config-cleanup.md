@@ -5,23 +5,31 @@ metadata:
   node_type: memory
   type: feedback
   originSessionId: 55ade103-f0f4-40c5-b264-3ed9dbef7ad8
-  modified: 2026-09-10T11:30:49.945Z
+  modified: 2026-10-07T01:21:04.682Z
 ---
 
-## 1. Gemini stop-review gate — RESOLVED 2026-09-10
+## 1. Gemini stop-review gate — RECURRED, RE-RESOLVED 2026-10-06
 
 The Gemini Code Assist individual free tier is no longer supported for the
 `@google/gemini-cli` client, so every Stop hook fired a review that died with
-`IneligibleTierError`. Failed 11+ times across two sessions.
+`IneligibleTierError`. Blocked the entire session end — Claude Code appears
+hung with no useful stderr.
 
 **The off switch is `config.stopReviewGate` in the plugin's PER-WORKSPACE state
 file — nothing else.** `gemini-abiswas97-gemini/state/<slug>-<hash>/state.json`
-under `~/.claude/plugins/data/`. `stop-review-gate-hook.mjs` does
-`if (!config.stopReviewGate) return;` and there is **no env kill switch and no
-CLI flag** (`gemini-companion.mjs` exposes setup/review/task/status/... only).
+under `~/.claude/plugins/data/`. For RouteReady the slug+hash is
+`routeready-57025916c5a6e29b`. `stop-review-gate-hook.mjs` does
+`if (!config.stopReviewGate) return;` and there is **no env kill switch, no
+CLI flag, and no setup toggle** (`gemini-companion.mjs setup` has a
+`--enable-review-gate`/`--disable-review-gate` argument-hint but the handler
+only reads `--json`/`--cwd` — `setConfig` is orphan code).
 
-Set to `false` in all three workspace states on 2026-09-10; verified via
-`gemini-companion.mjs setup --json` → `reviewGateEnabled: false`.
+**Flipped off on 2026-09-10, found re-enabled 2026-10-06.** Set to `false`
+again. Unknown re-enable trigger (plugin update or manual edit). Treat this
+as recurring — re-check after any `abiswas97-gemini` plugin update.
+
+Codex plugin uses the same key but defaults to `false` and has no
+RouteReady-scoped state file — not currently a blocker.
 
 **Two traps if this recurs:**
 - `setup --json` reporting `ready:true, auth.loggedIn:true` is a **false

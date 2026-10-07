@@ -211,7 +211,8 @@
     "si-agent@dobeu-tech-eco": true,
     "context7@claude-plugins-official": true,
     "ralph-loop@claude-plugins-official": true,
-    "supabase@claude-plugins-official": true
+    "supabase@claude-plugins-official": true,
+    "cc-plugin-you-should-know@builtin": true
   },
   "extraKnownMarketplaces": {
     "2389-research": {
@@ -308,7 +309,6 @@
   "outputStyle": "Proactive",
   "feedbackDrafts": "notify",
   "advisorModel": "opus",
-  "fastMode": true,
   "remote": {
     "defaultEnvironmentId": "env_01HknyLfcnWW25fgLABFDJpn"
   },
