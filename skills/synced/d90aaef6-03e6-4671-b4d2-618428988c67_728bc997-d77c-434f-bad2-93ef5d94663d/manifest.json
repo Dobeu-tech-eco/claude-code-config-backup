@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1791329823542,
+  "lastUpdated": 1791431641300,
   "skills": [
     {
       "skillId": "import-memory",
@@ -1097,6 +1097,22 @@
       "source": "plugin",
       "updatedAt": "2026-10-06T08:15:27.901606Z",
       "backingPluginId": "plugin_01TcrdTit5Q5D3qycs71XWne"
+    },
+    {
+      "skillId": "skill_01XrKo1fimTCxMNS8qBNRPBn",
+      "name": "memory-promoter",
+      "description": "Promote AMFS memory entries into the Notion Memory archive through the Memory Librarian gate. Use when publishing, promoting, or syncing AMFS entries to Notion, or when asked to update the Memory tree.",
+      "source": "plugin",
+      "updatedAt": "2026-10-08T00:25:09.963859Z",
+      "backingPluginId": "plugin_018uG72rXjxHYmCGHPraLpq3"
+    },
+    {
+      "skillId": "skill_01KBJzhJTf4md2NL7hsbxzP1",
+      "name": "impeccable-automode",
+      "description": "Orchestrates the Impeccable design toolkit (impeccable.style). Invoke when you want a guided, context-aware design pass but do not know which Impeccable command to run. Reads the current conversation, the project's Impeccable context files, and the live state of the work, diagnoses the design situation, then proposes an ordered sequence of real Impeccable commands with reasoning and waits for approval before running anything. Use for \"run impeccable automode\", \"do a full design pass\", \"which impeccable command should I use\", or when design quality is the goal but the specific pass is unclear.",
+      "source": "plugin",
+      "updatedAt": "2026-10-08T03:53:52.263361Z",
+      "backingPluginId": "plugin_01KKUAH5hxKP6RqUTtUpCD6G"
     }
   ]
 }
