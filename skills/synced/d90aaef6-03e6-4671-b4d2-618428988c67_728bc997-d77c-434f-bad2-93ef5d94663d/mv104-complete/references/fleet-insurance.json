@@ -1,0 +1,13 @@
+{
+ "_comment": "Baldor fleet liability policy as printed on the NYS Insurance Identification Card. The card is a FLEET card: the company, NY insurance code, and policy number apply to every unit; only the Year/Make/VIN/Unit # lines change per vehicle. Check that the crash date falls inside the effective window before using it; if not, ask the user for the card in force on the crash date.",
+ "ny_insurance_code": "354",
+ "insurance_company": "Travelers Indemnity Company of CT",
+ "policy_number": "HRE-CAP-2J706719-TCT-26",
+ "effective_date": "2026-05-01",
+ "expiration_date": "2027-05-01",
+ "insured_name_on_card": "HUB TRUCK RENTAL CORPORATION, 155 FOOD CENTER DR, BRONX NY 10474",
+ "issuer": "Willis Towers Watson Northeast, Inc.",
+ "source": "assets/sample-fleet-cards-unit-99916.pdf page 3 (card W45731709, unit 99916)",
+ "note": "Insured name on the card is the lessor because Baldor issues its policy in the lessor's name for leased units; the registrant block on the MV-104 still comes from the cab card (references/lessor-registry.json), not from this card.",
+ "verified_on": "2026-10-09"
+}

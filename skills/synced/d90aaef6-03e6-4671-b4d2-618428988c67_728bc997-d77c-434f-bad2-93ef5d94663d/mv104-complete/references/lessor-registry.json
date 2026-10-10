@@ -1,0 +1,14 @@
+{
+ "_comment": "Registrant block EXACTLY as printed on the NYS apportioned registration cab card for each lessor in the Truck Info 'Vendor' column. Only lessors whose cab card has been seen are listed. The MV-104 asks for registrant info exactly as on the registration, so an unknown lessor must be flagged, not guessed. Add an entry after reading a new lessor's cab card.",
+ "HUB": {
+  "registrant_name": "HUB TRUCK RENTAL CORP",
+  "registrant_address": "131 E AMES COURT",
+  "registrant_city": "PLAINVIEW",
+  "registrant_state": "NY",
+  "registrant_zip": "11803",
+  "registration_state": "NY",
+  "source": "NYS Apportioned Registration Cab Card, plate 75436PC/IRP, unit 99916, effective 02/01/2026 expires 01/31/2027 (assets/sample-fleet-cards-unit-99916.pdf page 1)",
+  "usdot_motor_carrier_responsible_for_safety": "HUB TRUCK RENTAL CORP, USDOT 001183031",
+  "verified_on": "2026-10-09"
+ }
+}

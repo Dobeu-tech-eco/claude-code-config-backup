@@ -124,6 +124,10 @@ def step1_items(report: Path) -> dict[str, list[ActionItem]]:
             items[str(r["Branch"])].append(ActionItem("2-HIGH", "Step 1 - Reconciliation", "Yard Jockey on bonus sheet (never eligible)",
                                                      r["Employee ID"], r["Name"], str(r["Where"]), str(r["Source"]),
                                                      "Remove from the bonus sheet; Yard Jockeys are not eligible and should not be listed."))
+    for r in read_sheet(report, "Excluded_Cost_Centers"):
+        items[str(r["Branch"])].append(ActionItem("4-VERIFY", "Step 1 - Reconciliation", "Excluded cost center removed (not an eligible employee)",
+                                                 r["Employee ID"], r["Name"], str(r["Tab"]), f"Cost center {r['Cost Center']} (column C)",
+                                                 "Row was removed; confirm this cost center should not be on the sheet."))
     # Unknown_Branch rows are intentionally NOT turned into branch action items.
     # A termed driver whose branch cannot be reconciled is reported only in the
     # reconciliation report (Unknown_Branch sheet + red rows on Terminated_Report).

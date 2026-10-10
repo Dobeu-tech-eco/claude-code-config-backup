@@ -84,6 +84,16 @@ question before running.
 ## What each step does and why
 
 ### Step 1 – `reconcile_safety_bonus.py`
+* **Excluded cost centers run first.** Any row whose **column C** (literally column C —
+  the `COST CENTER` column on BNY, where this applies; the other branches have a text
+  `LOCATION` in C that never matches a number) holds one of the excluded cost-center
+  numbers is **not an eligible employee and its row is deleted from every tab**
+  (Eligible, Ineligible, Terminated). The list is `EXCLUDED_COST_CENTERS` =
+  **850, 250, 745, 011, 512, 499** (stored normalised, so `011`/`11`/`11.0` all match).
+  Each removed row is logged on the report's `Excluded_Cost_Centers` sheet and shown as a
+  4-VERIFY action item on its branch. A removed row that is *also* a termed driver is
+  **not re-added** to Terminated (its ID is remembered; `Terminated_Report` marks it
+  `EXCLUDED`). Add new cost centers to `EXCLUDED_COST_CENTERS` as Jeremy identifies them.
 * Every driver on the HR term report whose ID **and** name agree with a sheet row is
   removed from Eligible/Ineligible and appended to that branch's Terminated tab (yellow), `STATUS = TERM mm/dd/yy`, `ELIG = N`. Rows are
   copied **by header name**, not column position, because BNY's layout differs. If the
@@ -189,6 +199,11 @@ field alone identifies a person. Every script applies this:
   added** - not to Eligible, Ineligible, or Terminated. Identify them by the Job Title
   on the full roster Jeremy will supply (or the "Jockeys" sub-department on the term
   report). Applies mostly to BNY. If one is found on an active tab, flag it for removal.
+* **Excluded cost centers are never eligible and are removed from every tab.** Column C
+  values 850, 250, 745, 011, 512, 499 are not employees; delete their rows outright and
+  log them (`EXCLUDED_COST_CENTERS` in `reconcile_safety_bonus.py`). Mostly BNY (its
+  column C is the COST CENTER column). Never re-add an excluded row via the termination
+  step. Extend the list when Jeremy names more cost centers.
 * Term date goes in the STATUS column as `TERM mm/dd/yy`.
 * Duplicates and cross-branch conflicts are flagged, never auto-resolved.
 * A termed driver whose branch cannot be reconciled is **not** an action item on any
@@ -203,7 +218,8 @@ field alone identifies a person. Every script applies this:
   Jeremy wants holds only the `_v2` workbooks plus the two report workbooks.
 
 ## What to tell Jeremy at the end
-Lead with counts (moved, added, unknown-branch, duplicates, dates filled/left blank;
+Lead with counts (moved, added, unknown-branch, excluded cost centers, Yard Jockeys,
+duplicates, dates filled/left blank;
 critical / missing / mismatch / review incidents), then the items that need *his*
 decision, then source-data fixes worth making upstream (blank employee numbers in
 Origami, missing Preventable column, a branch location missing from the Origami

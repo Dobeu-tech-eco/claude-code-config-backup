@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1791495123566,
+  "lastUpdated": 1791586409535,
   "skills": [
     {
       "skillId": "import-memory",
@@ -1095,7 +1095,7 @@
       "name": "quarterly-safety-bonus-reconciliation",
       "description": "Run Jeremy's end-of-quarter Baldor driver Safety Bonus reconciliation across the branch workbooks (BB/Boston, BNY, BPA/Philly, BDC, Baldor Fish). Use this whenever he uploads the *_Q#_YYYY_Safety_Bonus.xlsx branch files with an HR \"EmployeeInformation-TerminatedDrivers\" export and/or an Origami \"Incidents\" export, or says anything like \"safety bonus\", \"quarterly bonus\", \"bonus reconciliation\", \"terminated drivers off the bonus sheet\", \"preventable incidents vs bonus sheet\", \"eligible / ineligible tabs\", or \"ACTION ITEMS tab / v1 v2\". Three bundled scripts do the work deterministically; the skill explains the rules, the order, and what to hand back.",
       "source": "plugin",
-      "updatedAt": "2026-10-06T08:15:27.901606Z",
+      "updatedAt": "2026-10-09T22:49:56.459013Z",
       "backingPluginId": "plugin_01TcrdTit5Q5D3qycs71XWne"
     },
     {
@@ -1113,6 +1113,14 @@
       "source": "plugin",
       "updatedAt": "2026-10-08T03:53:52.263361Z",
       "backingPluginId": "plugin_01KKUAH5hxKP6RqUTtUpCD6G"
+    },
+    {
+      "skillId": "skill_01PgB93bN5pVorvjB3eY5nDF",
+      "name": "mv104-complete",
+      "description": "Complete the New York State MV-104 \"Report of Motor Vehicle Crash\" for a Baldor Specialty Foods fleet incident from an Origami RMIS incident export, matching the driver by Employee Id in the UKG roster and the truck by Unit",
+      "source": "plugin",
+      "updatedAt": "2026-10-09T13:29:07.312690Z",
+      "backingPluginId": "plugin_01Hk9KfhENeNumeBbuvL7FmZ"
     }
   ]
 }

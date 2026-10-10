@@ -90,6 +90,13 @@ TEMP_KEYWORDS: tuple[str, ...] = ("TEMP", "VERTEX", "AGENCY", "STAFFING")
 # belong on any bonus sheet and are never added. Yard Jockeys are the main case (BNY).
 EXCLUDED_TITLE_KEYWORDS: tuple[str, ...] = ("YARD JOCKEY", "JOCKEY")
 EXCLUDED_SUBDEPTS: tuple[str, ...] = ("JOCKEYS",)
+# Cost-center numbers (column C on the bonus sheets) that are NOT eligible employees -
+# they do not belong on any sheet and their rows are removed outright (Jeremy, Q3 2026).
+# Stored normalised (leading zeros stripped) so "011"/"11"/11 all match. Mostly BNY,
+# the only branch whose column C is a COST CENTER column; elsewhere column C is a text
+# LOCATION, which never matches a numeric cost center.
+COST_CENTER_COLUMN: int = 3   # literally column C
+EXCLUDED_COST_CENTERS: frozenset[str] = frozenset({"850", "250", "745", "11", "512", "499"})
 ROSTER_ID_HEADERS: tuple[str, ...] = ("EMPLOYEE ID", "EMPLOYEE #", "EMPLOYEE NUMBER", "EMP ID", "ID")
 ROSTER_TITLE_HEADERS: tuple[str, ...] = ("JOB TITLE", "TITLE", "POSITION", "JOB")
 ROSTER_NAME_HEADERS: tuple[str, ...] = ("EMPLOYEE NAME", "NAME", "FULL NAME")
@@ -159,6 +166,21 @@ def is_excluded_title(text: object) -> bool:
     """True for titles / sub-departments that are never bonus-eligible (Yard Jockey)."""
     upper = str(text or "").strip().upper()
     return upper in EXCLUDED_SUBDEPTS or any(k in upper for k in EXCLUDED_TITLE_KEYWORDS)
+
+
+def normalize_cost_center(value: object) -> str | None:
+    """Normalise a column-C value for comparison: all-digit values lose leading zeros
+    ('011' -> '11', 11.0 -> '11'); text (e.g. 'BOS') is upper-cased as-is. Blank -> None."""
+    text = str(value if value is not None else "").strip()
+    if not text:
+        return None
+    if text.replace(".", "", 1).isdigit():
+        return str(int(float(text)))
+    return text.upper()
+
+
+def is_excluded_cost_center(value: object) -> bool:
+    return normalize_cost_center(value) in EXCLUDED_COST_CENTERS
 
 
 @dataclass
@@ -410,6 +432,7 @@ class Reconciler:
         self.branches: dict[str, tuple[openpyxl.Workbook, dict[str, Tab], Path]] = {}
         self.report: list[ReportRow] = []
         self.term_outcome: dict[int, tuple[str, str]] = {}   # id -> (branch, action)
+        self.excluded_ids: set[int] = set()   # employee ids pulled for an excluded cost center
 
     # -- loading ------------------------------------------------------------
     def add_branch(self, path: Path) -> None:
@@ -419,6 +442,28 @@ class Reconciler:
     def all_tabs(self) -> Iterable[Tab]:
         for _, tabs, _ in self.branches.values():
             yield from tabs.values()
+
+    # -- excluded cost centers (column C) ------------------------------------
+    def remove_excluded_cost_centers(self) -> None:
+        """Rows whose column-C value is an excluded cost center are not eligible
+        employees; delete them from every tab and log each removal. Runs first so the
+        removed rows never reach termination / duplicate / date checks."""
+        for branch, (_, tabs, _) in self.branches.items():
+            for tab in tabs.values():
+                to_delete: list[int] = []
+                for row in tab.data_rows():
+                    raw = tab.ws.cell(row=row, column=COST_CENTER_COLUMN).value
+                    if not is_excluded_cost_center(raw):
+                        continue
+                    to_delete.append(row)
+                    eid = tab.employee_id(row)
+                    if eid is not None:
+                        self.excluded_ids.add(eid)
+                    self.report.append(ReportRow("Excluded_Cost_Centers", [
+                        branch, tab.name, eid, tab.value(row, "NAME"),
+                        normalize_cost_center(raw), "Removed - cost center not a bonus-eligible employee",
+                    ], FILL_EXCLUDED))
+                delete_rows_bottom_up(tab, to_delete)
 
     # -- step 1 & 2: terminated drivers --------------------------------------
     def process_terminations(self) -> None:
@@ -476,6 +521,9 @@ class Reconciler:
     def add_missing_terminations(self) -> None:
         for eid, rec in self.term.items():
             if eid in self.term_outcome:
+                continue
+            if eid in self.excluded_ids:
+                self.term_outcome[eid] = ("EXCLUDED", "Pulled for an excluded cost center - not re-added to Terminated")
                 continue
             if rec.is_excluded:
                 self.term_outcome[eid] = ("EXCLUDED", "Not on any sheet; excluded title (Yard Jockey) - never added")
@@ -705,7 +753,7 @@ class Reconciler:
         for text, fill in (("Yellow = moved/added to Terminated tab", FILL_MOVED),
                            ("Orange = duplicate ID, needs your decision", FILL_DUPLICATE),
                            ("Green = ELIGIBLE FOR BONUS date computed by rule", FILL_DATE_FILLED),
-                           ("Grey = excluded title (Yard Jockey) - never eligible, never added", FILL_EXCLUDED)):
+                           ("Grey = excluded title (Yard Jockey) on an active tab - remove", FILL_EXCLUDED)):
             summary.append([text]); summary.cell(row=summary.max_row, column=1).fill = fill
         summary.append([])
         summary.append(["Section", "Rows"])
@@ -749,6 +797,7 @@ REPORT_SHEETS: dict[str, list[str]] = {
     "Added_To_Terminated": ["Branch", "Employee ID", "Name (HR)", "Sub Department", "Date Terminated"],
     "Unknown_Branch": ["Employee ID", "Name (HR)", "Sub Department", "Dept Code", "Date Terminated"],
     "Yard_Jockeys": ["Branch", "Employee ID", "Name", "Source", "Where", "Note"],
+    "Excluded_Cost_Centers": ["Branch", "Tab", "Employee ID", "Name", "Cost Center", "Note"],
     "Duplicates": ["Employee ID", "Name", "Issue", "Where (branch/tab row)"],
     "ID_Name_Mismatch": ["Branch", "Employee ID", "Name on sheet", "Name on HR report", "Tab / Row", "Note"],
     "Namesakes": ["Branch", "Employee ID A", "Employee ID B", "Name", "Row A", "Row B", "Note"],
@@ -788,6 +837,7 @@ def main() -> None:
     for path in branch_files:
         rec.add_branch(path)
 
+    rec.remove_excluded_cost_centers()
     rec.process_terminations()
     rec.add_missing_terminations()
     rec.flag_yard_jockeys()

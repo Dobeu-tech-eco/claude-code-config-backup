@@ -1,0 +1,14 @@
+{
+ "form_title": "REPORT OF MOTOR VEHICLE CRASH",
+ "expected_revision": "5/25",
+ "official_url": "https://dmv.ny.gov/forms/mv104.pdf",
+ "last_verified": "2026-10-09",
+ "verified_by": "WebFetch of official_url; template assets/mv104-template.pdf matched (MV-104 (5/25), 2 pages, 178 field objects / 158 named fields)",
+ "reporting_threshold": "Any crash in New York State causing a fatality, personal injury, or damage over $1,000 to the property of any one person.",
+ "deadline_days": 10,
+ "deadline_consequence": "Failure to report within 10 days is a misdemeanor; license and/or registration may be suspended until a report is filed.",
+ "submit_to": "CRASH RECORDS CENTER, 6 EMPIRE STATE PLAZA, PO BOX 2925, ALBANY, NY 12220-0925 (mail the original)",
+ "signature": "Must be signed by the driver, or by a representative only if the driver cannot sign because of injury or death. An unsigned report is not considered filed.",
+ "do_not_file_if": ["vehicle was vandalized (contact local police)", "crash did not occur in New York State"],
+ "fill_conventions": ["Enter a dash (-) if a question does not apply", "Enter an X if you do not know the answer", "Print or type in black ink", "Driver info EXACTLY as on the driver license", "Registrant info EXACTLY as on the registration", "More than two vehicles or more than five people: use additional forms, mark #2, #3..."]
+}

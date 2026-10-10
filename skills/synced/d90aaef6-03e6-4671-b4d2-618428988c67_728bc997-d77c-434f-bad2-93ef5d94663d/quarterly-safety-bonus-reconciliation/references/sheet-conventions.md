@@ -17,7 +17,11 @@ New Hire, Workers Comp, PFL, STDB, LOA, Temp Driver, VERTEX, Other …) · `ELIG
 BONUS` (date, or WC / PFL text on BNY) · `DRIVER RECORD` × many (one incident or note per
 cell, chronological left → right).
 
-BNY Eligible/Ineligible add `COST CENTER` after `ID`. BNY Terminated has a blank column
+BNY Eligible/Ineligible add `COST CENTER` after `ID` — so on BNY, **column C is the
+COST CENTER number** (the other branches have `LOCATION` text in column C). Cost centers
+850, 250, 745, 011, 512, 499 are **not bonus-eligible employees** (`EXCLUDED_COST_CENTERS`);
+their rows are deleted from every tab in step 1 and logged on `Excluded_Cost_Centers`.
+BNY Terminated has a blank column
 between `REASON` and `ELIGIBLE FOR BONUS`, ~40 legacy rows at the top with dates in the
 ID column, and one merged cell. BNY Ineligible has unlabeled columns 14–17 inside the
 DRIVER RECORD span that still hold entries — always treat the span from the first to
